@@ -75,8 +75,14 @@ def ensure_user_container(username):
             cur.execute("UPDATE users SET ssh_port=%s WHERE username=%s", (ssh_port, username))
             db.commit()
         if not status:
-            host_user_dir = f"/home/chuongdev/QUAN_LY_USER/{username}"
+            # Lấy đường dẫn thư mục cha từ biến môi trường
+            base_workspace_dir = os.environ.get('USER_WORKSPACE_DIR', '/app/workspaces')
+            
+            # Tạo đường dẫn đầy đủ cho thư mục của người dùng
+            host_user_dir = os.path.join(base_workspace_dir, username)
             os.makedirs(host_user_dir, exist_ok=True)
+            
+            # Lệnh docker run sẽ sử dụng biến host_user_dir này
             subprocess.run([
                 "docker", "run", "-d", "--name", cname, "--restart", "always",
                 "-p", f"{ssh_port}:22", "-e", f"USERNAME={username}", "-e", "PASSWORD=password123",
