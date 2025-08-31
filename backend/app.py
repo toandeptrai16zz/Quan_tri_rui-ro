@@ -100,7 +100,7 @@ def send_otp_email(email, otp, username):
     except Exception as e:
         app.logger.error(f"EMAIL SEND ERROR: {e}")
         return False
-
+#xinchao
 def validate_password_strength(password):
     if len(password) < SECURITY_CONFIG['PASSWORD_MIN_LENGTH']: return False, "Mật khẩu phải dài ít nhất 8 ký tự"
     if not re.search("[a-z]", password): return False, "Mật khẩu phải chứa chữ thường"
