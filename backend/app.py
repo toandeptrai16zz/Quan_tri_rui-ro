@@ -28,6 +28,14 @@ import mysql.connector
 import paramiko
 from werkzeug.security import generate_password_hash, check_password_hash
 
+#Nhập hardware_api vào app.py:
+from hardware_api import hardware_bp 
+app = Flask(__name__)
+# Đăng ký Blueprint với tiền tố /api/hardware
+# Tất cả các route trong hardware_bp sẽ có đường dẫn bắt đầu bằng /api/hardware/...
+app.register_blueprint(hardware_bp, url_prefix='/api/hardware')
+
+
 # ================== APP SETUP ==================
 logging.basicConfig(
     level=logging.INFO,
