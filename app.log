@@ -71,3 +71,109 @@
 2025-08-31 21:13:59,253 - INFO -  * Debugger PIN: 116-219-319
 2025-08-31 21:17:02,978 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
 2025-08-31 21:17:03,134 - INFO -  * Restarting with stat
+2025-08-31 21:17:04,634 - INFO - package: mysql.connector.plugins
+2025-08-31 21:17:04,635 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:17:04,636 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:17:04,640 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 21:17:04,640 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:17:04,647 - WARNING -  * Debugger is active!
+2025-08-31 21:17:04,656 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:17:16,547 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:17:16,791 - INFO -  * Restarting with stat
+2025-08-31 21:17:18,421 - INFO - package: mysql.connector.plugins
+2025-08-31 21:17:18,423 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:17:18,423 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:17:18,440 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 21:17:18,440 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:17:18,447 - WARNING -  * Debugger is active!
+2025-08-31 21:17:18,455 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:26:50,334 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:26:50,493 - INFO -  * Restarting with stat
+2025-08-31 21:26:52,200 - INFO - package: mysql.connector.plugins
+2025-08-31 21:26:52,201 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:26:52,201 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:26:52,207 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 21:26:52,208 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:26:52,214 - WARNING -  * Debugger is active!
+2025-08-31 21:26:52,223 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:29:02,046 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:29:02,290 - INFO -  * Restarting with stat
+2025-08-31 21:29:03,897 - INFO - package: mysql.connector.plugins
+2025-08-31 21:29:03,897 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:29:03,897 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:29:03,905 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 21:29:03,905 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:29:03,914 - WARNING -  * Debugger is active!
+2025-08-31 21:29:03,924 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:29:39,161 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:29:39,311 - INFO -  * Restarting with stat
+2025-08-31 21:29:40,826 - INFO - package: mysql.connector.plugins
+2025-08-31 21:29:40,827 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:29:40,827 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:29:40,830 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user ''@'localhost' (using password: NO)
+2025-08-31 21:29:40,831 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:29:40,836 - WARNING -  * Debugger is active!
+2025-08-31 21:29:40,846 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:30:03,504 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:30:03,654 - INFO -  * Restarting with stat
+2025-08-31 21:30:05,101 - INFO - package: mysql.connector.plugins
+2025-08-31 21:30:05,102 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:30:05,102 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:30:05,106 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user ''@'localhost' (using password: NO)
+2025-08-31 21:30:05,107 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:30:05,114 - WARNING -  * Debugger is active!
+2025-08-31 21:30:05,122 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:31:46,215 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:31:46,375 - INFO -  * Restarting with stat
+2025-08-31 21:31:47,961 - INFO - package: mysql.connector.plugins
+2025-08-31 21:31:47,961 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:31:47,961 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:31:47,964 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user ''@'localhost' (using password: NO)
+2025-08-31 21:31:47,965 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:31:47,970 - WARNING -  * Debugger is active!
+2025-08-31 21:31:47,980 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:32:34,113 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:32:34,256 - INFO -  * Restarting with stat
+2025-08-31 21:32:35,707 - INFO - package: mysql.connector.plugins
+2025-08-31 21:32:35,707 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:32:35,708 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:32:35,712 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user ''@'localhost' (using password: NO)
+2025-08-31 21:32:35,714 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:32:35,724 - WARNING -  * Debugger is active!
+2025-08-31 21:32:35,739 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:33:04,657 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:33:04,810 - INFO -  * Restarting with stat
+2025-08-31 21:33:06,214 - INFO - package: mysql.connector.plugins
+2025-08-31 21:33:06,214 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:33:06,216 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:33:06,219 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user ''@'localhost' (using password: NO)
+2025-08-31 21:33:06,220 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:33:06,231 - WARNING -  * Debugger is active!
+2025-08-31 21:33:06,245 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:33:10,542 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:33:10,683 - INFO -  * Restarting with stat
+2025-08-31 21:33:12,183 - INFO - package: mysql.connector.plugins
+2025-08-31 21:33:12,183 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:33:12,183 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:33:12,187 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user ''@'localhost' (using password: NO)
+2025-08-31 21:33:12,188 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:33:12,193 - WARNING -  * Debugger is active!
+2025-08-31 21:33:12,202 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:33:23,452 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:33:23,588 - INFO -  * Restarting with stat
+2025-08-31 21:33:24,953 - INFO - package: mysql.connector.plugins
+2025-08-31 21:33:24,953 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:33:24,954 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:33:24,956 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user ''@'localhost' (using password: NO)
+2025-08-31 21:33:24,956 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:33:24,963 - WARNING -  * Debugger is active!
+2025-08-31 21:33:24,970 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:34:18,796 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:34:18,936 - INFO -  * Restarting with stat
+2025-08-31 21:34:20,373 - INFO - package: mysql.connector.plugins
+2025-08-31 21:34:20,374 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:34:20,374 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:34:20,378 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user ''@'localhost' (using password: NO)
+2025-08-31 21:34:20,379 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:34:20,384 - WARNING -  * Debugger is active!
+2025-08-31 21:34:20,392 - INFO -  * Debugger PIN: 116-219-319
