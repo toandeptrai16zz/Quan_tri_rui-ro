@@ -1,16 +1,17 @@
-{% extends "layout.html" %}
-{% block title %}Quản lý Thiết bị & TAG{% endblock %}
+<!-- {% extends "layout.html" %} -->
+<!-- {% block title %}Quản lý Thiết bị & TAG{% endblock %} -->
 
-{% block extra_head %}
+<!-- {% block extra_head %} -->
+<!--tạm thời vô hiệu hóa , chuyển thành html tĩnh để preview sửa FE-->
 <style>
   .device-table { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
   .device-table th, .device-table td { vertical-align: middle; }
   .add-device-btn { background: linear-gradient(45deg, #11998e, #38ef7d); color: #fff; border: none; border-radius: 8px; padding: 8px 18px; font-weight: 600; }
   .add-device-btn:hover { background: linear-gradient(45deg, #38ef7d, #11998e); }
-</style>
-{% endblock %}
 
-{% block content %}
+<!-- {% endblock %} -->
+
+<!-- {% block content %} -->
 <div class="container py-4">
   <h2 class="mb-4"><i class="fa-solid fa-microchip"></i> Quản lý Thiết bị & TAG</h2>
   <button class="add-device-btn mb-3" onclick="showAddDeviceModal()"><i class="fa-solid fa-plus"></i> Thêm thiết bị mới</button>
@@ -24,8 +25,19 @@
           <th>Trạng thái</th>
         </tr>
       </thead>
-      <tbody id="devices-table-body">
-        <!-- Dữ liệu sẽ được chèn vào đây bằng JavaScript -->
+      <tbody>
+        <tr>
+          <td>ESP32_Lab1</td>
+          <td>ESP32</td>
+          <td>/dev/ttyUSB0</td>
+          <td>Còn trống</td>
+        </tr>
+        <tr>
+          <td>ESP32_Lab2</td>
+          <td>ESP32</td>
+          <td>/dev/ttyUSB1</td>
+          <td>Đang dùng bởi: sinhvienk4</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -60,6 +72,8 @@
   </div>
 </div>
 
+
+<!--
 <script>
 function showAddDeviceModal() {
   document.getElementById('addDeviceModal').style.display = 'block';
@@ -111,4 +125,5 @@ document.addEventListener('DOMContentLoaded', function() {
   loadDevices();
 });
 </script>
-{% endblock %}
+-->
+<!-- {% endblock %} -->
