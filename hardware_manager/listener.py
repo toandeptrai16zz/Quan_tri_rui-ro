@@ -27,26 +27,22 @@ def main():
         logging.error(f"Thiếu tham số. Cần 3 tham số, nhận được {len(sys.argv) - 1}.")
         sys.exit(1)
 
-    port_name = sys.argv[1]    # ví dụ: ttyUSB0
-    vendor_id = sys.argv[2]    # ví dụ: 1a86
-    product_id = sys.argv[3]   # ví dụ: 7523
+    port_name = sys.argv[1]
+    vendor_id = sys.argv[2]
+    product_id = sys.argv[3]
 
     full_port_path = f"/dev/{port_name}"
-    device_id = f"{vendor_id}:{product_id}"
+    
+    logging.info(f"Phát hiện sự kiện trên cổng: {full_port_path} với VID: {vendor_id}, PID: {product_id}")
 
-    logging.info(f"Phát hiện sự kiện trên cổng: {full_port_path} với ID: {device_id}")
-
-    device_type = DEVICE_MAP.get(device_id, "Unknown_Device")
-    logging.info(f"Định danh thiết bị: {device_type}")
-
+    # Gửi dữ liệu thô lên backend
     payload = {
         "port": full_port_path,
-        "type": device_type
+        "vendor_id": vendor_id,
+        "product_id": product_id
     }
-
-    headers = {
-        'X-Internal-Secret': INTERNAL_API_SECRET
-    }
+    
+    headers = {'X-Internal-Secret': INTERNAL_API_SECRET}
 
     try:
         logging.info(f"Gửi thông tin đến backend: {payload}")
