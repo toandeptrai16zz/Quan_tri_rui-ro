@@ -48,3 +48,26 @@
 2025-08-31 20:39:57,033 - INFO -  * Debugger PIN: 116-219-319
 2025-08-31 20:41:11,368 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
 2025-08-31 20:41:11,575 - INFO -  * Restarting with stat
+2025-08-31 20:41:13,393 - INFO - package: mysql.connector.plugins
+2025-08-31 20:41:13,394 - INFO - plugin_name: caching_sha2_password
+2025-08-31 20:41:13,394 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 20:41:13,399 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 20:41:13,401 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 20:41:13,407 - WARNING -  * Debugger is active!
+2025-08-31 20:41:13,416 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 20:43:32,688 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 21:13:57,697 - INFO - package: mysql.connector.plugins
+2025-08-31 21:13:57,751 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:13:57,752 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:13:57,760 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 21:13:57,760 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:13:57,772 - INFO -  * Restarting with stat
+2025-08-31 21:13:59,228 - INFO - package: mysql.connector.plugins
+2025-08-31 21:13:59,229 - INFO - plugin_name: caching_sha2_password
+2025-08-31 21:13:59,229 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 21:13:59,237 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 21:13:59,237 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 21:13:59,244 - WARNING -  * Debugger is active!
+2025-08-31 21:13:59,253 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 21:17:02,978 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 21:17:03,134 - INFO -  * Restarting with stat
