@@ -23,8 +23,18 @@ from functools import wraps
 from collections import defaultdict
 # Trong app.py
 from utils import (
-    get_db_connection, log_action, require_auth, ensure_user_container,
-    get_ssh_client # và các hàm khác bạn cần
+    generate_csrf_token,
+    validate_csrf_token,
+    generate_captcha,
+    validate_captcha,
+    generate_otp,
+    send_otp_email,
+    validate_password_strength,
+    require_auth,
+    ensure_user_container,
+    get_ssh_client,
+    log_action, 
+    get_db_connection
 )
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
 from flask_socketio import SocketIO, emit
