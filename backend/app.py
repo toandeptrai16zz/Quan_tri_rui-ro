@@ -743,7 +743,7 @@ def admin_dashboard():
                            blocked_users=stats.get('blocked', 0),
                            pending_users=stats.get('pending', 0),
                            logs=logs)  
-#s thêm route flask cho quản lý thiết bị và tag
+#thêm route flask cho quản lý thiết bị và tag
 
 @app.route("/admin/manage")
 @require_auth('admin')
