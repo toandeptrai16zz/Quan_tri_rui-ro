@@ -1,15 +1,14 @@
-# file: backend/hardware_api.py
-
+# backend/hardware_api.py (Phiên bản tối ưu)
 import os
 from flask import Blueprint, request, jsonify, session
 from datetime import datetime, timedelta
 import logging
 
-# Sửa lại dòng import này để trỏ đến utils.py
-from utils import get_db_connection, require_auth, log_action
+# Import từ app module chính
+from app import get_db_connection, require_auth, log_action
 
-# Tạo Blueprint
-hardware_bp = Blueprint('hardware_api', __name__)
+# Tạo Blueprint với url_prefix
+hardware_bp = Blueprint('hardware_api', __name__, url_prefix='/api/hardware')
 
 # Cấu hình logging
 logger = logging.getLogger(__name__)
