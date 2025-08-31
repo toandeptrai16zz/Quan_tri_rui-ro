@@ -1,1 +1,24 @@
-a
+version: '3.8'
+
+services:
+  database:
+    image: mysql:8.0
+    container_name: remote_lab_db
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      # Không cần MYSQL_DATABASE ở đây vì file init.sql đã tự tạo
+    volumes:
+      # Dòng này sẽ mount thư mục chứa dữ liệu DB ra ngoài container
+      - db_data:/var/lib/mysql
+      # Dòng QUAN TRỌNG: Tự động chạy file .sql khi container khởi động lần đầu
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      # Mở port 3306 để có thể kết nối từ bên ngoài vào DB (nếu cần gỡ lỗi)
+      - "3306:3306"
+
+# ... các service khác ...
+
+volumes:
+  db_data:
