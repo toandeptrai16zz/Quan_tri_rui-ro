@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theo dõi Bài làm</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --warning-gradient: linear-gradient(135deg, #ff9a56 0%, #fad0c4 100%);
+            --danger-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            --info-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.18);
+            --shadow-soft: 0 8px 32px rgba(31, 38, 135, 0.37);
+            --shadow-hover: 0 15px 35px rgba(31, 38, 135, 0.4);
+            --border-radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .main-header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+
+        .main-header h2 {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .stats-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            transition: var(--transition);
+        }
+
+        .stats-card.success::before { background: var(--success-gradient); }
+        .stats-card.warning::before { background: var(--warning-gradient); }
+        .stats-card.danger::before { background: var(--danger-gradient); }
+        .stats-card.info::before { background: var(--info-gradient); }
+
+        .stats-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .student-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .student-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            transition: var(--transition);
+        }
+
+        .student-card.completed::before { background: var(--success-gradient); }
+        .student-card.in-progress::before { background: var(--warning-gradient); }
+        .student-card.not-started::before { background: var(--danger-gradient); }
+
+        .student-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .student-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .student-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .student-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .student-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .student-id {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .student-body {
+            padding: 1.5rem;
+        }
+
+        .progress-section {
+            margin-bottom: 1rem;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .progress {
+            height: 8px;
+            border-radius: 25px;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .progress-bar {
+            border-radius: 25px;
+            transition: width 1s ease;
+        }
+
+        .progress-bar.completed { background: var(--success-gradient); }
+        .progress-bar.in-progress { background: var(--warning-gradient); }
+        .progress-bar.not-started { background: var(--danger-gradient); }
+
+        .submission-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            background: rgba(255,255,255,0.5);
+            border-radius: 12px;
+        }
+
+        .detail-item i {
+            width: 20px;
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-completed {
+            background: var(--success-gradient);
+            color: white;
+            animation: pulse-success 2s infinite;
+        }
+
+        .status-in-progress {
+            background: var(--warning-gradient);
+            color: white;
+            animation: pulse-warning 2s infinite;
+        }
+
+        .status-not-started {
+            background: var(--danger-gradient);
+            color: white;
+        }
+
+        .status-late {
+            background: #dc3545;
+            color: white;
+            animation: pulse-danger 1s infinite;
+        }
+
+        @keyframes pulse-success {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(56, 239, 125, 0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(56, 239, 125, 0); }
+        }
+
+        @keyframes pulse-warning {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 154, 86, 0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(255, 154, 86, 0); }
+        }
+
+        @keyframes pulse-danger {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(220, 53, 69, 0); }
+        }
+
+        .filter-tabs {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 0.75rem 1.5rem;
+            margin: 0 0.25rem;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .filter-btn.active {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        .filter-btn:not(.active):hover {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .session-timer {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .session-timer.warning {
+            background: var(--warning-gradient);
+            animation: pulse-warning 1s infinite;
+        }
+
+        .session-timer.danger {
+            background: var(--danger-gradient);
+            animation: pulse-danger 0.5s infinite;
+        }
+
+        .timer-text {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0;
+            font-family: 'Monaco', monospace;
+        }
+
+        .timer-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .code-preview {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            border-radius: 12px;
+            padding: 1rem;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 1rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-action {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-view {
+            background: var(--info-gradient);
+            color: white;
+        }
+
+        .btn-download {
+            background: var(--success-gradient);
+            color: white;
+        }
+
+        .btn-message {
+            background: var(--warning-gradient);
+            color: white;
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .submission-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .student-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .main-header h2 {
+                font-size: 2rem;
+            }
+
+            .action-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="main-header fade-in">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h2><i class="fa-solid fa-clipboard-list me-3"></i>Theo dõi Bài làm</h2>
+                <p class="subtitle mb-0">Giám sát tiến độ và kết quả bài làm của sinh viên</p>
+            </div>
+            <div class="d-flex gap-3">
+                <a href="/admin/study-time" class="btn btn-outline-primary">
+                    <i class="fa-solid fa-arrow-left me-2"></i>Quay lại
+                </a>
+                <button class="btn btn-success" onclick="exportResults()">
+                    <i class="fa-solid fa-download me-2"></i>Xuất kết quả
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Session Info & Timer -->
+    <div id="sessionTimer" class="session-timer fade-in">
+        <p class="timer-label">Thời gian còn lại</p>
+        <p class="timer-text" id="remainingTime">45:00</p>
+        <p class="timer-label" id="sessionName">Thực hành ESP32 - Buổi 1</p>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card success">
+                <div class="card-body text-center">
+                    <i class="fa-solid fa-check-circle fa-3x text-success mb-3"></i>
+                    <div class="stats-number text-success" id="completedCount">0</div>
+                    <h6 class="card-title">Đã hoàn thành</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card warning">
+                <div class="card-body text-center">
+                    <i class="fa-solid fa-clock fa-3x text-warning mb-3"></i>
+                    <div class="stats-number text-warning" id="inProgressCount">0</div>
+                    <h6 class="card-title">Đang làm</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card danger">
+                <div class="card-body text-center">
+                    <i class="fa-solid fa-exclamation-triangle fa-3x text-danger mb-3"></i>
+                    <div class="stats-number text-danger" id="notStartedCount">0</div>
+                    <h6 class="card-title">Chưa bắt đầu</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card info">
+                <div class="card-body text-center">
+                    <i class="fa-solid fa-users fa-3x text-primary mb-3"></i>
+                    <div class="stats-number text-primary" id="totalStudents">0</div>
+                    <h6 class="card-title">Tổng sinh viên</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs fade-in">
+        <div class="d-flex justify-content-center flex-wrap">
+            <button class="filter-btn active" onclick="filterSubmissions('all')">
+                <i class="fa-solid fa-list me-2"></i>Tất cả
+            </button>
+            <button class="filter-btn" onclick="filterSubmissions('completed')">
+                <i class="fa-solid fa-check me-2"></i>Hoàn thành
+            </button>
+            <button class="filter-btn" onclick="filterSubmissions('in-progress')">
+                <i class="fa-solid fa-clock me-2"></i>Đang làm
+            </button>
+            <button class="filter-btn" onclick="filterSubmissions('not-started')">
+                <i class="fa-solid fa-exclamation me-2"></i>Chưa bắt đầu
+            </button>
+            <button class="filter-btn" onclick="filterSubmissions('late')">
+                <i class="fa-solid fa-hourglass-end me-2"></i>Trễ hạn
+            </button>
+        </div>
+    </div>
+
+    <!-- Students List -->
+    <div id="studentsContainer">
+        <!-- Students will be rendered here -->
+    </div>
+</div>
+
+<!-- View Submission Modal -->
+<div id="viewSubmissionModal" class="modal" tabindex="-1" style="display:none;">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fa-solid fa-code me-2"></i>
+                    Chi tiết bài làm
+                </h5>
+                <button type="button" class="btn-close" onclick="hideSubmissionModal()"></button>
+            </div>
+            <div class="modal-body">
+                <div id="submissionContent">
+                    <!-- Submission content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // --- Mock Data ---
+    let currentSession = {
+        id: 1,
+        name: "Thực hành ESP32 - Buổi 1",
+        duration: 45, // minutes
+        startTime: new Date(Date.now() - 30 * 60 * 1000), // Started 30 minutes ago
+        description: "Lập trình LED nhấp nháy với ESP32"
+    };
+
+    let students = [
+        {
+            id: 1,
+            username: "nguyenvana",
+            fullName: "Nguyễn Văn A",
+            studentId: "20210001",
+            status: "completed",
+            progress: 100,
+            startTime: new Date(Date.now() - 25 * 60 * 1000),
+            submitTime: new Date(Date.now() - 5 * 60 * 1000),
+            codeLines: 45,
+            lastActivity: new Date(Date.now() - 2 * 60 * 1000),
+            submissionContent: `// LED Blink Program
+#include <Arduino.h>
+
+#define LED_PIN 2
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+  Serial.begin(115200);
+  Serial.println("ESP32 LED Blink Started");
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_PIN, LOW);
+  delay(1000);
+}`

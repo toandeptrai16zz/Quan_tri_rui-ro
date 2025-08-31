@@ -2,74 +2,89 @@
 {% block title %}Nhật ký Hoạt động{% endblock %}
 
 {% block content %}
-<div class="container py-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3><i class="fa-solid fa-clipboard-list"></i> Nhật ký Hoạt động Hệ thống</h3>
-        <a href="{{ url_for('admin_manage') }}" class="btn btn-secondary">
-            <i class="fa-solid fa-arrow-left"></i> Quay lại Quản lý
-        </a>
-    </div>
+<!-- Activity Log Configuration -->
+{% set ACTION_BADGES = {
+    'login': {'class': 'text-bg-success', 'icon': 'fa-right-to-bracket', 'label': 'Login'},
+    'logout': {'class': 'text-bg-secondary', 'icon': 'fa-right-from-bracket', 'label': 'Logout'},
+    'blocked': {'class': 'text-bg-warning', 'icon': 'fa-user-lock', 'label': 'Block User'},
+    'approved': {'class': 'text-bg-info', 'icon': 'fa-user-check', 'label': 'Approve User'},
+    'unblocked': {'class': 'text-bg-success', 'icon': 'fa-lock-open', 'label': 'Unblock User'},
+    'delete': {'class': 'text-bg-danger', 'icon': 'fa-trash', 'label': 'Delete Item'},
+    'create folder': {'class': 'text-bg-primary', 'icon': 'fa-folder-plus', 'label': 'Create Folder'},
+    'save file': {'class': 'text-bg-primary', 'icon': 'fa-save', 'label': 'Save File'},
+    'open file': {'class': 'text-bg-secondary', 'icon': 'fa-file-lines', 'label': 'Open File'},
+    'rename': {'class': 'text-bg-info', 'icon': 'fa-i-cursor', 'label': 'Rename Item'},
+    'upload': {'class': 'text-bg-primary', 'icon': 'fa-upload', 'label': 'Upload File'}
+} %}
 
-    <div class="card bg-dark border-secondary">
-        <div class="card-body">
-            <div class="table-responsive" style="max-height: 75vh;">
-                <table class="table table-dark table-hover align-middle">
-                    <thead class="sticky-top">
+<div class="container py-4">
+    <!-- Header Section -->
+    <header class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="mb-0">
+            <i class="fa-solid fa-clipboard-list me-2"></i>
+            Nhật ký Hoạt động Hệ thống
+        </h3>
+        <a href="{{ url_for('admin_manage') }}" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-arrow-left me-1"></i>
+            Quay lại Quản lý
+        </a>
+    </header>
+
+    <!-- Activity Log Table -->
+    <div class="card bg-dark border-secondary shadow-sm">
+        <div class="card-body p-0">
+            <div class="table-responsive" style="max-height: 75vh; overflow-y: auto;">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <thead class="sticky-top bg-dark">
                         <tr>
-                            <th>Thời gian</th>
-                            <th>Người thực hiện (Actor)</th>
-                            <th>Hành động</th>
-                            <th>Chi tiết / Đối tượng</th>
-                            <th>Địa chỉ IP</th>
+                            <th scope="col" class="ps-3">Thời gian</th>
+                            <th scope="col">Người thực hiện</th>
+                            <th scope="col">Hành động</th>
+                            <th scope="col">Chi tiết</th>
+                            <th scope="col" class="pe-3">IP Address</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for log in logs %}
+                        {% set action_parts = log.action.split(':', 1) %}
+                        {% set action_type = action_parts[0].strip().lower() %}
+                        {% set action_details = action_parts[1].strip() if action_parts|length > 1 else '' %}
+                        {% set badge_config = ACTION_BADGES.get(action_type, {'class': 'text-bg-dark', 'icon': 'fa-cog', 'label': action_parts[0].strip()}) %}
+                        
                         <tr>
-                            <td class="text-muted"><small>{{ log.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</small></td>
-                            <td><strong>{{ log.username }}</strong></td>
-                            
-                            {% set parts = log.action.split(':', 1) %}
-                            {% set action_type = parts[0].strip() %}
-                            {% set details = parts[1].strip() if parts|length > 1 else '' %}
-
+                            <td class="ps-3">
+                                <time datetime="{{ log.timestamp.isoformat() }}" class="text-muted small">
+                                    {{ log.timestamp.strftime('%d/%m/%Y %H:%M') }}
+                                </time>
+                            </td>
                             <td>
-                                {% if 'login' in action_type|lower %}
-                                    <span class="badge text-bg-success"><i class="fa-solid fa-right-to-bracket me-1"></i> Login</span>
-                                {% elif 'logout' in action_type|lower %}
-                                    <span class="badge text-bg-secondary"><i class="fa-solid fa-right-from-bracket me-1"></i> Logout</span>
-                                {% elif 'blocked' in action_type|lower %}
-                                    <span class="badge text-bg-warning"><i class="fa-solid fa-user-lock me-1"></i> Block User</span>
-                                {% elif 'approved' in action_type|lower %}
-                                    <span class="badge text-bg-info"><i class="fa-solid fa-user-check me-1"></i> Approve User</span>
-                                {% elif 'unblocked' in action_type|lower %}
-                                    <span class="badge text-bg-success"><i class="fa-solid fa-lock-open me-1"></i> Unblock User</span>
-                                {% elif 'delete' in action_type|lower %}
-                                    <span class="badge text-bg-danger"><i class="fa-solid fa-trash me-1"></i> Delete Item</span>
-                                {% elif 'create folder' in action_type|lower %}
-                                    <span class="badge text-bg-primary"><i class="fa-solid fa-folder-plus me-1"></i> Create Folder</span>
-                                {% elif 'save file' in action_type|lower %}
-                                    <span class="badge text-bg-primary"><i class="fa-solid fa-save me-1"></i> Save File</span>
-                                {% elif 'open file' in action_type|lower %}
-                                    <span class="badge" style="background-color: #6c757d;"><i class="fa-solid fa-file-lines me-1"></i> Open File</span>
-                                {% elif 'rename' in action_type|lower %}
-                                    <span class="badge text-bg-info"><i class="fa-solid fa-i-cursor me-1"></i> Rename Item</span>
-                                {% elif 'upload' in action_type|lower %}
-                                    <span class="badge text-bg-primary"><i class="fa-solid fa-upload me-1"></i> Upload File</span>
+                                <strong class="text-light">{{ log.username }}</strong>
+                            </td>
+                            <td>
+                                <span class="badge {{ badge_config.class }}">
+                                    <i class="fa-solid {{ badge_config.icon }} me-1"></i>
+                                    {{ badge_config.label }}
+                                </span>
+                            </td>
+                            <td>
+                                {% if action_details %}
+                                <small class="text-muted text-break">{{ action_details }}</small>
                                 {% else %}
-                                    <span class="badge text-bg-dark">{{ action_type }}</span>
+                                <span class="text-muted">—</span>
                                 {% endif %}
                             </td>
-                            <td>
-                                <small class="text-muted" style="word-break: break-all;">{{ details }}</small>
+                            <td class="pe-3">
+                                <code class="text-muted small">{{ log.ip_address }}</code>
                             </td>
-                            <td class="text-muted"><small>{{ log.ip_address }}</small></td>
                         </tr>
                         {% else %}
+                        <!-- Empty State -->
                         <tr>
-                            <td colspan="5" class="text-center text-muted p-5">
-                                <i class="fa-solid fa-inbox fa-2x mb-2"></i><br>
-                                Chưa có hoạt động nào được ghi lại.
+                            <td colspan="5" class="text-center py-5">
+                                <div class="text-muted">
+                                    <i class="fa-solid fa-inbox fa-3x mb-3 opacity-50"></i>
+                                    <p class="mb-0 fs-6">Chưa có hoạt động nào được ghi lại</p>
+                                </div>
                             </td>
                         </tr>
                         {% endfor %}
@@ -77,6 +92,74 @@
                 </table>
             </div>
         </div>
+        
+        <!-- Footer Info -->
+        {% if logs %}
+        <div class="card-footer bg-dark border-secondary text-muted text-center py-2">
+            <small>
+                <i class="fa-solid fa-info-circle me-1"></i>
+                Hiển thị {{ logs|length }} hoạt động gần nhất
+            </small>
+        </div>
+        {% endif %}
     </div>
 </div>
+
+<!-- Custom Styles -->
+<style>
+.table-responsive {
+    scrollbar-width: thin;
+    scrollbar-color: #6c757d #343a40;
+}
+
+.table-responsive::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #343a40;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #6c757d;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #8e959b;
+}
+
+.text-break {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+    border-color: #495057;
+}
+
+.table > thead > tr > th {
+    border-bottom: 2px solid #6c757d;
+    font-weight: 600;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+}
+
+@media (max-width: 768px) {
+    .table th:nth-child(4),
+    .table td:nth-child(4) {
+        display: none;
+    }
+    
+    .table th:nth-child(5),
+    .table td:nth-child(5) {
+        display: none;
+    }
+}
+</style>
 {% endblock %}
