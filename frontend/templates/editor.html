@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+{% block title %}Editor - {{ username }}{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+  <h3 class="mb-3"><i class="fa-solid fa-code"></i> Code Editor: <strong>{{ username }}</strong></h3>
+
+  <div class="mb-3">
+    <button class="btn btn-success" id="newFileBtn"><i class="fa-solid fa-file"></i> Tạo file mới</button>
+    <button class="btn btn-primary" id="saveFileBtn"><i class="fa-solid fa-save"></i> Lưu file</button>
+    <button class="btn btn-warning" id="newFolderBtn"><i class="fa-solid fa-folder-plus"></i> Tạo thư mục</button>
+
+    <select id="fileSelect" class="form-select d-inline-block w-auto ms-2"></select>
+  </div>
+
+  <div id="editor" style="height:600px; width:100%; border:1px solid #444; border-radius:8px;"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.23.4/ace.js"></script>
+<script>
+let editor;
+let currentFile = "";
+let currentPath = "."; // ✅ thư mục hiện tại (gốc user)
+
+// ==================== Load danh sách file ====================
+async function refreshFiles() {
+  const res = await fetch(`/user/{{ username }}/files`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ path: currentPath })
+  });
+  const data = await res.json();
+  const select = document.getElementById("fileSelect");
+  select.innerHTML = "";
+
+  if (currentPath !== ".") {
+    const up = document.createElement("option");
+    up.value = "..";
+    up.textContent = "⬅ Quay lại";
+    select.appendChild(up);
+  }
+
+  if (data.files) {
+    data.files.forEach(f => {
+      const opt = document.createElement("option");
+      opt.value = f.name;
+      opt.textContent = f.is_dir ? "[Folder] " + f.name : f.name;
+      opt.dataset.isDir = f.is_dir;
+      select.appendChild(opt);
+    });
+  }
+}
+
+// ==================== DOM loaded ====================
+document.addEventListener("DOMContentLoaded", () => {
+  editor = ace.edit("editor");
+  editor.setTheme("ace/theme/monokai");
+  editor.session.setMode("ace/mode/python");
+
+  refreshFiles();
+
+  // ---------- Tạo file ----------
+  document.getElementById("newFileBtn").addEventListener("click", async () => {
+    const filename = prompt("Nhập tên file mới:");
+    if (!filename) return;
+
+    const res = await fetch(`/user/{{ username }}/editor/new`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ filename, path: currentPath })
+    });
+    const data = await res.json();
+    if (data.success) {
+      alert("Đã tạo file: " + filename);
+      refreshFiles();
+    } else {
+      alert("Lỗi: " + data.error);
+    }
+  });
+
+  // ---------- Tạo thư mục ----------
+  document.getElementById("newFolderBtn").addEventListener("click", async () => {
+    const folderName = prompt("Nhập tên thư mục mới:");
+    if (!folderName) return;
+
+    const res = await fetch(`/user/{{ username }}/create-folder`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ folder_name: folderName, path: currentPath })
+    });
+    const data = await res.json();
+    if (data.success) {
+      alert("Đã tạo thư mục: " + folderName);
+      refreshFiles();
+    } else {
+      alert("Lỗi tạo thư mục: " + data.error);
+    }
+  });
+
+  // ---------- Mở file / vào folder ----------
+  document.getElementById("fileSelect").addEventListener("change", async (e) => {
+    const filename = e.target.value;
+    if (!filename) return;
+
+    const opt = e.target.selectedOptions[0];
+    const isDir = opt.dataset.isDir === "true";
+
+    if (filename === "..") {
+      currentPath = currentPath.split("/").slice(0, -1).join("/") || ".";
+      refreshFiles();
+      return;
+    }
+
+    if (isDir) {
+      currentPath = currentPath === "." ? filename : currentPath + "/" + filename;
+      refreshFiles();
+    } else {
+      currentFile = filename;
+      const res = await fetch(`/user/{{ username }}/editor/load`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ filename, path: currentPath })
+      });
+      const data = await res.json();
+      if (data.success) {
+        editor.setValue(data.content, -1);
+      } else {
+        alert("Không mở được file: " + data.error);
+      }
+    }
+  });
+
+  // ---------- Lưu file ----------
+  document.getElementById("saveFileBtn").addEventListener("click", async () => {
+    if (!currentFile) {
+      alert("Chưa chọn file để lưu!");
+      return;
+    }
+    const content = editor.getValue();
+    const res = await fetch(`/user/{{ username }}/editor/save`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ filename: currentFile, content, path: currentPath })
+    });
+    const data = await res.json();
+    if (data.success) alert("Đã lưu file!");
+    else alert("Lưu lỗi: " + data.error);
+  });
+});
+</script>
+{% endblock %}
+

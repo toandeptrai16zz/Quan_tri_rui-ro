@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block title %}Đăng ký{% endblock %}
+
+{% block extra_head %}
+<style>
+  /* CSS giữ nguyên như file bạn gửi */
+  .auth-container { display: flex; justify-content: center; align-items: center; min-height: 80vh; }
+  .auth-card { width: 450px; background: #1e1e1e; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); }
+  .auth-header h2 { font-weight: 700; font-size: 2rem; background: linear-gradient(90deg, #5e72e4, #9254de); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .form-control-dark { background-color: #2a2a2e; border: 1px solid #444; color: #fff; border-radius: 8px; padding: 12px 16px; }
+  .form-control-dark:focus { background-color: #2a2a2e; border-color: #5e72e4; box-shadow: 0 0 0 0.25rem rgba(94, 114, 228, 0.25); color: #fff; }
+  .btn-auth { background: linear-gradient(90deg, #5e72e4, #9254de); border: none; padding: 12px; font-weight: 600; font-size: 1.1rem; border-radius: 8px; transition: all 0.3s ease; }
+  .btn-auth:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(146, 84, 222, 0.3); }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+  <div class="auth-card animate__animated animate__fadeInUp">
+    <div class="text-center mb-4 auth-header">
+      <h2>Tạo Tài Khoản</h2>
+      <p class="text-muted">Bắt đầu hành trình của bạn với EPU Tech</p>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ 'danger' if category == 'error' else 'info' }} mb-3" role="alert">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="/register">
+      <div class="mb-3">
+        <label class="form-label">Tên tài khoản</label>
+        <input type="text" name="username" class="form-control form-control-dark" required placeholder="Tối thiểu 3 ký tự">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control form-control-dark" required placeholder="Dùng để xác thực tài khoản">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Mật khẩu</label>
+        <input type="password" name="password" class="form-control form-control-dark" required placeholder="Tối thiểu 8 ký tự">
+      </div>
+       <div class="mb-4">
+        <label class="form-label">Xác nhận Mật khẩu</label>
+        <input type="password" name="confirm_password" class="form-control form-control-dark" required placeholder="Nhập lại mật khẩu">
+      </div>
+      <button type="submit" class="btn btn-primary w-100 btn-auth">Tiếp tục <i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+    <div class="text-center mt-4">
+      <span class="text-muted">Đã có tài khoản?</span> <a href="/login">Đăng nhập</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

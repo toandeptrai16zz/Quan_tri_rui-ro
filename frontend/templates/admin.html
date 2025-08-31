@@ -1,0 +1,238 @@
+{% extends "layout.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block extra_head %}
+<style>
+  .stats-card {
+    background: linear-gradient(135deg, var(--card-gradient));
+    border: none;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .stats-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    pointer-events: none;
+  }
+  .stats-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+  .stats-card.primary { --card-gradient: #667eea, #764ba2; }
+  .stats-card.success { --card-gradient: #11998e, #38ef7d; }
+  .stats-card.warning { --card-gradient: #ff9a56, #fad0c4; }
+  .stats-card.info { --card-gradient: #667eea, #764ba2; }
+  .stats-card.danger { --card-gradient: #ff6b6b, #ee5a24; }
+  .stats-number { font-size: 2.5rem; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+  .stats-icon { opacity: 0.7; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
+  .log-table { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 16px; border: 1px solid rgba(255,255,255,0.2); overflow: hidden; }
+  .log-table thead { background: linear-gradient(135deg, #667eea, #764ba2); }
+  .log-row { transition: all 0.2s ease; }
+  .log-row:hover { background: rgba(102, 126, 234, 0.05); transform: translateX(4px); }
+  .action-badge { padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .action-login { background: linear-gradient(45deg, #28a745, #20c997); color: white; }
+  .action-logout { background: linear-gradient(45deg, #6c757d, #495057); color: white; }
+  .action-register { background: linear-gradient(45deg, #007bff, #0056b3); color: white; }
+  .action-admin { background: linear-gradient(45deg, #dc3545, #bd2130); color: white; }
+  .quick-actions { background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)); backdrop-filter: blur(10px); border-radius: 16px; border: 1px solid rgba(255,255,255,0.3); padding: 24px; }
+  .refresh-btn { background: linear-gradient(45deg, #667eea, #764ba2); border: none; border-radius: 12px; color: white; padding: 8px 16px; transition: all 0.3s ease; }
+  .refresh-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3); }
+  .refresh-btn:active { transform: translateY(0); }
+  .admin-header {
+    background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 24px; border-radius: 16px;
+    margin-bottom: 24px; position: relative; overflow: hidden;
+  }
+  .admin-header::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    pointer-events: none;
+  }
+  .system-status { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #28a745; animation: pulse 2s infinite; }
+  @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="admin-header animate__animated animate__fadeInDown">
+  <div class="d-flex justify-content-between align-items-center">
+    <div>
+      <h2 class="mb-2"><i class="fa-solid fa-gauge-high"></i> Admin Dashboard</h2>
+      <div class="system-status">
+        <div class="status-dot"></div>
+        <span>System Online</span>
+        <span class="ms-3"><i class="fa-solid fa-clock"></i> <span id="currentTime"></span></span>
+      </div>
+    </div>
+    <div class="d-flex gap-3">
+      <a href="{{ url_for('admin_manage') }}" class="btn btn-light btn-lg"><i class="fa-solid fa-users-gear"></i> Quản lý User</a>
+      <a href="{{ url_for('admin_manage') }}" class="btn btn-warning btn-lg">
+        <i class="fa-solid fa-user-check"></i> Duyệt User
+        {% if pending_users > 0 %}<span class="badge bg-danger ms-2">{{ pending_users }}</span>{% endif %}
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row g-4 mb-5">
+  <div class="col-lg-3 col-md-6">
+    <div class="card stats-card primary text-white h-100">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        <div>
+          <h6 class="card-title mb-2 text-uppercase">Tổng số User</h6>
+          <div class="stats-number">{{ total_users }}</div>
+          <small class="opacity-75"><i class="fa-solid fa-chart-line"></i> Tất cả tài khoản</small>
+        </div>
+        <i class="fa-solid fa-users fa-3x stats-icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="card stats-card success text-white h-100">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        <div>
+          <h6 class="card-title mb-2 text-uppercase">User Hoạt động</h6>
+          <div class="stats-number">{{ active_users }}</div>
+          <small class="opacity-75"><i class="fa-solid fa-check-circle"></i> Đang sử dụng</small>
+        </div>
+        <i class="fa-solid fa-user-check fa-3x stats-icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="card stats-card danger text-white h-100">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        <div>
+          <h6 class="card-title mb-2 text-uppercase">User bị chặn</h6>
+          <div class="stats-number">{{ blocked_users }}</div>
+          <small class="opacity-75"><i class="fa-solid fa-ban"></i> Tài khoản khóa</small>
+        </div>
+        <i class="fa-solid fa-user-lock fa-3x stats-icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <a href="{{ url_for('admin_manage') }}" class="text-decoration-none">
+      <div class="card stats-card warning text-white h-100">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <div>
+            <h6 class="card-title mb-2 text-uppercase">Chờ duyệt</h6>
+            <div class="stats-number">{{ pending_users }}</div>
+            <small class="opacity-75"><i class="fa-solid fa-hourglass-half"></i> Cần xử lý</small>
+          </div>
+          <i class="fa-solid fa-user-clock fa-3x stats-icon"></i>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="card log-table">
+  <div class="card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <h5 class="mb-0 text-white"><i class="fa-solid fa-history"></i> Hoạt động gần nhất (50 logs)</h5>
+      <button class="refresh-btn" onclick="refreshLogs()" id="refreshLogsBtn">
+        <i class="fa-solid fa-sync-alt"></i> Refresh
+      </button>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <div class="table-responsive" style="max-height: 500px;">
+      <table class="table table-hover mb-0">
+        <thead class="sticky-top">
+          <tr>
+            <th class="text-white">Username</th>
+            <th class="text-white">Hành động</th>
+            <th class="text-white">IP Address</th>
+            <th class="text-white">Thời gian</th>
+          </tr>
+        </thead>
+        <tbody id="logsTableBody">
+          {% for log in logs %}
+          <tr class="log-row">
+            <td><strong>{{ log.username }}</strong></td>
+            <td>
+              {% set action_type = log.action.split(':')[0] %}
+              <span class="action-badge action-{{ 'login' if 'login' in action_type else 'logout' if 'logout' in action_type else 'register' if 'register' in action_type else 'admin' }}">
+                {{ log.action }}
+              </span>
+            </td>
+            <td><span class="text-muted"><i class="fa-solid fa-globe"></i> {{ log.ip_address or 'N/A' }}</span></td>
+            <td><span class="text-muted" title="{{ log.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}">{{ log.timestamp.strftime('%H:%M:%S') }}</span></td>
+          </tr>
+          {% else %}
+          <tr><td colspan="4" class="text-center text-muted py-4"><i class="fa-solid fa-inbox fa-2x mb-2"></i><br>Chưa có log nào</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+function updateTime() {
+  const now = new Date();
+  document.getElementById('currentTime').textContent = now.toLocaleString('vi-VN');
+}
+
+async function refreshLogs() {
+  const btn = document.getElementById('refreshLogsBtn');
+  const icon = btn.querySelector('i');
+  btn.disabled = true;
+  icon.classList.add('fa-spin');
+  
+  try {
+    const response = await fetch('/admin/api/logs');
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    
+    if (data.success) {
+      updateLogsTable(data.logs);
+    } else {
+      console.error('API returned error:', data.error);
+    }
+  } catch (error) {
+    console.error('Error refreshing logs:', error);
+    // Optionally show an error message to the user
+  } finally {
+    btn.disabled = false;
+    icon.classList.remove('fa-spin');
+  }
+}
+
+function updateLogsTable(logs) {
+  const tbody = document.getElementById('logsTableBody');
+  tbody.innerHTML = '';
+  
+  if (!logs || logs.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="4" class="text-center text-muted py-4"><i class="fa-solid fa-inbox fa-2x mb-2"></i><br>Chưa có log nào</td></tr>`;
+    return;
+  }
+  
+  logs.forEach(log => {
+    const actionType = log.action.split(':')[0];
+    let badgeClass = 'admin';
+    if (actionType.includes('login')) badgeClass = 'login';
+    else if (actionType.includes('logout')) badgeClass = 'logout';
+    else if (actionType.includes('register')) badgeClass = 'register';
+    
+    const row = document.createElement('tr');
+    row.className = 'log-row';
+    row.innerHTML = `
+      <td><strong>${log.username}</strong></td>
+      <td><span class="action-badge action-${badgeClass}">${log.action}</span></td>
+      <td><span class="text-muted"><i class="fa-solid fa-globe"></i> ${log.ip_address || 'N/A'}</span></td>
+      <td><span class="text-muted" title="${new Date(log.timestamp).toLocaleString('vi-VN')}">${new Date(log.timestamp).toLocaleTimeString('vi-VN')}</span></td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  updateTime();
+  setInterval(updateTime, 1000);
+  setInterval(refreshLogs, 30000); // Auto refresh logs every 30 seconds
+});
+</script>
+{% endblock %}

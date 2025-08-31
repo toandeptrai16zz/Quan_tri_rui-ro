@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+{% block title %}Quản lý User{% endblock %}
+
+{% block extra_head %}
+<style>
+  :root {
+    --primary-gradient: linear-gradient(135deg, #667eea, #764ba2);
+    --success-gradient: linear-gradient(45deg, #28a745, #20c997);
+    --warning-gradient: linear-gradient(45deg, #ffc107, #e0a800);
+    --danger-gradient: linear-gradient(45deg, #dc3545, #bd2130);
+    --dark-bg: #1a1a1e;
+    --dark-surface: #2a2a2e;
+    --dark-border: rgba(255,255,255,0.1);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255,255,255,0.7);
+  }
+  .management-header { background: var(--primary-gradient); color: var(--text-primary); padding: 2rem; border-radius: 20px; margin-bottom: 2rem; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); }
+  .management-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>'); pointer-events: none; }
+  .stats-row { margin-bottom: 2rem; }
+  .stats-item { background: var(--dark-surface); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--dark-border); transition: all 0.3s ease; position: relative; overflow: hidden; }
+  .stats-item::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--primary-gradient); }
+  .stats-item:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
+  .stats-number { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .controls-container { background: var(--dark-surface); border-radius: 16px; border: 1px solid var(--dark-border); padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+  .users-table-container { background: var(--dark-surface); border-radius: 20px; border: 1px solid var(--dark-border); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+  .users-table { margin-bottom: 0; }
+  .users-table thead { background: var(--primary-gradient); position: sticky; top: 0; z-index: 10; }
+  .users-table thead th { border: none; padding: 1rem; font-weight: 600; color: white !important; }
+  .user-row { transition: all 0.3s ease; border-left: 4px solid transparent; background: var(--dark-surface); }
+  .user-row:hover { background: rgba(102, 126, 234, 0.1) !important; border-left-color: #667eea; transform: translateX(4px); }
+  .user-row td { padding: 1rem; vertical-align: middle; border-color: var(--dark-border); }
+  .status-badge { padding: 8px 16px; border-radius: 25px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+  .status-active { background: var(--success-gradient); color: white; }
+  .status-blocked { background: var(--danger-gradient); color: white; }
+  .status-pending { background: var(--warning-gradient); color: #000; }
+  .action-btn { background: none; border: none; padding: 8px 12px; border-radius: 10px; font-size: 14px; font-weight: 500; transition: all 0.3s ease; margin: 0 3px; position: relative; overflow: hidden; cursor: pointer; }
+  .action-btn:hover { transform: translateY(-2px) scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+  .btn-unblock { background: var(--success-gradient); color: white; }
+  .btn-block { background: var(--warning-gradient); color: #000; }
+  .btn-delete { background: var(--danger-gradient); color: white; }
+  .user-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary-gradient); display: inline-flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 16px; margin-right: 12px; box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3); }
+  .add-user-modal .modal-content { border-radius: 20px; border: none; background-color: var(--dark-surface); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+  .add-user-modal .modal-header { background: var(--primary-gradient); color: white; border-radius: 20px 20px 0 0; border: none; padding: 1.5rem 2rem; }
+  .form-control-dark, .form-select { background-color: rgba(255,255,255,0.05); border: 1px solid var(--dark-border); color: var(--text-primary); border-radius: 10px; padding: 12px 16px; transition: all 0.3s ease; }
+  .form-control-dark:focus, .form-select:focus { background-color: rgba(255,255,255,0.08); border-color: #667eea; box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25); color: var(--text-primary); }
+  .btn-primary { background: var(--primary-gradient); border: none; padding: 12px 24px; border-radius: 10px; font-weight: 600; transition: all 0.3s ease; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4); }
+  .nav-tabs { border-bottom: 2px solid var(--dark-border); margin-bottom: 2rem; }
+  .nav-tabs .nav-link { background: none; border: none; color: var(--text-secondary); padding: 12px 24px; border-radius: 10px 10px 0 0; transition: all 0.3s ease; }
+  .nav-tabs .nav-link.active { background: var(--primary-gradient); color: white; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="management-header">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div>
+                <h2 class="mb-2"><i class="fa-solid fa-users-gear"></i> Quản lý User</h2>
+                <p class="mb-0 opacity-75">Quản lý tài khoản người dùng và phân quyền hệ thống</p>
+            </div>
+            <button type="button" class="btn btn-light mt-3 mt-md-0" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                <i class="fa-solid fa-user-plus"></i> Thêm User Mới
+            </button>
+        </div>
+    </div>
+
+    <div class="users-table-container">
+        <div class="table-responsive">
+            <table class="table users-table table-dark table-hover mb-0" id="usersTable">
+                <thead>
+                    <tr>
+                        <th><i class="fa-solid fa-user me-2"></i>User</th>
+                        <th><i class="fa-solid fa-shield me-2"></i>Vai trò</th>
+                        <th class="text-center"><i class="fa-solid fa-signal me-2"></i>Trạng thái</th>
+                        <th class="text-center"><i class="fa-solid fa-calendar me-2"></i>Ngày tạo</th>
+                        <th class="text-center"><i class="fa-solid fa-cogs me-2"></i>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr class="user-row">
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="user-avatar">{{ user.username[0].upper() }}</div>
+                                <div>
+                                    <div class="fw-bold">{{ user.username }}</div>
+                                    <small class="text-muted">{{ user.email or 'No Email' }}</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>{{ user.role|title }}</td>
+                        <td class="text-center">
+                            <span class="status-badge status-{{ user.status }}">
+                                <i class="fa-solid fa-{{ 'check-circle' if user.status == 'active' else 'lock' if user.status == 'blocked' else 'clock' }}"></i>
+                                {{ 'Hoạt động' if user.status == 'active' else 'Bị chặn' if user.status == 'blocked' else 'Chờ duyệt' }}
+                            </span>
+                        </td>
+                        <td class="text-center">
+                            <small class="text-muted">{{ user.created_at.strftime('%d/%m/%Y') if user.created_at else 'N/A' }}</small>
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group" role="group">
+                                {% if user.role != 'admin' %}
+                                    {% if user.status == 'active' %}
+                                        <form method="POST" action="{{ url_for('change_user_status', action='block', username=user.username) }}" style="display: inline;">
+                                            <button type="submit" class="action-btn btn-block" title="Khóa tài khoản" onclick="return confirm('⚠️ Bạn chắc chắn muốn KHÓA user này?')"><i class="fa-solid fa-user-lock"></i></button>
+                                        </form>
+                                    {% elif user.status == 'blocked' %}
+                                        <form method="POST" action="{{ url_for('change_user_status', action='unblock', username=user.username) }}" style="display: inline;">
+                                            <button type="submit" class="action-btn btn-unblock" title="Mở khóa tài khoản" onclick="return confirm('✅ Bạn chắc chắn muốn MỞ KHÓA user này?')"><i class="fa-solid fa-user-check"></i></button>
+                                        </form>
+                                    {% elif user.status == 'pending' %}
+                                        <form method="POST" action="{{ url_for('change_user_status', action='approve', username=user.username) }}" style="display: inline;">
+                                            <button type="submit" class="action-btn btn-unblock" title="Duyệt tài khoản" onclick="return confirm('✅ Bạn chắc chắn muốn DUYỆT user này?')"><i class="fa-solid fa-check"></i></button>
+                                        </form>
+                                    {% endif %}
+                                    <form method="POST" action="{{ url_for('delete_user', user_id=user.id) }}" style="display: inline;">
+                                        <button type="submit" class="action-btn btn-delete" onclick="return confirm('🗑️ Bạn chắc chắn muốn XÓA VĨNH VIỄN user này?\nHành động này không thể hoàn tác!')" title="Xóa tài khoản"><i class="fa-solid fa-trash"></i></button>
+                                    </form>
+                                {% endif %}
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade add-user-modal" id="addUserModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="fa-solid fa-user-plus"></i> Thêm User Mới</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="POST" action="{{ url_for('add_user') }}" id="addUserForm">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label"><i class="fa-solid fa-user"></i> Username</label>
+            <input type="text" name="username" class="form-control form-control-dark" placeholder="Tối thiểu 3 ký tự" required minlength="3">
+          </div>
+          <div class="mb-3">
+            <label class="form-label"><i class="fa-solid fa-lock"></i> Password</label>
+            <input type="password" name="password" class="form-control form-control-dark" placeholder="Tối thiểu 8 ký tự" required minlength="8">
+          </div>
+          <div class="mb-3">
+            <label class="form-label"><i class="fa-solid fa-envelope"></i> Email (Tùy chọn)</label>
+            <input type="email" name="email" class="form-control form-control-dark" placeholder="vidu@email.com">
+            <div class="form-text text-muted">Nếu có email, user sẽ dùng OTP khi đăng nhập.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label"><i class="fa-solid fa-shield"></i> Vai trò</label>
+            <select name="role" class="form-select form-control-dark">
+              <option value="user" selected>👤 User - Người dùng thường</option>
+              <option value="admin">👑 Admin - Quản trị viên</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-times"></i> Hủy</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Thêm User</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

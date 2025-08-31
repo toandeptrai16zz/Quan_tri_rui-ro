@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block title %}File Manager & Terminal{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+  <h3 class="mb-3 animate__animated animate__fadeInDown">
+    File Manager & Terminal: <strong>{{ username }}</strong>
+  </h3>
+
+  <!-- Tabs -->
+  <ul class="nav nav-tabs animate__animated animate__fadeInUp" id="fileTerminalTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="files-tab" data-bs-toggle="tab" data-bs-target="#files" type="button" role="tab">
+        <i class="fa-solid fa-folder"></i> Files
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="terminal-tab" data-bs-toggle="tab" data-bs-target="#terminal" type="button" role="tab">
+        <i class="fa-solid fa-terminal"></i> Terminal
+      </button>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3" id="fileTerminalTabContent">
+    <!-- File Manager Tab -->
+    <div class="tab-pane fade show active" id="files" role="tabpanel">
+      <div class="card card-soft p-3">
+        <form id="uploadForm" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="fileInput" class="form-label">Upload file vào container:</label>
+            <input class="form-control" type="file" id="fileInput" name="file">
+          </div>
+          <button type="submit" class="btn btn-success"><i class="fa-solid fa-upload"></i> Upload</button>
+        </form>
+        <hr>
+        <h5>Files trong container:</h5>
+        <ul id="fileList" class="list-group list-group-flush">
+          <!-- Danh sách file sẽ load bằng JS -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Terminal Tab -->
+    <div class="tab-pane fade" id="terminal" role="tabpanel">
+      <div class="card card-soft p-3">
+        <div id="xterm" style="height:400px; width:100%; background:#1e1e1e;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<!-- Xterm.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
+<script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xterm/lib/addons/fit/fit.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // ================== Upload file ==================
+    const form = document.getElementById("uploadForm");
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const fileInput = document.getElementById("fileInput");
+        if (!fileInput.files.length) return alert("Chọn file trước!");
+
+        const formData = new FormData();
+        formData.append("file", fileInput.files[0]);
+
+        const res = await fetch("/user/{{ username }}/upload", {
+            method: "POST",
+            body: formData
+        });
+        const data = await res.json();
+        if (data.ok) alert("Upload thành công!");
+        else alert("Upload lỗi!");
+        fileInput.value = "";
+    });
+
+    // ================== Terminal ==================
+    const term = new Terminal();
+    term.open(document.getElementById('xterm'));
+    term.write("Kết nối SSH tới container...\r\n");
+
+    const socket = io(); // SocketIO
+    socket.on('connect', () => {
+        term.write("✔ SocketIO connected!\r\n");
+    });
+
+    term.onData(data => {
+        socket.emit('terminal_input', {username: "{{ username }}", data: data});
+    });
+
+    socket.on('terminal_output', data => {
+        term.write(data.output);
+    });
+});
+</script>
+{% endblock %}
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Dev Portal{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111 !important;
+    }
+    .navbar {
+        background: rgba(17, 17, 17, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    .brand-gradient {
+      background: linear-gradient(90deg, #5e72e4, #9254de);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+    .toast-container {
+      z-index: 9999;
+    }
+    /* Đảm bảo content block có thể chiếm toàn bộ chiều cao còn lại */
+    html, body {
+        height: 100%;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-wrapper {
+        flex: 1;
+        overflow: auto; /* Thêm scroll nếu nội dung dài */
+    }
+  </style>
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top border-bottom border-secondary border-opacity-25">
+    <div class="container-fluid px-3">
+      <a class="navbar-brand fs-4" href="/">
+        <i class="fa-solid fa-cubes-stacked"></i>
+        <span class="brand-gradient">EPU Tech</span>
+      </a>
+      <div class="d-flex gap-2">
+        {% if session.get('username') %}
+          {% if session.get('role') == 'admin' %}
+            <a class="btn btn-outline-primary" href="{{ url_for('admin_manage') }}"><i class="fa-solid fa-shield-halved"></i> Admin</a>
+          {% else %}
+            <a class="btn btn-outline-info" href="{{ url_for('user_workspace', username=session['username']) }}"><i class="fa-solid fa-terminal"></i> Dashboard</a>
+          {% endif %}
+          <a class="btn btn-outline-danger" href="{{ url_for('logout') }}"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+        {% else %}
+          <a class="btn btn-outline-light" href="{{ url_for('login_page') }}">Đăng nhập</a>
+          <a class="btn btn-primary" href="{{ url_for('register') }}">Đăng ký</a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="toast-container position-fixed top-0 end-0 p-3 mt-5">
+        {% for category, message in messages %}
+        {% set alert_type = 'primary' if category == 'message' else category %}
+        <div class="toast show align-items-center text-bg-{{ alert_type }} border-0" role="alert">
+          <div class="d-flex">
+            <div class="toast-body">{{ message }}</div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <div class="content-wrapper">
+    {% block content %}{% endblock %}
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

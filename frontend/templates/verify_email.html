@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác thực Email - EPU Tech</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; font-family: 'Poppins', sans-serif; display: flex; align-items: center; justify-content: center; }
+        .auth-card { max-width: 500px; width: 100%; background: rgba(30, 30, 30, 0.95); border-radius: 24px; padding: 2.5rem; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px); color: #fff; }
+        .auth-header h2 { font-weight: 700; background: linear-gradient(90deg, #5e72e4, #9254de); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-muted { color: rgba(255, 255, 255, 0.6) !important; }
+        .otp-input { text-align: center; font-size: 24px; font-weight: bold; border-radius: 12px; background: #2a2a2e; border: 1px solid #444; color: #fff; }
+        .otp-input:focus { border-color: #5e72e4; box-shadow: 0 0 0 0.25rem rgba(94, 114, 228, 0.25); }
+        .btn-auth { background: linear-gradient(90deg, #5e72e4, #9254de); border: none; padding: 14px; font-weight: 600; border-radius: 12px; transition: all 0.3s ease; }
+        .btn-auth:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(146, 84, 222, 0.4); }
+        .alert { border-radius: 12px; }
+    </style>
+</head>
+<body>
+    <div class="auth-card">
+        <div class="text-center mb-4 auth-header">
+            <h2>Xác thực Email</h2>
+            <p class="text-muted">Một mã OTP đã được gửi đến <strong>{{ email }}</strong>. Vui lòng nhập mã vào bên dưới.</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'danger' if category == 'error' else 'info' }}" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('verify_email') }}">
+            <div class="mb-4">
+                 <input type="text" name="otp" class="form-control form-control-lg otp-input" required maxlength="6" pattern="\d{6}" title="Vui lòng nhập 6 chữ số" placeholder="______" autofocus>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 btn-auth">
+                <i class="fa-solid fa-shield-alt me-2"></i>Xác thực và Hoàn tất
+            </button>
+        </form>
+
+        <div class="text-center mt-4">
+            <a href="{{ url_for('register') }}" class="text-muted small">Quay lại trang đăng ký</a>
+        </div>
+    </div>
+</body>
+</html>

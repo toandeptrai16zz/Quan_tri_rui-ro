@@ -1,0 +1,2038 @@
+2025-08-24 14:32:06,671 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 14:32:06,676 - WARNING -  * Debugger is active!
+2025-08-24 14:32:06,688 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 14:44:35,280 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 14:44:35,283 - INFO -  * Restarting with stat
+2025-08-24 14:44:38,108 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 14:44:38,112 - WARNING -  * Debugger is active!
+2025-08-24 14:44:38,121 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 14:49:30,451 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 14:49:30,821 - INFO -  * Restarting with stat
+2025-08-24 14:49:32,458 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 14:49:32,460 - WARNING -  * Debugger is active!
+2025-08-24 14:49:32,467 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 14:52:09,825 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 14:52:10,064 - INFO -  * Restarting with stat
+2025-08-24 14:52:11,043 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 14:52:11,046 - WARNING -  * Debugger is active!
+2025-08-24 14:52:11,052 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 15:02:20,362 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:02:20,364 - INFO -  * Restarting with stat
+2025-08-24 15:02:21,179 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:02:21,181 - WARNING -  * Debugger is active!
+2025-08-24 15:02:21,238 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 15:07:31,680 - INFO - Created default admin user: admin/admin123!@#
+2025-08-24 15:07:31,864 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:07:31,868 - INFO -  * Restarting with stat
+2025-08-24 15:07:32,995 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:07:33,001 - WARNING -  * Debugger is active!
+2025-08-24 15:07:33,019 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 15:08:32,806 - ERROR - LOG ACTION ERROR: 1054 (42S22): Unknown column 'success' in 'field list'
+2025-08-24 15:09:51,548 - ERROR - LOG ACTION ERROR: 1054 (42S22): Unknown column 'success' in 'field list'
+2025-08-24 15:29:06,268 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:29:06,270 - INFO -  * Restarting with stat
+2025-08-24 15:29:07,187 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:29:07,188 - WARNING -  * Debugger is active!
+2025-08-24 15:29:07,196 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 15:29:44,193 - ERROR - LOG ACTION ERROR: 1054 (42S22): Unknown column 'success' in 'field list'
+2025-08-24 15:30:57,561 - ERROR - LOG ACTION ERROR: 1054 (42S22): Unknown column 'success' in 'field list'
+2025-08-24 15:32:34,690 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:32:34,692 - INFO -  * Restarting with stat
+2025-08-24 15:32:35,519 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:32:35,523 - WARNING -  * Debugger is active!
+2025-08-24 15:32:35,528 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 15:35:18,933 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 15:35:19,160 - INFO -  * Restarting with stat
+2025-08-24 15:37:46,324 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:37:46,326 - INFO -  * Restarting with stat
+2025-08-24 15:37:47,151 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:37:47,154 - WARNING -  * Debugger is active!
+2025-08-24 15:37:47,164 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 15:45:35,321 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 15:45:35,529 - INFO -  * Restarting with stat
+2025-08-24 15:45:36,883 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 15:45:36,888 - WARNING -  * Debugger is active!
+2025-08-24 15:45:36,897 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 16:00:12,863 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 16:00:13,120 - INFO -  * Restarting with stat
+2025-08-24 16:00:14,060 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:00:14,063 - WARNING -  * Debugger is active!
+2025-08-24 16:00:14,068 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 16:00:32,366 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 16:00:32,562 - INFO -  * Restarting with stat
+2025-08-24 16:00:33,456 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:00:33,458 - WARNING -  * Debugger is active!
+2025-08-24 16:00:33,465 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 16:02:51,365 - INFO - Container 'sinhvien_test-dev' not running. Ensuring it is started.
+2025-08-24 16:05:29,834 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 16:05:30,045 - INFO -  * Restarting with stat
+2025-08-24 16:05:31,195 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:05:31,199 - WARNING -  * Debugger is active!
+2025-08-24 16:05:31,206 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 16:06:06,442 - INFO - Container 'sinhvien_test-dev' not running. Ensuring it is started.
+2025-08-24 16:10:39,932 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:10:39,934 - INFO -  * Restarting with stat
+2025-08-24 16:10:40,522 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:10:40,527 - WARNING -  * Debugger is active!
+2025-08-24 16:10:40,533 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 16:11:25,119 - INFO - Container 'sinhvien_test-dev' not running. Ensuring it is started.
+2025-08-24 16:15:27,285 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:15:27,286 - INFO -  * Restarting with stat
+2025-08-24 16:15:27,987 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:15:27,989 - WARNING -  * Debugger is active!
+2025-08-24 16:15:27,996 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 16:15:56,410 - INFO - Container 'sinhvien_test-dev' not running. Ensuring it is started.
+2025-08-24 16:20:25,829 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:20:25,831 - INFO -  * Restarting with stat
+2025-08-24 16:20:26,485 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:20:26,488 - WARNING -  * Debugger is active!
+2025-08-24 16:20:26,494 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 16:21:06,685 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:21:07,733 - INFO - Authentication (password) successful!
+2025-08-24 16:21:08,060 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:21:08,074 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:21:08,100 - ERROR - 'Session is disconnected' 6Kkb31RVxghFU61kAAAA (further occurrences of this error will be logged with level INFO)
+2025-08-24 16:21:10,083 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:21:10,371 - INFO - Authentication (password) successful!
+2025-08-24 16:21:10,464 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:21:10,471 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:21:10,540 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:21:10,693 - INFO - Authentication (password) successful!
+2025-08-24 16:21:10,879 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:21:10,885 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:21:45,806 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:21:45,921 - INFO - Authentication (password) successful!
+2025-08-24 16:21:46,006 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:21:46,013 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:21:46,170 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:21:46,461 - INFO - Authentication (password) successful!
+2025-08-24 16:21:46,559 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:21:46,566 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:21:47,226 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:21:47,341 - INFO - Authentication (password) successful!
+2025-08-24 16:21:47,436 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:21:47,443 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:21:47,832 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:21:47,946 - INFO - Authentication (password) successful!
+2025-08-24 16:21:48,036 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:21:48,045 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:21:48,112 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:21:48,264 - INFO - Authentication (password) successful!
+2025-08-24 16:21:48,352 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:21:48,358 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:21:48,418 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:21:48,533 - INFO - Authentication (password) successful!
+2025-08-24 16:21:48,617 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:21:48,622 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:24:39,303 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 16:24:39,537 - INFO -  * Restarting with stat
+2025-08-24 16:32:21,444 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:32:21,446 - INFO -  * Restarting with stat
+2025-08-24 16:32:22,098 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 16:32:22,101 - WARNING -  * Debugger is active!
+2025-08-24 16:32:22,201 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 16:33:22,231 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:33:22,754 - INFO - Authentication (password) successful!
+2025-08-24 16:33:22,850 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:33:22,860 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:33:27,548 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:33:27,661 - INFO - Authentication (password) successful!
+2025-08-24 16:33:27,764 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:33:27,767 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:33:27,986 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:33:28,275 - INFO - Authentication (password) successful!
+2025-08-24 16:33:28,379 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:33:28,384 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:33:29,671 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:33:29,783 - INFO - Authentication (password) successful!
+2025-08-24 16:33:29,872 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:33:29,880 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:34:00,616 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:34:00,805 - INFO - Authentication (password) successful!
+2025-08-24 16:34:00,930 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:34:00,934 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:34:01,137 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:34:01,314 - INFO - Authentication (password) successful!
+2025-08-24 16:34:01,400 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:34:01,405 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:34:02,404 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:34:02,517 - INFO - Authentication (password) successful!
+2025-08-24 16:34:02,605 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:34:02,610 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:34:42,186 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:34:42,745 - INFO - Authentication (password) successful!
+2025-08-24 16:34:42,867 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:34:42,872 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:34:43,094 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:34:43,263 - INFO - Authentication (password) successful!
+2025-08-24 16:34:43,362 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:34:43,366 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:36:19,106 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:36:19,281 - INFO - Authentication (password) successful!
+2025-08-24 16:36:19,375 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:36:19,383 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:36:25,418 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:36:25,629 - INFO - Authentication (password) successful!
+2025-08-24 16:36:25,720 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:36:25,724 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:36:26,186 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:36:26,356 - INFO - Authentication (password) successful!
+2025-08-24 16:36:26,444 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:36:26,451 - INFO - [chan 0] sftp session closed.
+2025-08-24 16:36:26,965 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 16:36:27,954 - INFO - Authentication (password) successful!
+2025-08-24 16:36:28,039 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 16:36:28,051 - INFO - [chan 0] sftp session closed.
+2025-08-24 17:39:48,022 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 17:39:48,024 - INFO -  * Restarting with stat
+2025-08-24 17:39:48,884 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 17:39:48,889 - WARNING -  * Debugger is active!
+2025-08-24 17:39:48,910 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 17:47:58,962 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 17:47:58,963 - INFO -  * Restarting with stat
+2025-08-24 17:47:59,694 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 17:47:59,696 - WARNING -  * Debugger is active!
+2025-08-24 17:47:59,704 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 17:48:56,552 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 17:48:56,740 - INFO -  * Restarting with stat
+2025-08-24 17:48:57,684 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 17:48:57,687 - WARNING -  * Debugger is active!
+2025-08-24 17:48:57,733 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 17:49:09,733 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 17:49:09,735 - INFO -  * Restarting with stat
+2025-08-24 17:49:10,365 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 17:49:10,369 - WARNING -  * Debugger is active!
+2025-08-24 17:49:10,375 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 17:51:44,831 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 17:51:45,047 - INFO -  * Restarting with stat
+2025-08-24 17:51:46,016 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 17:51:46,017 - WARNING -  * Debugger is active!
+2025-08-24 17:51:46,022 - INFO -  * Debugger PIN: 971-608-022
+2025-08-24 17:56:48,277 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 17:56:48,279 - INFO -  * Restarting with stat
+2025-08-24 17:56:48,908 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 17:56:48,910 - WARNING -  * Debugger is active!
+2025-08-24 17:56:48,917 - INFO -  * Debugger PIN: 254-689-676
+2025-08-24 18:05:35,089 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 18:05:35,305 - INFO -  * Restarting with stat
+2025-08-24 18:21:01,048 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 18:21:01,050 - INFO -  * Restarting with stat
+2025-08-24 18:21:01,748 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 18:21:01,750 - WARNING -  * Debugger is active!
+2025-08-24 18:21:01,756 - INFO -  * Debugger PIN: 254-689-676
+2025-08-24 18:32:05,649 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-24 18:32:05,872 - INFO -  * Restarting with stat
+2025-08-24 18:32:07,494 - INFO - Enhanced Flask App with Security Features Started
+2025-08-24 18:32:07,496 - WARNING -  * Debugger is active!
+2025-08-24 18:32:07,503 - INFO -  * Debugger PIN: 254-689-676
+2025-08-24 18:33:52,219 - INFO - Container 'sinhvien2-dev' not running (status: ''). Ensuring it is started.
+2025-08-24 18:33:54,505 - INFO - Started new container 'sinhvien2-dev' on port 2259.
+2025-08-24 18:33:55,159 - ERROR - Exception (client): Error reading SSH protocol banner[Errno 104] Connection reset by peer
+2025-08-24 18:33:55,209 - ERROR - Traceback (most recent call last):
+2025-08-24 18:33:55,210 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2363, in _check_banner
+2025-08-24 18:33:55,210 - ERROR -     buf = self.packetizer.readline(timeout)
+2025-08-24 18:33:55,210 - ERROR -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-24 18:33:55,210 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 395, in readline
+2025-08-24 18:33:55,210 - ERROR -     buf += self._read_timeout(timeout)
+2025-08-24 18:33:55,210 - ERROR -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-24 18:33:55,210 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 663, in _read_timeout
+2025-08-24 18:33:55,211 - ERROR -     x = self.__socket.recv(128)
+2025-08-24 18:33:55,211 - ERROR -         ^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-24 18:33:55,211 - ERROR - ConnectionResetError: [Errno 104] Connection reset by peer
+2025-08-24 18:33:55,211 - ERROR - 
+2025-08-24 18:33:55,211 - ERROR - During handling of the above exception, another exception occurred:
+2025-08-24 18:33:55,212 - ERROR - 
+2025-08-24 18:33:55,212 - ERROR - Traceback (most recent call last):
+2025-08-24 18:33:55,212 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2179, in run
+2025-08-24 18:33:55,212 - ERROR -     self._check_banner()
+2025-08-24 18:33:55,212 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2367, in _check_banner
+2025-08-24 18:33:55,213 - ERROR -     raise SSHException(
+2025-08-24 18:33:55,213 - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 104] Connection reset by peer
+2025-08-24 18:33:55,213 - ERROR - 
+2025-08-24 18:33:55,389 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:33:56,540 - INFO - Authentication (password) successful!
+2025-08-24 18:33:56,729 - ERROR - SOCKET CONNECT ERROR for sinhvien2: name 'threading' is not defined
+2025-08-24 18:33:56,840 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:33:57,159 - INFO - Authentication (password) successful!
+2025-08-24 18:33:57,263 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:33:57,270 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:06,620 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:06,740 - INFO - Authentication (password) successful!
+2025-08-24 18:34:06,825 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:06,828 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:06,948 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:07,083 - INFO - Authentication (password) successful!
+2025-08-24 18:34:07,167 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:07,173 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:13,860 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:13,981 - INFO - Authentication (password) successful!
+2025-08-24 18:34:14,065 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:14,068 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:14,186 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:14,509 - INFO - Authentication (password) successful!
+2025-08-24 18:34:14,601 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:14,609 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:15,697 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:15,818 - INFO - Authentication (password) successful!
+2025-08-24 18:34:15,903 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:15,907 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:16,793 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:16,928 - INFO - Authentication (password) successful!
+2025-08-24 18:34:17,010 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:17,014 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:17,118 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:17,238 - INFO - Authentication (password) successful!
+2025-08-24 18:34:17,326 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:17,330 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:17,438 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:17,756 - INFO - Authentication (password) successful!
+2025-08-24 18:34:17,845 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:17,849 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:30,241 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:30,358 - INFO - Authentication (password) successful!
+2025-08-24 18:34:30,438 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:30,442 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:36,828 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:36,949 - INFO - Authentication (password) successful!
+2025-08-24 18:34:37,030 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:37,035 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:37,142 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:37,263 - INFO - Authentication (password) successful!
+2025-08-24 18:34:37,386 - ERROR - SOCKET CONNECT ERROR for sinhvien2: name 'threading' is not defined
+2025-08-24 18:34:39,265 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:39,385 - INFO - Authentication (password) successful!
+2025-08-24 18:34:39,465 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:39,470 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:39,975 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:40,096 - INFO - Authentication (password) successful!
+2025-08-24 18:34:40,179 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:40,184 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:40,656 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:40,773 - INFO - Authentication (password) successful!
+2025-08-24 18:34:40,857 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:40,861 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:41,014 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:41,136 - INFO - Authentication (password) successful!
+2025-08-24 18:34:41,217 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:41,222 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:34:42,964 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:34:43,083 - INFO - Authentication (password) successful!
+2025-08-24 18:34:43,166 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:34:43,170 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:35:47,813 - INFO - Container 'sinhvien_test-dev' not running (status: 'exited'). Ensuring it is started.
+2025-08-24 18:35:48,602 - INFO - Restarted existing container 'sinhvien_test-dev'.
+2025-08-24 18:35:48,985 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:35:49,519 - INFO - Authentication (password) successful!
+2025-08-24 18:35:49,649 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:35:49,656 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:35:49,782 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:35:49,897 - INFO - Authentication (password) successful!
+2025-08-24 18:35:50,040 - ERROR - SOCKET CONNECT ERROR for sinhvien_test: name 'threading' is not defined
+2025-08-24 18:36:42,818 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:36:42,993 - INFO - Authentication (password) successful!
+2025-08-24 18:36:43,079 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:36:43,087 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:49:41,880 - INFO - Container 'sinhvienk4-dev' not running (status: ''). Ensuring it is started.
+2025-08-24 18:49:42,753 - INFO - Started new container 'sinhvienk4-dev' on port 2222.
+2025-08-24 18:49:43,428 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:49:43,590 - INFO - Authentication (password) successful!
+2025-08-24 18:49:43,678 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:49:43,685 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:49:43,826 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:49:43,935 - INFO - Authentication (password) successful!
+2025-08-24 18:49:44,070 - ERROR - SOCKET CONNECT ERROR for sinhvienk4: name 'threading' is not defined
+2025-08-24 18:49:58,472 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:49:58,585 - INFO - Authentication (password) successful!
+2025-08-24 18:49:58,669 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:49:58,727 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:49:58,863 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:49:58,971 - INFO - Authentication (password) successful!
+2025-08-24 18:49:59,060 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:49:59,065 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:50:00,245 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:50:00,405 - INFO - Authentication (password) successful!
+2025-08-24 18:50:00,490 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:50:00,496 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:50:07,205 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:50:07,366 - INFO - Authentication (password) successful!
+2025-08-24 18:50:07,447 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:50:07,453 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:50:07,603 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:50:07,713 - INFO - Authentication (password) successful!
+2025-08-24 18:50:07,797 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:50:07,802 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:50:09,203 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:50:09,310 - INFO - Authentication (password) successful!
+2025-08-24 18:50:09,394 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:50:09,398 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:50:09,502 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:50:09,612 - INFO - Authentication (password) successful!
+2025-08-24 18:50:09,697 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:50:09,701 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:50:41,083 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:50:41,190 - INFO - Authentication (password) successful!
+2025-08-24 18:50:41,282 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:50:41,287 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:51:23,173 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:51:23,334 - INFO - Authentication (password) successful!
+2025-08-24 18:51:23,421 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:51:23,424 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:51:23,538 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:51:23,700 - INFO - Authentication (password) successful!
+2025-08-24 18:51:23,826 - ERROR - SOCKET CONNECT ERROR for sinhvienk4: name 'threading' is not defined
+2025-08-24 18:51:25,100 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:51:25,262 - INFO - Authentication (password) successful!
+2025-08-24 18:51:25,349 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-24 18:51:25,353 - INFO - [chan 0] sftp session closed.
+2025-08-24 18:51:25,483 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-24 18:51:25,589 - INFO - Authentication (password) successful!
+2025-08-24 18:51:25,717 - ERROR - SOCKET CONNECT ERROR for sinhvienk4: name 'threading' is not defined
+2025-08-25 13:27:28,892 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 13:27:28,944 - INFO -  * Restarting with stat
+2025-08-25 13:27:30,344 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 13:27:30,346 - WARNING -  * Debugger is active!
+2025-08-25 13:27:30,425 - INFO -  * Debugger PIN: 165-346-971
+2025-08-25 13:36:08,646 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 13:36:08,647 - INFO -  * Restarting with stat
+2025-08-25 13:36:09,339 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 13:36:09,344 - WARNING -  * Debugger is active!
+2025-08-25 13:36:09,351 - INFO -  * Debugger PIN: 394-151-364
+2025-08-25 13:50:29,839 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 13:50:29,843 - INFO -  * Restarting with stat
+2025-08-25 13:50:31,000 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 13:50:31,003 - WARNING -  * Debugger is active!
+2025-08-25 13:50:31,011 - INFO -  * Debugger PIN: 339-514-926
+2025-08-25 13:56:27,019 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 13:56:27,022 - INFO -  * Restarting with stat
+2025-08-25 13:56:28,225 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 13:56:28,226 - WARNING -  * Debugger is active!
+2025-08-25 13:56:28,236 - INFO -  * Debugger PIN: 339-514-926
+2025-08-25 13:58:42,413 - ERROR - EMAIL SEND ERROR: [Errno -3] Temporary failure in name resolution
+2025-08-25 14:00:16,893 - ERROR - EMAIL SEND ERROR: [Errno -3] Temporary failure in name resolution
+2025-08-25 14:12:04,924 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 14:12:04,929 - INFO -  * Restarting with stat
+2025-08-25 14:12:05,980 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 14:12:05,982 - WARNING -  * Debugger is active!
+2025-08-25 14:12:05,991 - INFO -  * Debugger PIN: 554-002-879
+2025-08-25 14:17:43,561 - INFO - Container 'TUNG-dev' not running (status: ''). Ensuring it is started.
+2025-08-25 14:17:44,511 - INFO - Started new container 'TUNG-dev' on port 2256.
+2025-08-25 14:17:45,399 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:17:45,757 - INFO - Authentication (password) successful!
+2025-08-25 14:17:46,043 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:17:46,047 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:17:46,188 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:17:46,313 - INFO - Authentication (password) successful!
+2025-08-25 14:17:46,464 - ERROR - SOCKET CONNECT ERROR for TUNG: name 'threading' is not defined
+2025-08-25 14:19:24,134 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:19:24,475 - INFO - Authentication (password) successful!
+2025-08-25 14:19:24,591 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:19:24,594 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:19:24,735 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:19:24,861 - INFO - Authentication (password) successful!
+2025-08-25 14:19:24,955 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:19:24,960 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:32:35,019 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:32:35,362 - INFO - Authentication (password) successful!
+2025-08-25 14:32:35,500 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:32:35,510 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:32:36,806 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:32:36,936 - INFO - Authentication (password) successful!
+2025-08-25 14:32:37,042 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:32:37,051 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:56:46,969 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:56:47,610 - INFO - Authentication (password) successful!
+2025-08-25 14:56:47,794 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:56:47,818 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:56:48,138 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:56:48,493 - INFO - Authentication (password) successful!
+2025-08-25 14:56:48,802 - ERROR - SOCKET CONNECT ERROR for TUNG: name 'threading' is not defined
+2025-08-25 14:56:52,010 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:56:52,371 - INFO - Authentication (password) successful!
+2025-08-25 14:56:52,556 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:56:52,568 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:56:59,817 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:00,175 - INFO - Authentication (password) successful!
+2025-08-25 14:57:00,329 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:00,348 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:57:12,530 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:12,890 - INFO - Authentication (password) successful!
+2025-08-25 14:57:13,068 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:13,076 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:57:13,438 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:14,066 - INFO - Authentication (password) successful!
+2025-08-25 14:57:14,224 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:14,246 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:57:41,189 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:41,544 - INFO - Authentication (password) successful!
+2025-08-25 14:57:41,711 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:41,723 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:57:42,067 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:42,427 - INFO - Authentication (password) successful!
+2025-08-25 14:57:42,736 - ERROR - SOCKET CONNECT ERROR for TUNG: name 'threading' is not defined
+2025-08-25 14:57:44,070 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:44,430 - INFO - Authentication (password) successful!
+2025-08-25 14:57:44,603 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:44,619 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:57:45,594 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:45,956 - INFO - Authentication (password) successful!
+2025-08-25 14:57:46,120 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:46,135 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:57:47,011 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:47,371 - INFO - Authentication (password) successful!
+2025-08-25 14:57:47,546 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:47,556 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:57:47,906 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:48,259 - INFO - Authentication (password) successful!
+2025-08-25 14:57:48,428 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:48,439 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:57:48,796 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:49,161 - INFO - Authentication (password) successful!
+2025-08-25 14:57:49,330 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:49,339 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:57:54,928 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:55,281 - INFO - Authentication (password) successful!
+2025-08-25 14:57:55,441 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:55,453 - INFO - [chan 0] sftp session closed.
+2025-08-25 14:57:55,775 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 14:57:56,157 - INFO - Authentication (password) successful!
+2025-08-25 14:57:56,324 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 14:57:56,335 - INFO - [chan 0] sftp session closed.
+2025-08-25 15:17:11,065 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 15:17:11,081 - INFO -  * Restarting with stat
+2025-08-25 15:17:12,160 - INFO - Enhanced Flask App with Security Features Started
+2025-08-25 15:17:12,162 - WARNING -  * Debugger is active!
+2025-08-25 15:17:12,171 - INFO -  * Debugger PIN: 115-675-322
+2025-08-25 15:18:22,660 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 15:18:23,308 - INFO - Authentication (password) successful!
+2025-08-25 15:18:23,636 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 15:18:23,641 - INFO - [chan 0] sftp session closed.
+2025-08-25 15:18:23,762 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 15:18:23,930 - INFO - Authentication (password) successful!
+2025-08-25 15:18:24,097 - ERROR - SOCKET CONNECT ERROR for TUNG: name 'threading' is not defined
+2025-08-25 15:18:24,778 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 15:18:24,974 - INFO - Authentication (password) successful!
+2025-08-25 15:18:25,059 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 15:18:25,065 - INFO - [chan 0] sftp session closed.
+2025-08-25 15:18:30,279 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 15:18:30,472 - INFO - Authentication (password) successful!
+2025-08-25 15:18:30,559 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 15:18:30,564 - INFO - [chan 0] sftp session closed.
+2025-08-25 15:18:31,078 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 15:18:31,202 - INFO - Authentication (password) successful!
+2025-08-25 15:18:31,291 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 15:18:31,297 - INFO - [chan 0] sftp session closed.
+2025-08-25 15:18:35,663 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 15:18:35,855 - INFO - Authentication (password) successful!
+2025-08-25 15:18:35,943 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 15:18:35,949 - INFO - [chan 0] sftp session closed.
+2025-08-25 15:18:42,179 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 15:18:42,304 - INFO - Authentication (password) successful!
+2025-08-25 15:18:42,394 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 15:18:42,400 - INFO - [chan 0] sftp session closed.
+2025-08-25 15:18:42,506 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 15:18:42,631 - INFO - Authentication (password) successful!
+2025-08-25 15:18:42,754 - ERROR - SOCKET CONNECT ERROR for TUNG: name 'threading' is not defined
+2025-08-25 15:21:06,079 - INFO - Container 'tuan-dev' not running (status: ''). Ensuring it is started.
+2025-08-25 15:21:06,873 - INFO - Started new container 'tuan-dev' on port 2210.
+2025-08-25 15:21:07,067 - ERROR - Exception (client): Error reading SSH protocol banner
+2025-08-25 15:21:07,121 - ERROR - Traceback (most recent call last):
+2025-08-25 15:21:07,123 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2363, in _check_banner
+2025-08-25 15:21:07,123 - ERROR -     buf = self.packetizer.readline(timeout)
+2025-08-25 15:21:07,123 - ERROR -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-25 15:21:07,123 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 395, in readline
+2025-08-25 15:21:07,124 - ERROR -     buf += self._read_timeout(timeout)
+2025-08-25 15:21:07,124 - ERROR -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-25 15:21:07,124 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 665, in _read_timeout
+2025-08-25 15:21:07,124 - ERROR -     raise EOFError()
+2025-08-25 15:21:07,124 - ERROR - EOFError
+2025-08-25 15:21:07,124 - ERROR - 
+2025-08-25 15:21:07,124 - ERROR - During handling of the above exception, another exception occurred:
+2025-08-25 15:21:07,124 - ERROR - 
+2025-08-25 15:21:07,124 - ERROR - Traceback (most recent call last):
+2025-08-25 15:21:07,124 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2179, in run
+2025-08-25 15:21:07,124 - ERROR -     self._check_banner()
+2025-08-25 15:21:07,125 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2367, in _check_banner
+2025-08-25 15:21:07,127 - ERROR -     raise SSHException(
+2025-08-25 15:21:07,127 - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2025-08-25 15:21:07,127 - ERROR - 
+2025-08-25 15:21:07,223 - ERROR - Exception (client): Error reading SSH protocol banner
+2025-08-25 15:21:07,224 - ERROR - Traceback (most recent call last):
+2025-08-25 15:21:07,226 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2363, in _check_banner
+2025-08-25 15:21:07,226 - ERROR -     buf = self.packetizer.readline(timeout)
+2025-08-25 15:21:07,226 - ERROR -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-25 15:21:07,226 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 395, in readline
+2025-08-25 15:21:07,226 - ERROR -     buf += self._read_timeout(timeout)
+2025-08-25 15:21:07,226 - ERROR -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-25 15:21:07,226 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 665, in _read_timeout
+2025-08-25 15:21:07,227 - ERROR -     raise EOFError()
+2025-08-25 15:21:07,227 - ERROR - EOFError
+2025-08-25 15:21:07,227 - ERROR - 
+2025-08-25 15:21:07,227 - ERROR - During handling of the above exception, another exception occurred:
+2025-08-25 15:21:07,227 - ERROR - 
+2025-08-25 15:21:07,227 - ERROR - Traceback (most recent call last):
+2025-08-25 15:21:07,227 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2179, in run
+2025-08-25 15:21:07,227 - ERROR -     self._check_banner()
+2025-08-25 15:21:07,227 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2367, in _check_banner
+2025-08-25 15:21:07,227 - ERROR -     raise SSHException(
+2025-08-25 15:21:07,227 - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2025-08-25 15:21:07,227 - ERROR - 
+2025-08-25 15:21:07,228 - ERROR - SOCKET CONNECT ERROR for tuan: Error reading SSH protocol banner
+2025-08-25 15:21:12,601 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 15:21:12,796 - INFO - Authentication (password) successful!
+2025-08-25 15:21:12,935 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 15:21:12,939 - INFO - [chan 0] sftp session closed.
+2025-08-25 15:21:13,095 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 15:21:13,225 - INFO - Authentication (password) successful!
+2025-08-25 15:21:13,349 - ERROR - SOCKET CONNECT ERROR for tuan: name 'threading' is not defined
+2025-08-25 16:18:10,156 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 16:18:10,321 - INFO - Authentication (password) successful!
+2025-08-25 16:18:10,407 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 16:18:10,412 - INFO - [chan 0] sftp session closed.
+2025-08-25 16:18:10,585 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 16:18:10,749 - INFO - Authentication (password) successful!
+2025-08-25 16:18:10,872 - ERROR - SOCKET CONNECT ERROR for TUNG: name 'threading' is not defined
+2025-08-25 16:18:12,574 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 16:18:12,738 - INFO - Authentication (password) successful!
+2025-08-25 16:18:12,825 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 16:18:12,830 - INFO - [chan 0] sftp session closed.
+2025-08-25 16:18:32,507 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 16:18:32,631 - INFO - Authentication (password) successful!
+2025-08-25 16:18:32,719 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 16:18:32,726 - INFO - [chan 0] sftp session closed.
+2025-08-25 16:18:34,304 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-25 16:18:34,430 - INFO - Authentication (password) successful!
+2025-08-25 16:18:34,514 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-25 16:18:34,519 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:13:10,352 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 10:13:10,366 - INFO -  * Restarting with stat
+2025-08-26 10:13:11,108 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 10:13:11,111 - WARNING -  * Debugger is active!
+2025-08-26 10:13:11,126 - INFO -  * Debugger PIN: 314-698-547
+2025-08-26 10:15:01,995 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:15:02,520 - INFO - Authentication (password) successful!
+2025-08-26 10:15:02,823 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:15:02,830 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:15:02,985 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:15:03,097 - INFO - Authentication (password) successful!
+2025-08-26 10:15:03,384 - ERROR - SOCKET CONNECT ERROR for sinhvienk4: name 'threading' is not defined
+2025-08-26 10:18:26,507 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:18:26,616 - INFO - Authentication (password) successful!
+2025-08-26 10:18:26,710 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:18:26,715 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:18:39,531 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:18:39,642 - INFO - Authentication (password) successful!
+2025-08-26 10:18:39,767 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:18:39,770 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:18:39,889 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:18:40,052 - INFO - Authentication (password) successful!
+2025-08-26 10:18:40,141 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:18:40,150 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:18:41,715 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:18:41,877 - INFO - Authentication (password) successful!
+2025-08-26 10:18:41,970 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:18:41,976 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:18:42,097 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:18:42,206 - INFO - Authentication (password) successful!
+2025-08-26 10:18:42,304 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:18:42,310 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:18:45,273 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:18:45,382 - INFO - Authentication (password) successful!
+2025-08-26 10:18:45,467 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:18:45,470 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:21:31,955 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-26 10:21:32,209 - INFO -  * Restarting with stat
+2025-08-26 10:21:33,138 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 10:21:33,141 - WARNING -  * Debugger is active!
+2025-08-26 10:21:33,148 - INFO -  * Debugger PIN: 314-698-547
+2025-08-26 10:22:21,279 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:22:21,389 - INFO - Authentication (password) successful!
+2025-08-26 10:22:21,477 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:22:21,484 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:22:21,609 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:22:21,779 - INFO - Authentication (password) successful!
+2025-08-26 10:22:28,037 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:22:28,148 - INFO - Authentication (password) successful!
+2025-08-26 10:22:28,302 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:22:28,306 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:22:29,290 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:22:29,403 - INFO - Authentication (password) successful!
+2025-08-26 10:22:29,492 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:22:29,498 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:23:08,388 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:23:08,554 - INFO - Authentication (password) successful!
+2025-08-26 10:23:55,404 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:23:55,607 - INFO - Authentication (password) successful!
+2025-08-26 10:45:28,329 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 10:45:28,331 - INFO -  * Restarting with stat
+2025-08-26 10:45:29,116 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 10:45:29,118 - WARNING -  * Debugger is active!
+2025-08-26 10:45:29,125 - INFO -  * Debugger PIN: 151-255-710
+2025-08-26 10:46:09,907 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:46:10,112 - INFO - Authentication (password) successful!
+2025-08-26 10:46:10,199 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:46:10,207 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:46:10,383 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:46:10,492 - INFO - Authentication (password) successful!
+2025-08-26 10:46:20,559 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:46:20,667 - INFO - Authentication (password) successful!
+2025-08-26 10:46:20,751 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:46:20,760 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:46:22,031 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:46:22,142 - INFO - Authentication (password) successful!
+2025-08-26 10:46:22,227 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:46:22,232 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:46:32,895 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:46:33,007 - INFO - Authentication (password) successful!
+2025-08-26 10:46:33,103 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:46:33,111 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:46:33,234 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:46:33,399 - INFO - Authentication (password) successful!
+2025-08-26 10:46:34,926 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:46:35,035 - INFO - Authentication (password) successful!
+2025-08-26 10:46:35,128 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:46:35,141 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:46:44,813 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:46:44,924 - INFO - Authentication (password) successful!
+2025-08-26 10:46:45,016 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:46:45,020 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:51:33,499 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:51:33,666 - INFO - Authentication (password) successful!
+2025-08-26 10:51:33,757 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:51:33,765 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:51:33,889 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:51:33,999 - INFO - Authentication (password) successful!
+2025-08-26 10:51:46,243 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:51:46,355 - INFO - Authentication (password) successful!
+2025-08-26 10:51:46,443 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:51:46,453 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:51:47,615 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:51:47,782 - INFO - Authentication (password) successful!
+2025-08-26 10:51:47,871 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:51:47,877 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:52:51,804 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-26 10:52:51,988 - INFO -  * Restarting with stat
+2025-08-26 10:52:52,642 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 10:52:52,643 - WARNING -  * Debugger is active!
+2025-08-26 10:52:52,649 - INFO -  * Debugger PIN: 151-255-710
+2025-08-26 10:56:45,197 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:56:45,359 - INFO - Authentication (password) successful!
+2025-08-26 10:56:45,447 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:56:45,451 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:56:45,554 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:56:45,663 - INFO - Authentication (password) successful!
+2025-08-26 10:58:13,852 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 10:58:13,855 - INFO -  * Restarting with stat
+2025-08-26 10:58:14,604 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 10:58:14,606 - WARNING -  * Debugger is active!
+2025-08-26 10:58:14,613 - INFO -  * Debugger PIN: 151-255-710
+2025-08-26 10:58:48,813 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:58:48,985 - INFO - Authentication (password) successful!
+2025-08-26 10:58:49,105 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 10:58:49,116 - INFO - [chan 0] sftp session closed.
+2025-08-26 10:58:49,288 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 10:58:49,453 - INFO - Authentication (password) successful!
+2025-08-26 11:02:14,740 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 11:02:14,742 - INFO -  * Restarting with stat
+2025-08-26 11:02:15,373 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 11:02:15,375 - WARNING -  * Debugger is active!
+2025-08-26 11:02:15,383 - INFO -  * Debugger PIN: 268-587-374
+2025-08-26 11:02:55,632 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:02:55,743 - INFO - Authentication (password) successful!
+2025-08-26 11:02:55,838 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:02:55,846 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:02:55,978 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:02:56,091 - INFO - Authentication (password) successful!
+2025-08-26 11:05:29,385 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-26 11:05:29,556 - INFO -  * Restarting with stat
+2025-08-26 11:05:30,249 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 11:05:30,251 - WARNING -  * Debugger is active!
+2025-08-26 11:05:30,259 - INFO -  * Debugger PIN: 268-587-374
+2025-08-26 11:05:30,574 - ERROR - Invalid session uiYB7gwj4LKpb5zVAAAA (further occurrences of this error will be logged with level INFO)
+2025-08-26 11:06:02,896 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:06:03,003 - INFO - Authentication (password) successful!
+2025-08-26 11:06:03,086 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:06:03,092 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:06:03,204 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:06:03,370 - INFO - Authentication (password) successful!
+2025-08-26 11:07:37,102 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-26 11:07:37,368 - INFO -  * Restarting with stat
+2025-08-26 11:07:38,102 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 11:07:38,104 - WARNING -  * Debugger is active!
+2025-08-26 11:07:38,110 - INFO -  * Debugger PIN: 268-587-374
+2025-08-26 11:08:07,495 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:08:07,606 - INFO - Authentication (password) successful!
+2025-08-26 11:08:07,692 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:08:07,698 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:08:07,811 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:08:07,974 - INFO - Authentication (password) successful!
+2025-08-26 11:08:08,101 - WARNING - Terminal forward_output thread for sinhvienk4 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 11:08:11,024 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:08:11,134 - INFO - Authentication (password) successful!
+2025-08-26 11:08:11,260 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:08:11,267 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:08:12,024 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:08:12,131 - INFO - Authentication (password) successful!
+2025-08-26 11:08:12,275 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:08:12,282 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:08:12,951 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:08:13,060 - INFO - Authentication (password) successful!
+2025-08-26 11:08:13,146 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:08:13,151 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:16:04,218 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 11:16:04,219 - INFO -  * Restarting with stat
+2025-08-26 11:16:05,022 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 11:16:05,024 - WARNING -  * Debugger is active!
+2025-08-26 11:16:05,033 - INFO -  * Debugger PIN: 268-587-374
+2025-08-26 11:16:37,005 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:16:37,172 - INFO - Authentication (password) successful!
+2025-08-26 11:16:37,266 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:16:37,276 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:16:37,483 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:16:37,647 - INFO - Authentication (password) successful!
+2025-08-26 11:16:37,801 - WARNING - Terminal forward_output thread for sinhvienk4 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 11:16:41,319 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:16:41,483 - INFO - Authentication (password) successful!
+2025-08-26 11:16:41,577 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:16:41,585 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:16:42,808 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:16:42,918 - INFO - Authentication (password) successful!
+2025-08-26 11:16:43,009 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:16:43,013 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:33:08,881 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 11:33:08,883 - INFO -  * Restarting with stat
+2025-08-26 11:33:09,776 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 11:33:09,779 - WARNING -  * Debugger is active!
+2025-08-26 11:33:09,788 - INFO -  * Debugger PIN: 268-587-374
+2025-08-26 11:33:43,333 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:33:43,481 - INFO - Authentication (password) successful!
+2025-08-26 11:33:43,569 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:33:43,578 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:33:43,736 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:33:43,847 - INFO - Authentication (password) successful!
+2025-08-26 11:33:43,982 - WARNING - Terminal forward_output thread for sinhvienk4 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 11:33:46,083 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:33:46,194 - INFO - Authentication (password) successful!
+2025-08-26 11:33:46,281 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:33:46,289 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:33:47,375 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:33:47,486 - INFO - Authentication (password) successful!
+2025-08-26 11:33:47,580 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:33:47,586 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:35:41,843 - INFO - Container 'sinhvienk4-dev' not running (status: ''). Ensuring it is started.
+2025-08-26 11:35:42,763 - ERROR - Container check failed for sinhvienk4: Command '['docker', 'run', '-d', '--name', 'sinhvienk4-dev', '--restart', 'always', '-p', '2222:22', '-e', 'USERNAME=sinhvienk4', '-e', 'PASSWORD=password123', '-v', '/home/chuongdev/QUAN_LY_USER/sinhvienk4:/home/sinhvienk4', 'my-dev-env:latest']' returned non-zero exit status 125.
+2025-08-26 11:35:43,187 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:35:44,970 - INFO - Authentication (password) failed.
+2025-08-26 11:35:44,971 - ERROR - SOCKET CONNECT ERROR for sinhvienk4: Authentication failed.
+2025-08-26 11:35:45,039 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:35:48,552 - INFO - Authentication (password) failed.
+2025-08-26 11:36:16,869 - INFO - Container 'sinhvienk4-dev' not running (status: 'created'). Ensuring it is started.
+2025-08-26 11:36:17,648 - ERROR - Container check failed for sinhvienk4: Command '['docker', 'start', 'sinhvienk4-dev']' returned non-zero exit status 1.
+2025-08-26 11:36:17,945 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:36:19,733 - INFO - Authentication (password) failed.
+2025-08-26 11:36:19,805 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:36:21,588 - INFO - Authentication (password) failed.
+2025-08-26 11:36:21,588 - ERROR - SOCKET CONNECT ERROR for sinhvienk4: Authentication failed.
+2025-08-26 11:36:21,605 - ERROR - Invalid session RKGxc2jcZOKZq_IdAAAG (further occurrences of this error will be logged with level INFO)
+2025-08-26 11:38:18,288 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:38:18,483 - INFO - Authentication (password) successful!
+2025-08-26 11:38:18,610 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:38:18,618 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:38:18,820 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:38:19,026 - INFO - Authentication (password) successful!
+2025-08-26 11:38:19,268 - WARNING - Terminal forward_output thread for sinhvien2 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 11:38:19,974 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:38:20,096 - INFO - Authentication (password) successful!
+2025-08-26 11:38:20,186 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:38:20,190 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:38:20,989 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:38:21,310 - INFO - Authentication (password) successful!
+2025-08-26 11:38:21,407 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:38:21,414 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:38:22,193 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:38:22,318 - INFO - Authentication (password) successful!
+2025-08-26 11:38:22,415 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:38:22,471 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:38:35,226 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:38:35,349 - INFO - Authentication (password) successful!
+2025-08-26 11:38:35,436 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:38:35,440 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:38:35,571 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:38:35,697 - INFO - Authentication (password) successful!
+2025-08-26 11:38:35,793 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:38:35,799 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:38:37,128 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:38:37,252 - INFO - Authentication (password) successful!
+2025-08-26 11:38:37,352 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:38:37,364 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:38:38,782 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:38:38,973 - INFO - Authentication (password) successful!
+2025-08-26 11:38:39,063 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:38:39,073 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:43:01,317 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:43:01,439 - INFO - Authentication (password) successful!
+2025-08-26 11:43:01,528 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:43:01,532 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:43:21,379 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:43:21,505 - INFO - Authentication (password) successful!
+2025-08-26 11:43:21,599 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:43:21,610 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:43:21,767 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:43:21,893 - INFO - Authentication (password) successful!
+2025-08-26 11:43:22,047 - WARNING - Terminal forward_output thread for sinhvien2 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 11:43:24,604 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:43:24,727 - INFO - Authentication (password) successful!
+2025-08-26 11:43:24,814 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:43:24,821 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:43:26,108 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:43:26,271 - INFO - Authentication (password) successful!
+2025-08-26 11:43:26,359 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:43:26,368 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:43:36,385 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:43:36,548 - INFO - Authentication (password) successful!
+2025-08-26 11:43:36,636 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 11:43:36,640 - INFO - [chan 0] sftp session closed.
+2025-08-26 11:45:59,813 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:46:04,112 - INFO - Authentication (password) failed.
+2025-08-26 11:46:04,208 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:46:08,510 - INFO - Authentication (password) failed.
+2025-08-26 11:46:08,511 - ERROR - SOCKET CONNECT ERROR for sinhvien2: Authentication failed.
+2025-08-26 11:47:06,651 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:47:10,945 - INFO - Authentication (password) failed.
+2025-08-26 11:47:11,021 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 11:47:13,236 - INFO - Authentication (password) failed.
+2025-08-26 11:47:13,237 - ERROR - SOCKET CONNECT ERROR for sinhvien2: Authentication failed.
+2025-08-26 12:23:30,833 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:23:35,125 - INFO - Authentication (password) failed.
+2025-08-26 12:23:35,193 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:23:39,490 - INFO - Authentication (password) failed.
+2025-08-26 12:23:39,491 - ERROR - SOCKET CONNECT ERROR for sinhvien2: Authentication failed.
+2025-08-26 12:28:46,094 - INFO - Container 'SV3-dev' not running (status: ''). Ensuring it is started.
+2025-08-26 12:28:47,109 - INFO - Started new container 'SV3-dev' on port 2249.
+2025-08-26 12:28:47,422 - ERROR - Exception (client): Error reading SSH protocol banner[Errno 104] Connection reset by peer
+2025-08-26 12:28:47,487 - ERROR - Traceback (most recent call last):
+2025-08-26 12:28:47,488 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2363, in _check_banner
+2025-08-26 12:28:47,488 - ERROR -     buf = self.packetizer.readline(timeout)
+2025-08-26 12:28:47,488 - ERROR -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-26 12:28:47,489 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 395, in readline
+2025-08-26 12:28:47,489 - ERROR -     buf += self._read_timeout(timeout)
+2025-08-26 12:28:47,489 - ERROR -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-26 12:28:47,489 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 663, in _read_timeout
+2025-08-26 12:28:47,489 - ERROR -     x = self.__socket.recv(128)
+2025-08-26 12:28:47,489 - ERROR -         ^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-26 12:28:47,489 - ERROR - ConnectionResetError: [Errno 104] Connection reset by peer
+2025-08-26 12:28:47,489 - ERROR - 
+2025-08-26 12:28:47,489 - ERROR - During handling of the above exception, another exception occurred:
+2025-08-26 12:28:47,489 - ERROR - 
+2025-08-26 12:28:47,489 - ERROR - Traceback (most recent call last):
+2025-08-26 12:28:47,490 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2179, in run
+2025-08-26 12:28:47,490 - ERROR -     self._check_banner()
+2025-08-26 12:28:47,490 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2367, in _check_banner
+2025-08-26 12:28:47,490 - ERROR -     raise SSHException(
+2025-08-26 12:28:47,490 - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 104] Connection reset by peer
+2025-08-26 12:28:47,490 - ERROR - 
+2025-08-26 12:28:47,579 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:28:47,744 - INFO - Authentication (password) successful!
+2025-08-26 12:28:47,940 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 12:28:50,430 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:28:50,543 - INFO - Authentication (password) successful!
+2025-08-26 12:28:50,638 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:28:50,645 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:29:01,944 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:29:02,056 - INFO - Authentication (password) successful!
+2025-08-26 12:29:02,144 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:29:02,146 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:29:02,278 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:29:02,425 - INFO - Authentication (password) successful!
+2025-08-26 12:29:02,507 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:29:02,515 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:29:09,131 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:29:09,243 - INFO - Authentication (password) successful!
+2025-08-26 12:29:09,386 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:29:09,392 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:29:09,506 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:29:09,653 - INFO - Authentication (password) successful!
+2025-08-26 12:29:09,740 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:29:09,745 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:29:11,218 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:29:11,367 - INFO - Authentication (password) successful!
+2025-08-26 12:29:11,455 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:29:11,462 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:29:12,033 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:29:12,143 - INFO - Authentication (password) successful!
+2025-08-26 12:29:12,229 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:29:12,235 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:35:35,227 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-26 12:35:35,513 - INFO -  * Restarting with stat
+2025-08-26 12:35:36,472 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 12:35:36,476 - WARNING -  * Debugger is active!
+2025-08-26 12:35:36,483 - INFO -  * Debugger PIN: 268-587-374
+2025-08-26 12:36:23,822 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:36:23,937 - INFO - Authentication (password) successful!
+2025-08-26 12:36:24,023 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:36:24,030 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:36:24,147 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:36:24,315 - INFO - Authentication (password) successful!
+2025-08-26 12:36:24,473 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 12:36:27,691 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:36:27,860 - INFO - Authentication (password) successful!
+2025-08-26 12:36:27,950 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:36:27,957 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:36:28,889 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:36:29,002 - INFO - Authentication (password) successful!
+2025-08-26 12:36:29,095 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:36:29,100 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:37:02,795 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:37:02,944 - INFO - Authentication (password) successful!
+2025-08-26 12:37:03,029 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:37:03,037 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:40:06,026 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 12:40:06,027 - INFO -  * Restarting with stat
+2025-08-26 12:40:06,796 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 12:40:06,798 - WARNING -  * Debugger is active!
+2025-08-26 12:40:06,807 - INFO -  * Debugger PIN: 268-587-374
+2025-08-26 12:40:51,132 - INFO - Container 'SV3-dev' not running (status: ''). Ensuring it is started.
+2025-08-26 12:40:52,067 - INFO - Started new container 'SV3-dev' on port 2249.
+2025-08-26 12:40:52,497 - ERROR - Exception (client): Error reading SSH protocol banner
+2025-08-26 12:40:52,501 - ERROR - Traceback (most recent call last):
+2025-08-26 12:40:52,501 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2363, in _check_banner
+2025-08-26 12:40:52,501 - ERROR -     buf = self.packetizer.readline(timeout)
+2025-08-26 12:40:52,501 - ERROR -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-26 12:40:52,501 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 395, in readline
+2025-08-26 12:40:52,501 - ERROR -     buf += self._read_timeout(timeout)
+2025-08-26 12:40:52,501 - ERROR -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-26 12:40:52,501 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 665, in _read_timeout
+2025-08-26 12:40:52,501 - ERROR -     raise EOFError()
+2025-08-26 12:40:52,501 - ERROR - EOFError
+2025-08-26 12:40:52,504 - ERROR - 
+2025-08-26 12:40:52,505 - ERROR - During handling of the above exception, another exception occurred:
+2025-08-26 12:40:52,505 - ERROR - 
+2025-08-26 12:40:52,505 - ERROR - Traceback (most recent call last):
+2025-08-26 12:40:52,505 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2179, in run
+2025-08-26 12:40:52,505 - ERROR -     self._check_banner()
+2025-08-26 12:40:52,505 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2367, in _check_banner
+2025-08-26 12:40:52,505 - ERROR -     raise SSHException(
+2025-08-26 12:40:52,505 - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2025-08-26 12:40:52,505 - ERROR - 
+2025-08-26 12:40:52,515 - ERROR - SOCKET CONNECT ERROR for SV3: Error reading SSH protocol banner
+2025-08-26 12:40:52,598 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:40:52,914 - INFO - Authentication (password) successful!
+2025-08-26 12:40:53,017 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:40:53,027 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:41:12,069 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:41:12,239 - INFO - Authentication (password) successful!
+2025-08-26 12:41:12,340 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:41:12,348 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:41:12,924 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:41:13,073 - INFO - Authentication (password) successful!
+2025-08-26 12:41:13,165 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:41:13,172 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:42:42,858 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:42:42,970 - INFO - Authentication (password) successful!
+2025-08-26 12:42:43,063 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:42:43,066 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:42:43,218 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:42:43,330 - INFO - Authentication (password) successful!
+2025-08-26 12:42:43,428 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:42:43,439 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:42:44,341 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:42:45,288 - INFO - Authentication (password) successful!
+2025-08-26 12:42:45,529 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:42:45,539 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:42:45,659 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:42:46,170 - INFO - Authentication (password) successful!
+2025-08-26 12:42:46,280 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:42:46,293 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:42:51,541 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:42:51,655 - INFO - Authentication (password) successful!
+2025-08-26 12:42:51,744 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:42:51,747 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:42:51,870 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:42:52,000 - INFO - Authentication (password) successful!
+2025-08-26 12:42:52,088 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:42:52,098 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:42:53,199 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:42:53,316 - INFO - Authentication (password) successful!
+2025-08-26 12:42:53,407 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:42:53,420 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:42:57,723 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:42:57,834 - INFO - Authentication (password) successful!
+2025-08-26 12:42:57,927 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:42:57,938 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:42:58,869 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:42:58,985 - INFO - Authentication (password) successful!
+2025-08-26 12:42:59,077 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:42:59,090 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:43:00,097 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:43:00,211 - INFO - Authentication (password) successful!
+2025-08-26 12:43:00,306 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:43:00,321 - INFO - [chan 0] sftp session closed.
+2025-08-26 12:43:05,245 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 12:43:05,392 - INFO - Authentication (password) successful!
+2025-08-26 12:43:05,490 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 12:43:05,501 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:00:25,828 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:00:26,170 - INFO - Authentication (password) successful!
+2025-08-26 13:00:26,275 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:00:26,286 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:00:26,418 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:00:26,588 - INFO - Authentication (password) successful!
+2025-08-26 13:00:26,764 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 13:01:00,221 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:01:00,428 - INFO - Authentication (password) successful!
+2025-08-26 13:01:00,544 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:01:00,548 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:01:01,559 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:01:01,840 - INFO - Authentication (password) successful!
+2025-08-26 13:01:01,930 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:01:01,936 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:06:54,450 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:06:54,620 - INFO - Authentication (password) successful!
+2025-08-26 13:06:54,711 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:06:54,720 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:06:54,903 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:06:55,052 - INFO - Authentication (password) successful!
+2025-08-26 13:06:55,251 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 13:06:57,202 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:06:57,372 - INFO - Authentication (password) successful!
+2025-08-26 13:06:57,477 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:06:57,489 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:06:58,371 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:06:58,481 - INFO - Authentication (password) successful!
+2025-08-26 13:06:58,573 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:06:58,580 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:31:17,818 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-26 13:31:18,818 - INFO -  * Restarting with stat
+2025-08-26 13:31:20,681 - INFO - Enhanced Flask App with Security Features Started
+2025-08-26 13:31:20,684 - WARNING -  * Debugger is active!
+2025-08-26 13:31:20,714 - INFO -  * Debugger PIN: 268-587-374
+2025-08-26 13:46:30,299 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:46:30,599 - INFO - Authentication (password) successful!
+2025-08-26 13:46:30,785 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:46:30,795 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:46:30,965 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:46:31,173 - INFO - Authentication (password) successful!
+2025-08-26 13:46:31,364 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 13:46:31,914 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:46:32,082 - INFO - Authentication (password) successful!
+2025-08-26 13:46:32,174 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:46:32,179 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:46:33,099 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:46:33,218 - INFO - Authentication (password) successful!
+2025-08-26 13:46:33,311 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:46:33,316 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:47:16,506 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:47:16,680 - INFO - Authentication (password) successful!
+2025-08-26 13:47:16,773 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:47:16,778 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:47:17,052 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:47:17,221 - INFO - Authentication (password) successful!
+2025-08-26 13:47:17,421 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 13:47:18,101 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:47:18,252 - INFO - Authentication (password) successful!
+2025-08-26 13:47:18,342 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:47:18,352 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:47:18,932 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:47:19,085 - INFO - Authentication (password) successful!
+2025-08-26 13:47:19,228 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:47:19,234 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:47:29,324 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:47:29,528 - INFO - Authentication (password) successful!
+2025-08-26 13:47:29,641 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:47:29,648 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:58:46,379 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:58:46,547 - INFO - Authentication (password) successful!
+2025-08-26 13:58:46,643 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:58:46,650 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:58:46,849 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:58:46,964 - INFO - Authentication (password) successful!
+2025-08-26 13:58:47,099 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 13:58:47,864 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:58:47,975 - INFO - Authentication (password) successful!
+2025-08-26 13:58:48,073 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:58:48,083 - INFO - [chan 0] sftp session closed.
+2025-08-26 13:58:49,063 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 13:58:49,175 - INFO - Authentication (password) successful!
+2025-08-26 13:58:49,268 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 13:58:49,275 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:05:42,602 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:05:42,809 - INFO - Authentication (password) successful!
+2025-08-26 14:05:42,907 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:05:42,918 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:05:43,107 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:05:43,281 - INFO - Authentication (password) successful!
+2025-08-26 14:05:43,424 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 14:05:44,030 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:05:44,141 - INFO - Authentication (password) successful!
+2025-08-26 14:05:44,233 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:05:44,241 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:05:45,814 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:05:45,981 - INFO - Authentication (password) successful!
+2025-08-26 14:05:46,164 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:05:46,170 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:06:31,687 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:06:31,799 - INFO - Authentication (password) successful!
+2025-08-26 14:06:31,892 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:06:31,898 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:16:55,283 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:16:55,520 - INFO - Authentication (password) successful!
+2025-08-26 14:16:55,678 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:16:55,693 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:16:55,910 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:16:56,083 - INFO - Authentication (password) successful!
+2025-08-26 14:16:56,346 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 14:16:56,562 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:16:56,732 - INFO - Authentication (password) successful!
+2025-08-26 14:16:56,850 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:16:56,858 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:16:57,877 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:16:58,051 - INFO - Authentication (password) successful!
+2025-08-26 14:16:58,162 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:16:58,168 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:36:53,823 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:36:53,997 - INFO - Authentication (password) successful!
+2025-08-26 14:36:54,094 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:36:54,101 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:36:57,493 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:36:57,702 - INFO - Authentication (password) successful!
+2025-08-26 14:36:57,790 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:36:57,796 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:36:58,023 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:36:58,134 - INFO - Authentication (password) successful!
+2025-08-26 14:36:58,276 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-26 14:36:59,536 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:36:59,648 - INFO - Authentication (password) successful!
+2025-08-26 14:36:59,743 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:36:59,753 - INFO - [chan 0] sftp session closed.
+2025-08-26 14:37:00,768 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-26 14:37:00,882 - INFO - Authentication (password) successful!
+2025-08-26 14:37:00,973 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-26 14:37:00,981 - INFO - [chan 0] sftp session closed.
+2025-08-28 12:59:27,358 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 12:59:27,402 - INFO -  * Restarting with stat
+2025-08-28 12:59:29,624 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 12:59:29,626 - WARNING -  * Debugger is active!
+2025-08-28 12:59:29,634 - INFO -  * Debugger PIN: 205-579-662
+2025-08-28 13:06:02,143 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 13:06:02,145 - INFO -  * Restarting with stat
+2025-08-28 13:06:03,301 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 13:06:03,303 - WARNING -  * Debugger is active!
+2025-08-28 13:06:03,312 - INFO -  * Debugger PIN: 205-579-662
+2025-08-28 13:16:31,862 - INFO - Container 'sinhvien_test-dev' not running (status: 'exited'). Ensuring it is started.
+2025-08-28 13:16:32,558 - INFO - Restarted existing container 'sinhvien_test-dev'.
+2025-08-28 13:16:34,079 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:16:35,092 - INFO - Authentication (password) successful!
+2025-08-28 13:16:35,500 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:16:35,505 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:16:35,625 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:16:35,739 - INFO - Authentication (password) successful!
+2025-08-28 13:16:35,926 - WARNING - Terminal forward_output thread for sinhvien_test ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 13:16:36,889 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:16:37,041 - INFO - Authentication (password) successful!
+2025-08-28 13:16:37,128 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:16:37,134 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:16:37,837 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:16:37,952 - INFO - Authentication (password) successful!
+2025-08-28 13:16:38,040 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:16:38,044 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:16:39,227 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:16:39,381 - INFO - Authentication (password) successful!
+2025-08-28 13:16:39,468 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:16:39,526 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:16:46,949 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:16:47,113 - INFO - Authentication (password) successful!
+2025-08-28 13:16:47,198 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:16:47,200 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:16:47,313 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:16:47,424 - INFO - Authentication (password) successful!
+2025-08-28 13:16:47,512 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:16:47,517 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:17:10,394 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:17:10,506 - INFO - Authentication (password) successful!
+2025-08-28 13:17:10,594 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:17:10,600 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:17:11,291 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:17:11,444 - INFO - Authentication (password) successful!
+2025-08-28 13:17:11,590 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:17:11,600 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:17:14,308 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:17:14,423 - INFO - Authentication (password) successful!
+2025-08-28 13:17:14,510 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:17:14,514 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:17:18,094 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:17:18,206 - INFO - Authentication (password) successful!
+2025-08-28 13:17:18,298 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:17:18,350 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:17:18,469 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:17:18,585 - INFO - Authentication (password) successful!
+2025-08-28 13:17:18,671 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:17:18,675 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:17:21,291 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:17:21,405 - INFO - Authentication (password) successful!
+2025-08-28 13:17:21,505 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:17:21,513 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:17:30,009 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:17:30,128 - INFO - Authentication (password) successful!
+2025-08-28 13:17:30,212 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:17:30,216 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:20:36,883 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:20:37,200 - INFO - Authentication (password) successful!
+2025-08-28 13:20:37,321 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:20:37,328 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:20:37,485 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:20:37,650 - INFO - Authentication (password) successful!
+2025-08-28 13:20:37,820 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 13:20:38,366 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:20:38,479 - INFO - Authentication (password) successful!
+2025-08-28 13:20:38,570 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:20:38,579 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:20:39,725 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:20:39,837 - INFO - Authentication (password) successful!
+2025-08-28 13:20:39,925 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:20:39,985 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:20:58,327 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:20:58,443 - INFO - Authentication (password) successful!
+2025-08-28 13:20:58,532 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:20:58,533 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:20:58,650 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:20:58,804 - INFO - Authentication (password) successful!
+2025-08-28 13:20:58,893 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:20:58,898 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:21:00,937 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:21:01,049 - INFO - Authentication (password) successful!
+2025-08-28 13:21:01,139 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:21:01,145 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:21:03,419 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:21:03,529 - INFO - Authentication (password) successful!
+2025-08-28 13:21:03,643 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:21:03,663 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:21:06,788 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:21:06,903 - INFO - Authentication (password) successful!
+2025-08-28 13:21:07,158 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:21:07,311 - INFO - Authentication (password) successful!
+2025-08-28 13:21:07,400 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:21:07,407 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:21:09,938 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:21:10,091 - INFO - Authentication (password) successful!
+2025-08-28 13:21:10,178 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:21:10,183 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:21:11,104 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:21:11,257 - INFO - Authentication (password) successful!
+2025-08-28 13:21:11,345 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:21:11,348 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:21:30,251 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:21:30,403 - INFO - Authentication (password) successful!
+2025-08-28 13:21:30,494 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:21:30,499 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:21:30,621 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:21:30,736 - INFO - Authentication (password) successful!
+2025-08-28 13:21:30,867 - WARNING - Terminal forward_output thread for sinhvien_test ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 13:21:32,078 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:21:32,190 - INFO - Authentication (password) successful!
+2025-08-28 13:21:32,276 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:21:32,280 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:21:33,191 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:21:33,303 - INFO - Authentication (password) successful!
+2025-08-28 13:21:33,394 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:21:33,398 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:22:21,977 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:22:22,091 - INFO - Authentication (password) successful!
+2025-08-28 13:22:22,183 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:22:22,190 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:22:22,308 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:22:22,420 - INFO - Authentication (password) successful!
+2025-08-28 13:22:22,549 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 13:22:24,813 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:22:24,926 - INFO - Authentication (password) successful!
+2025-08-28 13:22:25,012 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:22:25,016 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:22:25,837 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:22:25,986 - INFO - Authentication (password) successful!
+2025-08-28 13:22:26,078 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:22:26,082 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:25:19,479 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:25:19,590 - INFO - Authentication (password) successful!
+2025-08-28 13:25:19,676 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:25:19,682 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:25:41,397 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:25:41,568 - INFO - Authentication (password) successful!
+2025-08-28 13:25:41,658 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:25:41,664 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:26:29,462 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:26:29,576 - INFO - Authentication (password) successful!
+2025-08-28 13:26:29,662 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:26:29,666 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:27:36,638 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:27:36,751 - INFO - Authentication (password) successful!
+2025-08-28 13:27:36,841 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:27:36,847 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:30:08,091 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:30:08,206 - INFO - Authentication (password) successful!
+2025-08-28 13:30:08,294 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 13:30:08,298 - INFO - [chan 0] sftp session closed.
+2025-08-28 13:30:08,414 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 13:30:08,525 - INFO - Authentication (password) successful!
+2025-08-28 13:30:08,654 - WARNING - Terminal forward_output thread for sinhvien_test ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 13:55:56,065 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 13:55:56,068 - INFO -  * Restarting with stat
+2025-08-28 13:55:56,831 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 13:55:56,833 - WARNING -  * Debugger is active!
+2025-08-28 13:55:56,844 - INFO -  * Debugger PIN: 297-316-674
+2025-08-28 13:58:31,201 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-28 13:58:31,391 - INFO -  * Restarting with stat
+2025-08-28 13:58:32,243 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 13:58:32,247 - WARNING -  * Debugger is active!
+2025-08-28 13:58:32,255 - INFO -  * Debugger PIN: 297-316-674
+2025-08-28 14:00:57,581 - INFO - Container 'ttung-dev' not running (status: ''). Ensuring it is started.
+2025-08-28 14:00:59,261 - INFO - Started new container 'ttung-dev' on port 2242.
+2025-08-28 14:00:59,795 - ERROR - Exception (client): Error reading SSH protocol banner
+2025-08-28 14:00:59,882 - ERROR - Traceback (most recent call last):
+2025-08-28 14:00:59,883 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2363, in _check_banner
+2025-08-28 14:00:59,883 - ERROR -     buf = self.packetizer.readline(timeout)
+2025-08-28 14:00:59,883 - ERROR -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-28 14:00:59,883 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 395, in readline
+2025-08-28 14:00:59,883 - ERROR -     buf += self._read_timeout(timeout)
+2025-08-28 14:00:59,885 - ERROR -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-28 14:00:59,885 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 665, in _read_timeout
+2025-08-28 14:00:59,885 - ERROR -     raise EOFError()
+2025-08-28 14:00:59,885 - ERROR - EOFError
+2025-08-28 14:00:59,885 - ERROR - 
+2025-08-28 14:00:59,886 - ERROR - During handling of the above exception, another exception occurred:
+2025-08-28 14:00:59,886 - ERROR - 
+2025-08-28 14:00:59,886 - ERROR - Traceback (most recent call last):
+2025-08-28 14:00:59,886 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2179, in run
+2025-08-28 14:00:59,886 - ERROR -     self._check_banner()
+2025-08-28 14:00:59,886 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2367, in _check_banner
+2025-08-28 14:00:59,886 - ERROR -     raise SSHException(
+2025-08-28 14:00:59,887 - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2025-08-28 14:00:59,887 - ERROR - 
+2025-08-28 14:01:00,038 - ERROR - Exception (client): Error reading SSH protocol banner
+2025-08-28 14:01:00,039 - ERROR - Traceback (most recent call last):
+2025-08-28 14:01:00,040 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2363, in _check_banner
+2025-08-28 14:01:00,040 - ERROR -     buf = self.packetizer.readline(timeout)
+2025-08-28 14:01:00,040 - ERROR -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-28 14:01:00,041 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 395, in readline
+2025-08-28 14:01:00,041 - ERROR -     buf += self._read_timeout(timeout)
+2025-08-28 14:01:00,041 - ERROR -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-08-28 14:01:00,041 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/packet.py", line 665, in _read_timeout
+2025-08-28 14:01:00,041 - ERROR -     raise EOFError()
+2025-08-28 14:01:00,041 - ERROR - EOFError
+2025-08-28 14:01:00,041 - ERROR - 
+2025-08-28 14:01:00,042 - ERROR - During handling of the above exception, another exception occurred:
+2025-08-28 14:01:00,042 - ERROR - 
+2025-08-28 14:01:00,042 - ERROR - Traceback (most recent call last):
+2025-08-28 14:01:00,042 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2179, in run
+2025-08-28 14:01:00,042 - ERROR -     self._check_banner()
+2025-08-28 14:01:00,043 - ERROR -   File "/home/chuongdev/flask-kerberos-demo/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2367, in _check_banner
+2025-08-28 14:01:00,043 - ERROR -     raise SSHException(
+2025-08-28 14:01:00,043 - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2025-08-28 14:01:00,043 - ERROR - 
+2025-08-28 14:01:00,043 - ERROR - SOCKET CONNECT ERROR for ttung: Error reading SSH protocol banner
+2025-08-28 14:01:07,730 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:01:08,357 - INFO - Authentication (password) successful!
+2025-08-28 14:01:08,477 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:01:08,483 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:01:17,694 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:01:18,054 - INFO - Authentication (password) successful!
+2025-08-28 14:01:18,143 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:01:18,146 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:01:18,290 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:01:18,453 - INFO - Authentication (password) successful!
+2025-08-28 14:01:18,544 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:01:18,550 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:01:19,558 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:01:19,747 - INFO - Authentication (password) successful!
+2025-08-28 14:01:19,837 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:01:19,843 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:01:43,376 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:01:43,499 - INFO - Authentication (password) successful!
+2025-08-28 14:01:43,598 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:01:43,603 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:01:43,760 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:01:43,883 - INFO - Authentication (password) successful!
+2025-08-28 14:01:43,971 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:01:43,976 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:01:45,893 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:01:46,011 - INFO - Authentication (password) successful!
+2025-08-28 14:01:46,098 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:01:46,100 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:01:46,200 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:01:46,322 - INFO - Authentication (password) successful!
+2025-08-28 14:01:46,408 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:01:46,412 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:02:00,408 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:02:00,527 - INFO - Authentication (password) successful!
+2025-08-28 14:02:00,610 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:02:00,614 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:15:56,985 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-28 14:15:57,260 - INFO -  * Restarting with stat
+2025-08-28 14:15:58,190 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 14:15:58,195 - WARNING -  * Debugger is active!
+2025-08-28 14:15:58,207 - INFO -  * Debugger PIN: 297-316-674
+2025-08-28 14:16:42,823 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 14:16:42,826 - INFO -  * Restarting with stat
+2025-08-28 14:16:44,857 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 14:16:44,861 - WARNING -  * Debugger is active!
+2025-08-28 14:16:44,871 - INFO -  * Debugger PIN: 225-864-995
+2025-08-28 14:17:24,416 - WARNING - Container 'ttung_env' not running (status: ''). Please ensure it's started via docker-compose.
+2025-08-28 14:17:24,591 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:17:25,219 - INFO - Authentication (password) successful!
+2025-08-28 14:17:25,329 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:17:25,333 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:17:25,375 - ERROR - Invalid session ZZ7NWZ2wAJVQq7DmAAAA (further occurrences of this error will be logged with level INFO)
+2025-08-28 14:17:26,401 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:17:26,984 - INFO - Authentication (password) successful!
+2025-08-28 14:17:27,111 - WARNING - Terminal forward_output thread for ttung ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 14:17:34,945 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:17:36,062 - INFO - Authentication (password) successful!
+2025-08-28 14:17:36,213 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:17:36,218 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:17:38,220 - WARNING - Container 'ttung_env' not running (status: ''). Please ensure it's started via docker-compose.
+2025-08-28 14:17:38,300 - ERROR - Invalid session B8z4gMIEVQc9UVe1AAAC (further occurrences of this error will be logged with level INFO)
+2025-08-28 14:17:38,355 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:17:38,674 - INFO - Authentication (password) successful!
+2025-08-28 14:17:38,755 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:17:38,760 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:17:38,853 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:17:38,974 - INFO - Authentication (password) successful!
+2025-08-28 14:17:39,096 - WARNING - Terminal forward_output thread for ttung ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 14:17:39,455 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:17:39,574 - INFO - Authentication (password) successful!
+2025-08-28 14:17:39,698 - WARNING - Terminal forward_output thread for ttung ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 14:17:50,402 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:17:50,523 - INFO - Authentication (password) successful!
+2025-08-28 14:17:50,604 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:17:50,608 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:17:51,207 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:17:51,324 - INFO - Authentication (password) successful!
+2025-08-28 14:17:51,489 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:17:51,497 - INFO - [chan 0] sftp session closed.
+2025-08-28 14:17:51,631 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 14:17:52,216 - INFO - Authentication (password) successful!
+2025-08-28 14:17:52,322 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 14:17:52,325 - INFO - [chan 0] sftp session closed.
+2025-08-28 15:05:16,224 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-28 15:05:16,476 - INFO -  * Restarting with stat
+2025-08-28 15:05:17,295 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 15:05:17,296 - WARNING -  * Debugger is active!
+2025-08-28 15:05:17,355 - INFO -  * Debugger PIN: 297-316-674
+2025-08-28 17:08:33,104 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 17:08:33,152 - INFO -  * Restarting with stat
+2025-08-28 17:08:34,531 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 17:08:34,534 - WARNING -  * Debugger is active!
+2025-08-28 17:08:34,544 - INFO -  * Debugger PIN: 336-848-052
+2025-08-28 17:11:33,403 - WARNING - Container 'ttung_env' not running (status: ''). Please ensure it's started via docker-compose.
+2025-08-28 17:11:34,077 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:11:34,689 - INFO - Authentication (password) successful!
+2025-08-28 17:11:35,043 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:11:35,051 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:11:35,189 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:11:35,509 - INFO - Authentication (password) successful!
+2025-08-28 17:11:35,715 - WARNING - Terminal forward_output thread for ttung ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 17:13:43,087 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:13:43,412 - INFO - Authentication (password) successful!
+2025-08-28 17:13:43,515 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:13:43,521 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:13:44,161 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:13:44,282 - INFO - Authentication (password) successful!
+2025-08-28 17:13:44,371 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:13:44,385 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:13:44,494 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:13:44,684 - INFO - Authentication (password) successful!
+2025-08-28 17:13:44,772 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:13:44,777 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:15:55,269 - WARNING - Container 'SV3_env' not running (status: ''). Please ensure it's started via docker-compose.
+2025-08-28 17:15:55,402 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:15:55,680 - INFO - Authentication (password) successful!
+2025-08-28 17:15:55,763 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:15:55,767 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:15:55,881 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:15:55,990 - INFO - Authentication (password) successful!
+2025-08-28 17:15:56,164 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 17:15:57,916 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:15:58,192 - INFO - Authentication (password) successful!
+2025-08-28 17:15:58,277 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:15:58,281 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:15:58,777 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:15:58,926 - INFO - Authentication (password) successful!
+2025-08-28 17:15:59,010 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:15:59,014 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:15:59,110 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:15:59,226 - INFO - Authentication (password) successful!
+2025-08-28 17:15:59,314 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:15:59,344 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:16:16,129 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:16:16,276 - INFO - Authentication (password) successful!
+2025-08-28 17:16:16,361 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:16:16,366 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:16:27,919 - WARNING - Container 'SV3_env' not running (status: ''). Please ensure it's started via docker-compose.
+2025-08-28 17:16:28,044 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:16:28,154 - INFO - Authentication (password) successful!
+2025-08-28 17:16:28,239 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:16:28,245 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:16:28,356 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:16:28,523 - INFO - Authentication (password) successful!
+2025-08-28 17:16:28,655 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 17:16:29,541 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:16:29,748 - INFO - Authentication (password) successful!
+2025-08-28 17:16:29,835 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:16:29,842 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:16:30,358 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:16:30,507 - INFO - Authentication (password) successful!
+2025-08-28 17:16:30,594 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:16:30,599 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:16:30,710 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:16:30,877 - INFO - Authentication (password) successful!
+2025-08-28 17:16:30,967 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:16:30,973 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:16:33,781 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:16:33,892 - INFO - Authentication (password) successful!
+2025-08-28 17:16:33,983 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:16:33,989 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:18:20,674 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:20,956 - INFO - Authentication (password) successful!
+2025-08-28 17:18:21,282 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:21,562 - INFO - Authentication (password) successful!
+2025-08-28 17:18:21,653 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:18:21,657 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:18:28,016 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:28,182 - INFO - Authentication (password) successful!
+2025-08-28 17:18:28,417 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:28,585 - INFO - Authentication (password) successful!
+2025-08-28 17:18:28,679 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:18:28,685 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:18:34,418 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:34,529 - INFO - Authentication (password) successful!
+2025-08-28 17:18:34,618 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:18:34,622 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:18:34,746 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:34,914 - INFO - Authentication (password) successful!
+2025-08-28 17:18:35,004 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:18:35,010 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:18:37,641 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:37,809 - INFO - Authentication (password) successful!
+2025-08-28 17:18:37,903 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:18:37,911 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:18:41,647 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:41,758 - INFO - Authentication (password) successful!
+2025-08-28 17:18:41,849 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:18:41,854 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:18:42,009 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:42,122 - INFO - Authentication (password) successful!
+2025-08-28 17:18:42,225 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:18:42,229 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:18:43,091 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:43,202 - INFO - Authentication (password) successful!
+2025-08-28 17:18:43,304 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:18:43,308 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:18:43,444 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:18:43,648 - INFO - Authentication (password) successful!
+2025-08-28 17:18:43,740 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:18:43,744 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:19:20,467 - WARNING - Container 'SV3_env' not running (status: ''). Please ensure it's started via docker-compose.
+2025-08-28 17:19:20,586 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:19:20,697 - INFO - Authentication (password) successful!
+2025-08-28 17:19:20,783 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:19:20,792 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:19:20,928 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:19:21,040 - INFO - Authentication (password) successful!
+2025-08-28 17:19:21,167 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 17:19:21,886 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:19:22,037 - INFO - Authentication (password) successful!
+2025-08-28 17:19:22,125 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:19:22,133 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:19:22,764 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:19:22,934 - INFO - Authentication (password) successful!
+2025-08-28 17:19:23,023 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:19:23,031 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:19:23,126 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:19:23,242 - INFO - Authentication (password) successful!
+2025-08-28 17:19:23,349 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:19:23,352 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:20:17,690 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:20:17,800 - INFO - Authentication (password) successful!
+2025-08-28 17:20:17,893 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:20:17,897 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:20:30,607 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:20:30,772 - INFO - Authentication (password) successful!
+2025-08-28 17:20:30,874 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:20:30,880 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:20:33,413 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:20:33,600 - INFO - Authentication (password) successful!
+2025-08-28 17:20:33,697 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:20:33,705 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:22:17,788 - WARNING - Container 'sinhvien_test_env' not running (status: ''). Please ensure it's started via docker-compose.
+2025-08-28 17:22:17,948 - ERROR - SOCKET CONNECT ERROR for sinhvien_test: [Errno None] Unable to connect to port 2215 on 127.0.0.1
+2025-08-28 17:22:17,983 - ERROR - Invalid session ApIXpCZszKGlL7jYAAAI (further occurrences of this error will be logged with level INFO)
+2025-08-28 17:23:47,481 - WARNING - Container 'SV3_env' not running (status: ''). Please ensure it's started via docker-compose.
+2025-08-28 17:23:47,589 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:23:47,755 - INFO - Authentication (password) successful!
+2025-08-28 17:23:47,857 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:23:47,867 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:23:48,003 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:23:48,172 - INFO - Authentication (password) successful!
+2025-08-28 17:23:48,311 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 17:23:49,846 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:23:50,012 - INFO - Authentication (password) successful!
+2025-08-28 17:23:50,106 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:23:50,112 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:23:50,626 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:23:50,903 - INFO - Authentication (password) successful!
+2025-08-28 17:23:50,993 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:23:51,001 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:23:51,104 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:23:51,609 - INFO - Authentication (password) successful!
+2025-08-28 17:23:51,704 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:23:51,712 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:27:03,239 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-28 17:27:03,522 - INFO -  * Restarting with stat
+2025-08-28 17:27:04,691 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 17:27:04,693 - WARNING -  * Debugger is active!
+2025-08-28 17:27:04,700 - INFO -  * Debugger PIN: 336-848-052
+2025-08-28 17:27:43,311 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-28 17:27:43,542 - INFO -  * Restarting with stat
+2025-08-28 17:27:44,385 - INFO - Enhanced Flask App with Security Features Started
+2025-08-28 17:27:44,390 - WARNING -  * Debugger is active!
+2025-08-28 17:27:44,400 - INFO -  * Debugger PIN: 336-848-052
+2025-08-28 17:28:46,714 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:28:46,921 - INFO - Authentication (password) successful!
+2025-08-28 17:28:47,086 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:28:47,094 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:28:47,212 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:28:47,324 - INFO - Authentication (password) successful!
+2025-08-28 17:28:47,458 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-28 17:28:49,415 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:28:49,937 - INFO - Authentication (password) successful!
+2025-08-28 17:28:50,071 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:28:50,080 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:28:50,604 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:28:50,768 - INFO - Authentication (password) successful!
+2025-08-28 17:28:50,860 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:28:50,864 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:29:35,172 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:29:35,339 - INFO - Authentication (password) successful!
+2025-08-28 17:29:35,427 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:29:35,431 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:29:53,207 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:29:53,316 - INFO - Authentication (password) successful!
+2025-08-28 17:29:53,404 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:29:53,409 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:30:29,188 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:30:29,339 - INFO - Authentication (password) successful!
+2025-08-28 17:30:29,423 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-28 17:30:29,428 - INFO - [chan 0] sftp session closed.
+2025-08-28 17:49:30,227 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-28 17:49:30,437 - INFO - Authentication (password) successful!
+2025-08-28 17:49:30,569 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-31 16:53:35,232 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 16:53:35,256 - INFO -  * Restarting with stat
+2025-08-31 16:53:36,402 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 16:53:36,404 - WARNING -  * Debugger is active!
+2025-08-31 16:53:36,412 - INFO -  * Debugger PIN: 635-320-364
+2025-08-31 16:56:05,171 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 16:56:05,173 - INFO -  * Restarting with stat
+2025-08-31 16:56:05,854 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 16:56:05,856 - WARNING -  * Debugger is active!
+2025-08-31 16:56:05,863 - INFO -  * Debugger PIN: 635-320-364
+2025-08-31 16:59:38,406 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 16:59:38,966 - INFO - Authentication (password) successful!
+2025-08-31 16:59:39,305 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 16:59:39,314 - INFO - [chan 0] sftp session closed.
+2025-08-31 16:59:39,442 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 16:59:39,724 - INFO - Authentication (password) successful!
+2025-08-31 16:59:39,949 - WARNING - Terminal forward_output thread for SV3 ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-31 16:59:41,055 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 16:59:41,221 - INFO - Authentication (password) successful!
+2025-08-31 16:59:41,307 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 16:59:41,312 - INFO - [chan 0] sftp session closed.
+2025-08-31 16:59:42,012 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 16:59:42,176 - INFO - Authentication (password) successful!
+2025-08-31 16:59:42,264 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 16:59:42,269 - INFO - [chan 0] sftp session closed.
+2025-08-31 16:59:42,642 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 16:59:42,961 - INFO - Authentication (password) successful!
+2025-08-31 16:59:43,055 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 16:59:43,116 - INFO - [chan 0] sftp session closed.
+2025-08-31 16:59:45,838 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 16:59:45,948 - INFO - Authentication (password) successful!
+2025-08-31 16:59:46,040 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 16:59:46,048 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:00:46,528 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:00:46,703 - INFO - Authentication (password) successful!
+2025-08-31 17:00:46,871 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:00:46,875 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:01:47,520 - INFO - Container 'sinhvien_test-dev' not running (status: 'exited'). Ensuring it is started.
+2025-08-31 17:01:48,051 - INFO - Restarted existing container 'sinhvien_test-dev'.
+2025-08-31 17:01:49,174 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:01:49,292 - INFO - Authentication (password) successful!
+2025-08-31 17:01:49,381 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:01:49,395 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:01:49,549 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:01:49,700 - INFO - Authentication (password) successful!
+2025-08-31 17:01:49,913 - WARNING - Terminal forward_output thread for sinhvien_test ended: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2025-08-31 17:01:51,208 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:01:51,361 - INFO - Authentication (password) successful!
+2025-08-31 17:01:51,449 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:01:51,455 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:01:52,187 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:01:52,304 - INFO - Authentication (password) successful!
+2025-08-31 17:01:52,390 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:01:52,399 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:01:52,929 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:01:53,103 - INFO - Authentication (password) successful!
+2025-08-31 17:01:53,200 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:01:53,256 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:01:53,416 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:01:53,529 - INFO - Authentication (password) successful!
+2025-08-31 17:01:53,630 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:01:53,635 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:01:57,617 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:01:57,730 - INFO - Authentication (password) successful!
+2025-08-31 17:01:57,823 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:01:57,829 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:26:49,603 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-31 17:26:49,880 - INFO -  * Restarting with stat
+2025-08-31 17:26:50,751 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 17:26:50,753 - WARNING -  * Debugger is active!
+2025-08-31 17:26:50,759 - INFO -  * Debugger PIN: 635-320-364
+2025-08-31 17:27:42,300 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:27:42,592 - INFO - Authentication (password) successful!
+2025-08-31 17:27:42,687 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:27:42,696 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:27:42,820 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:27:42,973 - INFO - Authentication (password) successful!
+2025-08-31 17:27:56,749 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:27:56,924 - INFO - Authentication (password) successful!
+2025-08-31 17:27:57,012 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:27:57,018 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:27:57,793 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:27:57,907 - INFO - Authentication (password) successful!
+2025-08-31 17:27:58,002 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:27:58,008 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:28:00,852 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:28:00,964 - INFO - Authentication (password) successful!
+2025-08-31 17:28:01,062 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:28:01,068 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:28:22,596 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 17:28:22,601 - INFO -  * Restarting with stat
+2025-08-31 17:28:23,244 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 17:28:23,247 - WARNING -  * Debugger is active!
+2025-08-31 17:28:23,253 - INFO -  * Debugger PIN: 635-320-364
+2025-08-31 17:29:42,229 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:29:42,403 - INFO - Authentication (password) successful!
+2025-08-31 17:29:42,494 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:29:42,501 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:29:42,625 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:29:42,798 - INFO - Authentication (password) successful!
+2025-08-31 17:29:50,442 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:29:50,740 - INFO - Authentication (password) successful!
+2025-08-31 17:29:50,844 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:29:50,848 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:29:52,981 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:29:53,095 - INFO - Authentication (password) successful!
+2025-08-31 17:29:53,191 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:29:53,199 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:29:56,838 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:29:57,135 - INFO - Authentication (password) successful!
+2025-08-31 17:29:57,225 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:29:57,233 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:32:05,540 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-31 17:32:05,779 - INFO -  * Restarting with stat
+2025-08-31 17:32:06,766 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 17:32:06,768 - WARNING -  * Debugger is active!
+2025-08-31 17:32:06,774 - INFO -  * Debugger PIN: 635-320-364
+2025-08-31 17:32:56,571 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:32:56,684 - INFO - Authentication (password) successful!
+2025-08-31 17:32:56,773 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:32:56,781 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:32:56,895 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:32:57,005 - INFO - Authentication (password) successful!
+2025-08-31 17:33:18,234 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:33:18,346 - INFO - Authentication (password) successful!
+2025-08-31 17:33:18,433 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:33:18,439 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:33:19,076 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:33:19,187 - INFO - Authentication (password) successful!
+2025-08-31 17:33:19,275 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:33:19,279 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:33:40,874 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:33:40,985 - INFO - Authentication (password) successful!
+2025-08-31 17:33:41,072 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:33:41,076 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:37:44,757 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-31 17:37:45,047 - INFO -  * Restarting with stat
+2025-08-31 17:37:45,978 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 17:37:45,980 - WARNING -  * Debugger is active!
+2025-08-31 17:37:45,988 - INFO -  * Debugger PIN: 635-320-364
+2025-08-31 17:38:50,023 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:38:50,196 - INFO - Authentication (password) successful!
+2025-08-31 17:38:50,285 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:38:50,291 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:38:50,411 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:38:50,582 - INFO - Authentication (password) successful!
+2025-08-31 17:38:52,175 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:38:52,344 - INFO - Authentication (password) successful!
+2025-08-31 17:38:52,429 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:38:52,436 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:38:53,092 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:38:53,205 - INFO - Authentication (password) successful!
+2025-08-31 17:38:53,288 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:38:53,291 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:38:56,962 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 17:38:57,132 - INFO - Authentication (password) successful!
+2025-08-31 17:38:57,218 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 17:38:57,224 - INFO - [chan 0] sftp session closed.
+2025-08-31 17:39:44,734 - INFO -  * Detected change in '/home/chuongdev/flask-kerberos-demo/app.py', reloading
+2025-08-31 17:39:44,971 - INFO -  * Restarting with stat
+2025-08-31 17:39:46,004 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 17:39:46,010 - WARNING -  * Debugger is active!
+2025-08-31 17:39:46,020 - INFO -  * Debugger PIN: 635-320-364
+2025-08-31 18:24:15,158 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 18:24:15,336 - INFO - Authentication (password) successful!
+2025-08-31 18:24:15,429 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 18:24:15,452 - INFO - [chan 0] sftp session closed.
+2025-08-31 18:24:15,631 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 18:24:15,804 - INFO - Authentication (password) successful!
+2025-08-31 18:24:22,843 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 18:24:22,956 - INFO - Authentication (password) successful!
+2025-08-31 18:24:23,047 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 18:24:23,071 - INFO - [chan 0] sftp session closed.
+2025-08-31 18:24:24,803 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 18:24:24,957 - INFO - Authentication (password) successful!
+2025-08-31 18:24:25,047 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 18:24:25,060 - INFO - [chan 0] sftp session closed.
+2025-08-31 18:24:25,440 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 18:24:25,554 - INFO - Authentication (password) successful!
+2025-08-31 18:24:25,643 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 18:24:25,670 - INFO - [chan 0] sftp session closed.
+2025-08-31 18:24:30,514 - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-08-31 18:24:30,625 - INFO - Authentication (password) successful!
+2025-08-31 18:24:30,721 - INFO - [chan 0] Opened sftp connection (server version 3)
+2025-08-31 18:24:30,727 - INFO - [chan 0] sftp session closed.

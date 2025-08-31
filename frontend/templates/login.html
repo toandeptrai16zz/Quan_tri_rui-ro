@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - EPU Tech</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Toàn bộ CSS tuyệt vời của bạn được giữ nguyên */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass-bg: rgba(0, 0, 0, 0.2);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.85);
+            --accent-blue: #4c9eff;
+            --accent-purple: #9c88ff;
+            --success-color: #00d4aa;
+            --error-color: #ff6b6b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--primary-gradient);
+            background-size: 400% 400%;
+            animation: gradientFloat 15s ease-in-out infinite;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+        .particle { position: absolute; width: 4px; height: 4px; background: rgba(255, 255, 255, 0.3); border-radius: 50%; animation: floatParticle 15s infinite linear; }
+        @keyframes gradientFloat { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        @keyframes floatParticle { 0% { transform: translateY(100vh); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-100vh); opacity: 0; } }
+        @keyframes slideInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        .auth-container { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; position: relative; z-index: 10; }
+        .auth-card {
+            max-width: 480px; width: 100%; background: var(--glass-bg);
+            border: 1px solid var(--glass-border); border-radius: 24px;
+            padding: 3rem 2.5rem; backdrop-filter: blur(20px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            animation: slideInUp 0.8s ease-out;
+        }
+        .auth-header { text-align: center; margin-bottom: 2.5rem; }
+        .auth-header h1 { font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+        .auth-header p { color: var(--text-secondary); font-size: 1.1rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-label { color: var(--text-primary); font-weight: 500; margin-bottom: 0.75rem; display: flex; align-items: center; font-size: 0.95rem; }
+        .form-label i { margin-right: 0.5rem; color: var(--accent-blue); }
+        .form-control-modern { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; color: var(--text-primary); padding: 1rem 1.25rem; font-size: 1rem; transition: all 0.2s ease; backdrop-filter: blur(10px); }
+        .form-control-modern:focus { background: rgba(255, 255, 255, 0.08); border-color: var(--accent-blue); box-shadow: 0 0 0 3px rgba(76, 158, 255, 0.2); }
+        .input-group-modern { position: relative; }
+        .input-group-text-modern { position: absolute; right: 0; top: 0; height: 100%; background: transparent; border: none; color: var(--text-secondary); padding: 0 1.25rem; cursor: pointer; display: flex; align-items: center; }
+        .password-strength { height: 4px; border-radius: 2px; margin-top: 0.5rem; background: rgba(255, 255, 255, 0.1); overflow: hidden; }
+        .password-strength::before { content: ''; height: 100%; display: block; transition: all 0.5s ease; width: 0%; }
+        .strength-weak::before { width: 33%; background: var(--error-color); } .strength-medium::before { width: 66%; background: var(--warning-color); } .strength-strong::before { width: 100%; background: var(--success-color); }
+        .captcha-container { background: rgba(0, 0, 0, 0.1); border-radius: 16px; padding: 1.5rem; margin: 1.5rem 0; text-align: center; }
+        .captcha-code { font-family: 'Courier New', monospace; font-size: 1.8rem; font-weight: bold; letter-spacing: 8px; color: var(--accent-blue); text-shadow: 0 2px 10px rgba(76, 158, 255, 0.3); margin: 1rem 0; user-select: none; }
+        .refresh-captcha { color: var(--accent-blue); cursor: pointer; padding: 0.5rem; border-radius: 8px; transition: all 0.3s ease; background: rgba(76, 158, 255, 0.1); }
+        .refresh-captcha:hover { transform: rotate(180deg); }
+        .btn-modern { background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); border: none; padding: 1rem 2rem; font-weight: 600; font-size: 1.1rem; color: white; border-radius: 16px; transition: all 0.3s ease; }
+        .btn-modern:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(76, 158, 255, 0.3); }
+        .loading-spinner { display: none; width: 20px; height: 20px; border: 2px solid rgba(255, 255, 255, 0.3); border-top-color: white; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 10px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .form-options { display: flex; justify-content: space-between; align-items: center; margin: 1.5rem 0; }
+        .form-check-custom label { color: var(--text-secondary); font-size: 0.9rem; }
+        .auth-link { color: var(--accent-blue); text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
+        .auth-link:hover { color: var(--accent-purple); }
+        .otp-container { display: none; }
+        .otp-inputs { display: flex; gap: 0.75rem; justify-content: center; margin: 2rem 0; }
+        .otp-input { width: 60px; height: 60px; text-align: center; font-size: 1.5rem; font-weight: bold; border-radius: 12px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-primary); transition: all 0.2s ease; }
+        .otp-input:focus { border-color: var(--accent-blue); background: rgba(255, 255, 255, 0.08); box-shadow: 0 0 0 3px rgba(76, 158, 255, 0.15); }
+        .alert-modern { border-radius: 12px; border: none; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; animation: slideInUp 0.5s ease-out; backdrop-filter: blur(10px); }
+        .alert-modern i { margin-right: 0.75rem; }
+        .alert-success { background: rgba(0, 212, 170, 0.15); color: var(--success-color); border-left: 4px solid var(--success-color); }
+        .alert-danger { background: rgba(255, 107, 107, 0.15); color: var(--error-color); border-left: 4px solid var(--error-color); }
+        .auth-footer { text-align: center; margin-top: 2rem; }
+        .auth-footer span { color: var(--text-secondary); }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div id="alertContainer"></div>
+            
+            <div id="loginContainer">
+                <div class="auth-header">
+                    <h1>EPU Tech</h1>
+                    <p>Chào mừng trở lại! Vui lòng đăng nhập để tiếp tục</p>
+                </div>
+                <form id="loginForm" method="POST">
+                    <input type="hidden" name="csrf_token" id="csrfToken">
+                    <div class="form-group">
+                        <label class="form-label"><i class="fas fa-user"></i>Tên đăng nhập</label>
+                        <input type="text" name="username" id="username" class="form-control-modern" placeholder="Nhập tên đăng nhập của bạn" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label"><i class="fas fa-lock"></i>Mật khẩu</label>
+                        <div class="input-group-modern">
+                            <input type="password" name="password" id="password" class="form-control-modern" placeholder="Nhập mật khẩu của bạn" required>
+                            <span class="input-group-text-modern" onclick="togglePassword()"><i class="fas fa-eye" id="password-icon"></i></span>
+                        </div>
+                        <div class="password-strength" id="passwordStrength"></div>
+                    </div>
+                    <div class="captcha-container">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="form-label mb-0">Mã xác thực</span>
+                            <i class="fas fa-sync-alt refresh-captcha" onclick="refreshCaptcha()" title="Tạo mã mới"></i>
+                        </div>
+                        <div class="captcha-code" id="captchaCode"></div>
+                        <input type="text" name="captcha" id="captchaInput" class="form-control-modern" placeholder="Nhập mã xác thực" required maxlength="6">
+                        <input type="hidden" name="captcha_token" id="captchaToken">
+                    </div>
+                    <div class="form-options">
+                        <div class="form-check-custom">
+                            <input class="form-check-input" type="checkbox" name="remember" id="rememberMe">
+                            <label for="rememberMe">Ghi nhớ đăng nhập</label>
+                        </div>
+                        <a href="#" class="auth-link">Quên mật khẩu?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 btn-modern" id="loginBtn">
+                        <span class="loading-spinner" id="loadingSpinner"></span>
+                        <i class="fas fa-sign-in-alt me-2"></i>Đăng nhập
+                    </button>
+                </form>
+                 <div class="auth-footer">
+                    <span>Chưa có tài khoản?</span>
+                    <a href="/register" class="auth-link">Đăng ký ngay</a>
+                </div>
+            </div>
+
+            <div class="otp-container" id="otpContainer">
+                <div class="auth-header">
+                    <h3><i class="fas fa-shield-alt"></i>Xác thực OTP</h3>
+                    <p>Nhập mã OTP đã gửi về email của bạn</p>
+                </div>
+                <div class="otp-inputs">
+                    <input type="text" class="otp-input" maxlength="1"> <input type="text" class="otp-input" maxlength="1">
+                    <input type="text" class="otp-input" maxlength="1"> <input type="text" class="otp-input" maxlength="1">
+                    <input type="text" class="otp-input" maxlength="1"> <input type="text" class="otp-input" maxlength="1">
+                </div>
+                <button type="button" class="btn w-100 btn-modern" onclick="verifyOTP()">
+                    <i class="fas fa-check-circle me-2"></i>Xác thực
+                </button>
+                <div class="text-center mt-3">
+                    <span class="text-secondary">Không nhận được mã?</span>
+                    <a href="#" onclick="resendOTP(event)" class="auth-link ms-2" id="resendLink">Gửi lại</a>
+                    <span class="text-secondary ms-2" id="countdown"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            createParticles();
+            fetchAndSetCSRFToken();
+            refreshCaptcha();
+            document.getElementById("password").addEventListener("input", updatePasswordStrengthUI);
+            document.getElementById("loginForm").addEventListener("submit", submitLogin);
+            setupOtpInputs();
+        });
+
+        function createParticles() {
+            const container = document.getElementById("particles");
+            for (let i = 0; i < 30; i++) {
+                const p = document.createElement("div");
+                p.className = "particle";
+                p.style.left = `${Math.random() * 100}%`;
+                p.style.animationDelay = `${Math.random() * 15}s`;
+                p.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                container.appendChild(p);
+            }
+        }
+
+        async function fetchAndSetCSRFToken() {
+            try {
+                const res = await fetch('/api/generate-csrf');
+                if (!res.ok) throw new Error('Network response was not ok');
+                const data = await res.json();
+                document.getElementById("csrfToken").value = data.csrf_token;
+            } catch (error) {
+                showAlert("Không thể lấy token bảo mật. Vui lòng tải lại trang.", "danger");
+            }
+        }
+
+        let captchaAnswer = "";
+        function refreshCaptcha() {
+            const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+            let captcha = "";
+            for (let i = 0; i < 6; i++) captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            captchaAnswer = captcha;
+            document.getElementById("captchaCode").textContent = captcha;
+            document.getElementById("captchaToken").value = btoa(captcha + ":" + Date.now());
+        }
+
+        function togglePassword() {
+            const p = document.getElementById("password"), i = document.getElementById("password-icon");
+            p.type = p.type === 'password' ? 'text' : 'password';
+            i.classList.toggle('fa-eye'); i.classList.toggle('fa-eye-slash');
+        }
+
+        function updatePasswordStrengthUI() {
+            const v = this.value, s = document.getElementById("passwordStrength"), str = v.length > 0 ? (v.length > 12 ? 3 : (v.length > 8 ? 2 : 1)) : 0;
+            s.className = "password-strength";
+            if (str === 1) s.classList.add("strength-weak");
+            else if (str === 2) s.classList.add("strength-medium");
+            else if (str === 3) s.classList.add("strength-strong");
+        }
+
+        async function submitLogin(e) {
+            e.preventDefault();
+            const btn = document.getElementById('loginBtn'), spinner = document.getElementById('loadingSpinner');
+            btn.disabled = true; spinner.style.display = 'inline-block';
+
+            try {
+                const res = await fetch('/api/login', { method: 'POST', body: new FormData(this) });
+                const result = await res.json();
+                if (result.success) {
+                    if (result.requireOTP) {
+                        document.getElementById('loginContainer').style.display = 'none';
+                        document.getElementById('otpContainer').style.display = 'block';
+                        startResendTimer();
+                    } else {
+                        showAlert('Đăng nhập thành công!', 'success');
+                        setTimeout(() => window.location.href = result.redirect || '/', 1000);
+                    }
+                } else {
+                    showAlert(result.message || 'Lỗi không xác định.', 'danger');
+                    refreshCaptcha();
+                }
+            } catch (error) {
+                showAlert('Lỗi kết nối đến server.', 'danger');
+                refreshCaptcha();
+            } finally {
+                btn.disabled = false; spinner.style.display = 'none';
+            }
+        }
+
+        function setupOtpInputs() {
+            const inputs = document.querySelectorAll('.otp-input');
+            inputs.forEach((input, index) => {
+                input.addEventListener('input', () => { if (input.value && index < inputs.length - 1) inputs[index + 1].focus(); });
+                input.addEventListener('keydown', e => { if (e.key === 'Backspace' && !input.value && index > 0) inputs[index - 1].focus(); });
+            });
+        }
+
+        async function verifyOTP() {
+            const otp = Array.from(document.querySelectorAll('.otp-input')).map(input => input.value).join('');
+            if (otp.length !== 6) return showAlert('Vui lòng nhập đủ 6 số OTP.', 'danger');
+            try {
+                const res = await fetch('/api/verify-otp', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': document.getElementById('csrfToken').value },
+                    body: JSON.stringify({ otp: otp })
+                });
+                const result = await res.json();
+                if (result.success) {
+                    showAlert('Xác thực thành công!', 'success');
+                    setTimeout(() => window.location.href = result.redirect || '/', 1000);
+                } else {
+                    showAlert(result.error || 'Mã OTP không đúng.', 'danger');
+                }
+            } catch (error) { showAlert('Lỗi khi xác thực OTP.', 'danger'); }
+        }
+
+        function startResendTimer() {
+            let timeLeft = 60;
+            const link = document.getElementById('resendLink'), countdown = document.getElementById('countdown');
+            link.style.pointerEvents = 'none'; link.style.opacity = '0.5';
+            countdown.textContent = `(${timeLeft}s)`;
+            const timer = setInterval(() => {
+                timeLeft--; countdown.textContent = `(${timeLeft}s)`;
+                if (timeLeft <= 0) { clearInterval(timer); link.style.pointerEvents = 'auto'; link.style.opacity = '1'; countdown.textContent = ''; }
+            }, 1000);
+        }
+
+        async function resendOTP(e) {
+            e.preventDefault();
+            try {
+                const res = await fetch('/api/resend-otp', { method: 'POST', headers: { 'X-CSRF-TOKEN': document.getElementById('csrfToken').value } });
+                const result = await res.json();
+                if (result.success) { showAlert('Mã OTP mới đã được gửi.', 'success'); startResendTimer(); }
+                else { showAlert(result.error || 'Không thể gửi lại OTP.', 'danger'); }
+            } catch (error) { showAlert('Lỗi khi gửi lại OTP.', 'danger'); }
+        }
+
+        function showAlert(message, type) {
+            const container = document.getElementById('alertContainer');
+            const icon = type === 'danger' ? 'exclamation-circle' : 'check-circle';
+            container.innerHTML = `<div class="alert-modern alert-${type}"><i class="fas fa-${icon}"></i> ${message}</div>`;
+        }
+    </script>
+</body>
+</html>
+
