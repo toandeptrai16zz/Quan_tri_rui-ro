@@ -1,5 +1,5 @@
 # ================== IMPORTS ==================
-import 
+import os
 #Cài đặt thêm thư viện eventlet
 import eventlet
 eventlet.monkey_patch()
@@ -34,7 +34,8 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler('app.log'), logging.StreamHandler()]
 )
-app = Flask(__name__)
+#Sửa đường dẫn chỉ rõ thư mục frontend , vì cấu trúc thư mục khác
+app = Flask(__name__, template_folder="../frontend/templates")
 app.secret_key = os.urandom(24)
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
 

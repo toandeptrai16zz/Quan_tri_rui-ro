@@ -1,0 +1,50 @@
+2025-08-31 20:32:22,035 - INFO - package: mysql.connector.plugins
+2025-08-31 20:32:22,035 - INFO - plugin_name: caching_sha2_password
+2025-08-31 20:32:22,037 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 20:32:22,072 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 20:32:22,073 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 20:32:22,093 - INFO -  * Restarting with stat
+2025-08-31 20:32:23,539 - INFO - package: mysql.connector.plugins
+2025-08-31 20:32:23,540 - INFO - plugin_name: caching_sha2_password
+2025-08-31 20:32:23,540 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 20:32:23,546 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 20:32:23,548 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 20:32:23,553 - WARNING -  * Debugger is active!
+2025-08-31 20:32:23,562 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 20:35:36,624 - INFO - package: mysql.connector.plugins
+2025-08-31 20:35:36,625 - INFO - plugin_name: caching_sha2_password
+2025-08-31 20:35:36,625 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 20:35:36,631 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 20:35:36,632 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 20:35:36,637 - INFO -  * Restarting with stat
+2025-08-31 20:35:38,151 - INFO - package: mysql.connector.plugins
+2025-08-31 20:35:38,152 - INFO - plugin_name: caching_sha2_password
+2025-08-31 20:35:38,152 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 20:35:38,157 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 20:35:38,160 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 20:35:38,165 - WARNING -  * Debugger is active!
+2025-08-31 20:35:38,174 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 20:36:44,617 - INFO - package: mysql.connector.plugins
+2025-08-31 20:36:44,618 - INFO - plugin_name: caching_sha2_password
+2025-08-31 20:36:44,618 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 20:36:44,623 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 20:36:44,624 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 20:36:44,630 - INFO -  * Restarting with stat
+2025-08-31 20:36:46,096 - INFO - package: mysql.connector.plugins
+2025-08-31 20:36:46,096 - INFO - plugin_name: caching_sha2_password
+2025-08-31 20:36:46,097 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 20:36:46,103 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 20:36:46,104 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 20:36:46,109 - WARNING -  * Debugger is active!
+2025-08-31 20:36:46,118 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 20:39:55,353 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 20:39:55,500 - INFO -  * Restarting with stat
+2025-08-31 20:39:57,012 - INFO - package: mysql.connector.plugins
+2025-08-31 20:39:57,013 - INFO - plugin_name: caching_sha2_password
+2025-08-31 20:39:57,013 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-08-31 20:39:57,018 - ERROR - DATABASE CONNECTION ERROR: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-08-31 20:39:57,019 - INFO - Enhanced Flask App with Security Features Started
+2025-08-31 20:39:57,024 - WARNING -  * Debugger is active!
+2025-08-31 20:39:57,033 - INFO -  * Debugger PIN: 116-219-319
+2025-08-31 20:41:11,368 - INFO -  * Detected change in 'd:\\PRODUCTION1\\backend\\app.py', reloading
+2025-08-31 20:41:11,575 - INFO -  * Restarting with stat
