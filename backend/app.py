@@ -62,6 +62,7 @@ def generate_csrf_token():
     for t in expired: del csrf_tokens[t]
     return token
 
+#sua dong 65
 def validate_csrf_token(token):
     if not token or token not in csrf_tokens: return False
     if time.time() - csrf_tokens[token]['created_at'] > SECURITY_CONFIG['CSRF_EXPIRY']:
