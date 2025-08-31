@@ -723,6 +723,11 @@ def extract_warning_info(warning_line, all_lines, line_index):
 # =================================================================
 # ▲▲▲ KẾT THÚC ĐOẠN CODE API BIÊN DỊCH MỚI ▲▲▲
 # ================== ADMIN ROUTES ==================
+#thêm route flask cho quản lý thiết bị và tag1
+@app.route("/admin/devices")
+@require_auth('admin')
+def admin_devices():
+    return render_template("admin/devices.html")
 @app.route("/admin")
 @require_auth('admin')
 def admin_dashboard():
@@ -738,7 +743,7 @@ def admin_dashboard():
                            active_users=stats.get('active', 0),
                            blocked_users=stats.get('blocked', 0),
                            pending_users=stats.get('pending', 0),
-                           logs=logs)
+                           logs=logs)  
 
 @app.route("/admin/manage")
 @require_auth('admin')
