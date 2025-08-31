@@ -17,6 +17,9 @@ DEVICE_MAP = {
     "2341:0043": "Arduino_Uno",
     "2341:0001": "Arduino_Uno",
     "2341:0042": "Arduino_Mega",
+    "10c4:ea60": "ESP8266",
+    "0e0f:0002": "ESP8266",
+    "1d6b:0001": "ESP8266",
 }
 
 def main():
