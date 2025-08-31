@@ -1,0 +1,6 @@
+#sudo nano /etc/udev/rules.d/99-usb-serial.rules
+# Rule này sẽ lấy thêm idVendor và idProduct và truyền chúng vào script
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}!="", ATTRS{idProduct}!="", RUN+="/usr/bin/docker exec hardware_manager python3 /app/listener.py %k $attr{idVendor} $attr{idProduct}"
+
+#Để áp dụng:
+#sudo udevadm control --reload-rules && sudo udevadm trigger
