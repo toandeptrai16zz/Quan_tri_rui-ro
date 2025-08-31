@@ -54,5 +54,14 @@ services:
       # TỐI ƯU: Thêm secret key để gọi API nội bộ an toàn.
       INTERNAL_API_SECRET: ${INTERNAL_API_SECRET}
 
+  hardware_broker:
+    build: ./hardware_broker
+    container_name: hardware_broker
+    restart: unless-stopped
+    # QUAN TRỌNG: Ánh xạ các cổng USB vật lý từ máy chủ vào container
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+      #- "/dev/ttyUSB1:/dev/ttyUSB1"
+      # Thêm các cổng khác nếu cần...
 volumes:
   db_data:
