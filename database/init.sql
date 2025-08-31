@@ -65,6 +65,15 @@ CREATE TABLE IF NOT EXISTS `assignments` (
   FOREIGN KEY (`tag_name`) REFERENCES `devices`(`tag_name`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- BẢNG MỚI: Dùng để lưu trữ bản đồ nhận dạng thiết bị
+CREATE TABLE IF NOT EXISTS `device_identities` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `vendor_id` VARCHAR(10) NOT NULL,
+  `product_id` VARCHAR(10) NOT NULL,
+  `device_type` VARCHAR(100) NOT NULL,  -- ESP8266, ESP32, Arduino_Uno, etc.
+  `description` TEXT NULL,
+  UNIQUE KEY `vendor_product_unique` (`vendor_id`, `product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- =================================================================
 -- KHỞI TẠO DỮ LIỆU BAN ĐẦU
@@ -75,5 +84,14 @@ CREATE TABLE IF NOT EXISTS `assignments` (
 INSERT INTO `users` (`username`, `password`, `email`, `role`, `status`)
 SELECT 'admin', '$2b$12$K8.o3B5a.s4.6a0ZJ2n3nO.i4.mYg5i3U2e9R6j4.pYc5L5f6g7H8', 'admin@eputech.com', 'admin', 'active'
 WHERE NOT EXISTS (SELECT 1 FROM `users` WHERE `username` = 'admin');
+-- Thêm dữ liệu nhận dạng mẫu
+INSERT INTO `device_identities` (`vendor_id`, `product_id`, `device_type`, `description`) VALUES
+('1a86', '7523', 'ESP_CH340', 'Common USB-Serial chip for NodeMCU, ESP8266'),
+('10c4', 'ea60', 'ESP_CP2102', 'Common USB-Serial chip for ESP32 DevKits'),
+('2341', '0043', 'Arduino_Uno', 'Arduino Uno R3'),
+('2341', '0001', 'Arduino_Uno', 'Arduino Uno'),
+('2341', '0042', 'Arduino_Mega', 'Arduino Mega 2560')
+('2341', '0042', 'Arduino_Mega', 'Arduino Mega 2560')
+ON DUPLICATE KEY UPDATE device_type=VALUES(device_type);
 -- Lưu ý: password hash này tương ứng với 'admin123@', được tạo bởi generate_password_hash của werkzeug.
 -- Nếu backend dùng thuật toán hash khác, bạn cần tạo lại hash này.
