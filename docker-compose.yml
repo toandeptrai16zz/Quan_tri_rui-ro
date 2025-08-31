@@ -1,25 +1,24 @@
+version: '3.8'
+
 services:
-  # Dịch vụ Broker quản lý phần cứng
-  hardware_broker:
-    build: /srv/hardware_broker
-    container_name: hardware_broker
+  database:
+    image: mysql:8.0
+    container_name: remote_lab_db
+    command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped
-    devices:
-      - "/dev/ttyUSB0:/dev/ttyUSB0"
-    volumes:
-      - /var/log/hardware_broker.log:/var/log/hardware_broker.log
-
-  # Môi trường làm việc cho user ttung
-  ttung_env:
-    container_name: ttung_env
     environment:
-      - USER=ttung
-    build:
-      context: .
-      dockerfile: Dockerfile.user
-    command: tail -f /dev/null
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      # Không cần MYSQL_DATABASE ở đây vì file init.sql đã tự tạo
     volumes:
-      - /srv/rd-space/ttung:/workspace
-    working_dir: /workspace
-    restart: unless-stopped
+      # Dòng này sẽ mount thư mục chứa dữ liệu DB ra ngoài container
+      - db_data:/var/lib/mysql
+      # Dòng QUAN TRỌNG: Tự động chạy file .sql khi container khởi động lần đầu
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      # Mở port 3306 để có thể kết nối từ bên ngoài vào DB (nếu cần gỡ lỗi)
+      - "3306:3306"
 
+# ... các service khác ...
+
+volumes:
+  db_data:
