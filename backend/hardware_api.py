@@ -5,7 +5,7 @@ from .utils import get_db_connection, require_auth # Giả sử bạn có file u
 from datetime import datetime, timedelta
 
 # Tạo một Blueprint để nhóm các route phần cứng lại
-hardware_bp = Blueprint('hardware_api', __name__)
+hardware_bp = Blueprint('hardware_api', __name__, url_prefix='/api/hardware')
 
 # =================================================================
 # ===                  API CHO SINH VIÊN                        ===
@@ -91,3 +91,4 @@ def create_assignment():
     finally:
         cur.close()
         db.close()
+
