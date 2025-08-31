@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% block title %}Quản lý Thiết bị & TAG{% endblock %}
+
+{% block extra_head %}
+<style>
+  .device-table { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+  .device-table th, .device-table td { vertical-align: middle; }
+  .add-device-btn { background: linear-gradient(45deg, #11998e, #38ef7d); color: #fff; border: none; border-radius: 8px; padding: 8px 18px; font-weight: 600; }
+  .add-device-btn:hover { background: linear-gradient(45deg, #38ef7d, #11998e); }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+  <h2 class="mb-4"><i class="fa-solid fa-microchip"></i> Quản lý Thiết bị & TAG</h2>
+  <button class="add-device-btn mb-3" onclick="showAddDeviceModal()"><i class="fa-solid fa-plus"></i> Thêm thiết bị mới</button>
+  <div class="table-responsive">
+    <table class="table device-table">
+      <thead>
+        <tr>
+          <th>TAG Name</th>
+          <th>Loại</th>
+          <th>Cổng</th>
+          <th>Trạng thái</th>
+        </tr>
+      </thead>
+      <tbody id="devices-table-body">
+        <!-- Dữ liệu sẽ được chèn vào đây bằng JavaScript -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal thêm thiết bị mới -->
+<div id="addDeviceModal" class="modal" tabindex="-1" style="display:none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Thêm thiết bị mới</h5>
+        <button type="button" class="btn-close" onclick="hideAddDeviceModal()"></button>
+      </div>
+      <div class="modal-body">
+        <form id="addDeviceForm">
+          <div class="mb-3">
+            <label for="tag_name" class="form-label">TAG Name</label>
+            <input type="text" class="form-control" id="tag_name" name="tag_name" required>
+          </div>
+          <div class="mb-3">
+            <label for="type" class="form-label">Loại</label>
+            <input type="text" class="form-control" id="type" name="type" required>
+          </div>
+          <div class="mb-3">
+            <label for="port" class="form-label">Cổng</label>
+            <input type="text" class="form-control" id="port" name="port" required>
+          </div>
+          <button type="submit" class="btn btn-success">Thêm thiết bị</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function showAddDeviceModal() {
+  document.getElementById('addDeviceModal').style.display = 'block';
+}
+function hideAddDeviceModal() {
+  document.getElementById('addDeviceModal').style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const tableBody = document.getElementById('devices-table-body');
+  const addDeviceForm = document.getElementById('addDeviceForm');
+
+  async function loadDevices() {
+    const response = await fetch('/admin/api/devices');
+    const devices = await response.json();
+    tableBody.innerHTML = '';
+    devices.forEach(device => {
+      const row = `<tr>
+        <td>${device.tag_name}</td>
+        <td>${device.type}</td>
+        <td>${device.port}</td>
+        <td>${device.in_use_by ? `Đang dùng bởi: ${device.in_use_by}` : 'Còn trống'}</td>
+      </tr>`;
+      tableBody.innerHTML += row;
+    });
+  }
+
+  addDeviceForm.onsubmit = async function(e) {
+    e.preventDefault();
+    const data = {
+      tag_name: addDeviceForm.tag_name.value,
+      type: addDeviceForm.type.value,
+      port: addDeviceForm.port.value
+    };
+    const res = await fetch('/admin/api/devices', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (res.ok) {
+      hideAddDeviceModal();
+      loadDevices();
+      addDeviceForm.reset();
+    } else {
+      alert('Thêm thiết bị thất bại!');
+    }
+  };
+
+  loadDevices();
+});
+</script>
+{% endblock %}
