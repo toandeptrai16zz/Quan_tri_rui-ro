@@ -34,7 +34,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler('app.log'), logging.StreamHandler()]
 )
-#Sửa đường dẫn chỉ rõ thư mục frontend , vì cấu trúc thư mục khác
+#Sửa đường dẫn chỉ rõ thư mục frontend , vì cấu trúc thư mục khác Chỉ sửa FE
 app = Flask(__name__, template_folder="../frontend/templates")
 app.secret_key = os.urandom(24)
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
