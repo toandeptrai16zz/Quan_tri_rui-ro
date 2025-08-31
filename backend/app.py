@@ -1,5 +1,8 @@
 # ================== IMPORTS ==================
-import os
+import 
+#Cài đặt thêm thư viện eventlet
+import eventlet
+eventlet.monkey_patch()
 import secrets
 import time
 import random
@@ -33,7 +36,7 @@ logging.basicConfig(
 )
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
-socketio = SocketIO(app, cors_allowed_origins="*")
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
 
 # ================== CONFIGURATIONS ==================
 SECURITY_CONFIG = {
