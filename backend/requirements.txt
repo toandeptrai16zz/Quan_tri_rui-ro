@@ -1,4 +1,8 @@
-fastapi
-uvicorn
-python-multipart
-pyserial
+Flask
+Flask-SocketIO
+mysql-connector-python
+paramiko
+werkzeug
+gunicorn
+docker
+python-dotenv
