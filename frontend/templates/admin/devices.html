@@ -1,129 +1,701 @@
-<!-- {% extends "layout.html" %} -->
-<!-- {% block title %}Quản lý Thiết bị & TAG{% endblock %} -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Thiết bị & TAG</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --warning-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --danger-gradient: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.18);
+            --shadow-soft: 0 8px 32px rgba(31, 38, 135, 0.37);
+            --shadow-hover: 0 15px 35px rgba(31, 38, 135, 0.4);
+            --border-radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-<!-- {% block extra_head %} -->
-<!--tạm thời vô hiệu hóa , chuyển thành html tĩnh để preview sửa FE-->
-<style>
-  .device-table { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-  .device-table th, .device-table td { vertical-align: middle; }
-  .add-device-btn { background: linear-gradient(45deg, #11998e, #38ef7d); color: #fff; border: none; border-radius: 8px; padding: 8px 18px; font-weight: 600; }
-  .add-device-btn:hover { background: linear-gradient(45deg, #38ef7d, #11998e); }
+        * {
+            box-sizing: border-box;
+        }
 
-<!-- {% endblock %} -->
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            position: relative;
+        }
 
-<!-- {% block content %} -->
-<div class="container py-4">
-  <h2 class="mb-4"><i class="fa-solid fa-microchip"></i> Quản lý Thiết bị & TAG</h2>
-  <button class="add-device-btn mb-3" onclick="showAddDeviceModal()"><i class="fa-solid fa-plus"></i> Thêm thiết bị mới</button>
-  <div class="table-responsive">
-    <table class="table device-table">
-      <thead>
-        <tr>
-          <th>TAG Name</th>
-          <th>Loại</th>
-          <th>Cổng</th>
-          <th>Trạng thái</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>ESP32_Lab1</td>
-          <td>ESP32</td>
-          <td>/dev/ttyUSB0</td>
-          <td>Còn trống</td>
-        </tr>
-        <tr>
-          <td>ESP32_Lab2</td>
-          <td>ESP32</td>
-          <td>/dev/ttyUSB1</td>
-          <td>Đang dùng bởi: sinhvienk4</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
 
-<!-- Modal thêm thiết bị mới -->
-<div id="addDeviceModal" class="modal" tabindex="-1" style="display:none;">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Thêm thiết bị mới</h5>
-        <button type="button" class="btn-close" onclick="hideAddDeviceModal()"></button>
-      </div>
-      <div class="modal-body">
-        <form id="addDeviceForm">
-          <div class="mb-3">
-            <label for="tag_name" class="form-label">TAG Name</label>
-            <input type="text" class="form-control" id="tag_name" name="tag_name" required>
-          </div>
-          <div class="mb-3">
-            <label for="type" class="form-label">Loại</label>
-            <input type="text" class="form-control" id="type" name="type" required>
-          </div>
-          <div class="mb-3">
-            <label for="port" class="form-label">Cổng</label>
-            <input type="text" class="form-control" id="port" name="port" required>
-          </div>
-          <button type="submit" class="btn btn-success">Thêm thiết bị</button>
-        </form>
-      </div>
+        .container {
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+
+        .main-header h2 {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .main-header .subtitle {
+            color: #6c757d;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .add-device-btn {
+            background: var(--success-gradient);
+            color: #fff;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 12px 24px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(17, 153, 142, 0.3);
+        }
+
+        .add-device-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: var(--transition);
+        }
+
+        .add-device-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            color: #fff;
+        }
+
+        .add-device-btn:hover::before {
+            left: 100%;
+        }
+
+        .device-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .device-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .device-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .device-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .device-info {
+            padding: 1.5rem;
+        }
+
+        .device-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .device-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .device-type {
+            background: var(--primary-gradient);
+            color: #fff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .device-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-item i {
+            width: 20px;
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .port-code {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 0.25rem 0.5rem;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+        }
+
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .status-available {
+            background: var(--success-gradient);
+            color: #fff;
+            animation: pulse-success 2s infinite;
+        }
+
+        .status-in-use {
+            background: var(--warning-gradient);
+            color: #fff;
+            animation: pulse-warning 2s infinite;
+        }
+
+        @keyframes pulse-success {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(56, 239, 125, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(56, 239, 125, 0); }
+        }
+
+        @keyframes pulse-warning {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(245, 87, 108, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(245, 87, 108, 0); }
+        }
+
+        .modal {
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .modal-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .modal-header {
+            border-bottom: 1px solid var(--glass-border);
+            background: var(--primary-gradient);
+            color: #fff;
+        }
+
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+
+        .form-control {
+            border-radius: 12px;
+            border: 2px solid #e9ecef;
+            padding: 0.75rem 1rem;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+            background: #fff;
+        }
+
+        .btn-success {
+            background: var(--success-gradient);
+            border: none;
+            border-radius: 12px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(17, 153, 142, 0.4);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #6c757d;
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { 
+                opacity: 0; 
+                transform: translateX(-30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(0); 
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .device-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .device-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .main-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gradient);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--success-gradient);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="main-header fade-in">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h2><i class="fa-solid fa-microchip me-3"></i>Quản lý Thiết bị & TAG</h2>
+                <p class="subtitle mb-0">Quản lý và theo dõi các thiết bị IoT trong hệ thống</p>
+            </div>
+            <button class="add-device-btn" onclick="showAddDeviceModal()">
+                <i class="fa-solid fa-plus me-2"></i>Thêm thiết bị
+            </button>
+        </div>
     </div>
-  </div>
+
+    <div id="devices-container" class="fade-in">
+        <!-- Devices will be rendered here -->
+    </div>
 </div>
 
+<!-- Modal -->
+<div id="addDeviceModal" class="modal" tabindex="-1" style="display:none;">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fa-solid fa-plus-circle me-2"></i>
+                    Thêm thiết bị mới
+                </h5>
+                <button type="button" class="btn-close" onclick="hideAddDeviceModal()"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addDeviceForm">
+                    <div class="mb-3">
+                        <label for="tag_name" class="form-label">
+                            <i class="fa-solid fa-tag me-2"></i>TAG Name
+                        </label>
+                        <input type="text" class="form-control" id="tag_name" name="tag_name" required 
+                               placeholder="Ví dụ: ESP32_PhongThiNghiem">
+                    </div>
+                    <div class="mb-3">
+                        <label for="type" class="form-label">
+                            <i class="fa-solid fa-microchip me-2"></i>Loại thiết bị
+                        </label>
+                        <select class="form-control" id="type" name="type" required>
+                            <option value="">Chọn loại thiết bị...</option>
+                            <option value="ESP32">ESP32</option>
+                            <option value="Arduino Uno">Arduino Uno</option>
+                            <option value="Arduino Nano">Arduino Nano</option>
+                            <option value="Raspberry Pi">Raspberry Pi</option>
+                            <option value="STM32">STM32</option>
+                            <option value="NodeMCU">NodeMCU</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="port" class="form-label">
+                            <i class="fa-solid fa-plug me-2"></i>Cổng kết nối
+                        </label>
+                        <input type="text" class="form-control" id="port" name="port" required 
+                               placeholder="Ví dụ: /dev/ttyUSB0, COM3, /dev/ttyACM0">
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">
+                        <i class="fa-solid fa-plus me-2"></i>
+                        Thêm thiết bị
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!--
+<!-- Success Toast -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header bg-success text-white">
+            <i class="fa-solid fa-check-circle me-2"></i>
+            <strong class="me-auto">Thành công</strong>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Thiết bị đã được thêm thành công!
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-function showAddDeviceModal() {
-  document.getElementById('addDeviceModal').style.display = 'block';
-}
-function hideAddDeviceModal() {
-  document.getElementById('addDeviceModal').style.display = 'none';
-}
+    // --- Dữ liệu mẫu ---
+    let devices = [
+        {
+            id: 1,
+            tag_name: "ESP32_Lab1",
+            type: "ESP32",
+            port: "/dev/ttyUSB0",
+            in_use_by: null,
+            date_added: "2024-01-15"
+        },
+        {
+            id: 2,
+            tag_name: "ESP32_Lab2",
+            type: "ESP32",
+            port: "/dev/ttyUSB1",
+            in_use_by: "sinhvienk4",
+            date_added: "2024-01-20"
+        },
+        {
+            id: 3,
+            tag_name: "Arduino_Uno_01",
+            type: "Arduino Uno",
+            port: "COM3",
+            in_use_by: null,
+            date_added: "2024-02-01"
+        },
+        {
+            id: 4,
+            tag_name: "RaspberryPi_Main",
+            type: "Raspberry Pi",
+            port: "/dev/ttyACM0",
+            in_use_by: "admin",
+            date_added: "2024-02-10"
+        }
+    ];
 
-document.addEventListener('DOMContentLoaded', function() {
-  const tableBody = document.getElementById('devices-table-body');
-  const addDeviceForm = document.getElementById('addDeviceForm');
+    let deviceIdCounter = devices.length + 1;
 
-  async function loadDevices() {
-    const response = await fetch('/admin/api/devices');
-    const devices = await response.json();
-    tableBody.innerHTML = '';
-    devices.forEach(device => {
-      const row = `<tr>
-        <td>${device.tag_name}</td>
-        <td>${device.type}</td>
-        <td>${device.port}</td>
-        <td>${device.in_use_by ? `Đang dùng bởi: ${device.in_use_by}` : 'Còn trống'}</td>
-      </tr>`;
-      tableBody.innerHTML += row;
-    });
-  }
+    // --- Elements ---
+    const devicesContainer = document.getElementById('devices-container');
+    const addDeviceForm = document.getElementById('addDeviceForm');
+    const addDeviceModal = document.getElementById('addDeviceModal');
+    const successToast = new bootstrap.Toast(document.getElementById('successToast'));
 
-  addDeviceForm.onsubmit = async function(e) {
-    e.preventDefault();
-    const data = {
-      tag_name: addDeviceForm.tag_name.value,
-      type: addDeviceForm.type.value,
-      port: addDeviceForm.port.value
-    };
-    const res = await fetch('/admin/api/devices', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    if (res.ok) {
-      hideAddDeviceModal();
-      loadDevices();
-      addDeviceForm.reset();
-    } else {
-      alert('Thêm thiết bị thất bại!');
+    // --- Utility functions ---
+    function getDeviceIcon(type) {
+        const icons = {
+            'ESP32': 'fa-microchip',
+            'Arduino Uno': 'fa-microchip',
+            'Arduino Nano': 'fa-microchip',
+            'Raspberry Pi': 'fa-computer',
+            'STM32': 'fa-microchip',
+            'NodeMCU': 'fa-wifi'
+        };
+        return icons[type] || 'fa-microchip';
     }
-  };
 
-  loadDevices();
-});
+    function getStatusInfo(device) {
+        if (device.in_use_by) {
+            return {
+                class: 'status-in-use',
+                icon: 'fa-user',
+                text: `Đang sử dụng bởi: ${device.in_use_by}`
+            };
+        } else {
+            return {
+                class: 'status-available',
+                icon: 'fa-check-circle',
+                text: 'Sẵn sàng sử dụng'
+            };
+        }
+    }
+
+    // --- Render functions ---
+    function renderDevices() {
+        if (devices.length === 0) {
+            devicesContainer.innerHTML = `
+                <div class="empty-state fade-in">
+                    <i class="fa-solid fa-box-open"></i>
+                    <h4>Chưa có thiết bị nào</h4>
+                    <p>Hãy thêm thiết bị đầu tiên của bạn!</p>
+                </div>
+            `;
+            return;
+        }
+
+        devicesContainer.innerHTML = devices.map((device, index) => {
+            const status = getStatusInfo(device);
+            const deviceIcon = getDeviceIcon(device.type);
+            
+            return `
+                <div class="device-card slide-in" style="animation-delay: ${index * 0.1}s">
+                    <div class="device-info">
+                        <div class="device-header">
+                            <div class="device-name">
+                                <i class="fa-solid ${deviceIcon} me-2"></i>
+                                ${device.tag_name}
+                            </div>
+                            <div class="device-type">
+                                ${device.type}
+                            </div>
+                        </div>
+                        
+                        <div class="device-details">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-plug"></i>
+                                <span>Cổng: <code class="port-code">${device.port}</code></span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>Ngày thêm: ${device.date_added}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="status-badge ${status.class}">
+                            <i class="fa-solid ${status.icon} me-2"></i>
+                            ${status.text}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // --- Event handlers ---
+    addDeviceForm.onsubmit = function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(addDeviceForm);
+        const newDevice = {
+            id: deviceIdCounter++,
+            tag_name: formData.get('tag_name'),
+            type: formData.get('type'),
+            port: formData.get('port'),
+            in_use_by: null,
+            date_added: new Date().toISOString().split('T')[0]
+        };
+
+        // Validation
+        if (devices.some(d => d.tag_name === newDevice.tag_name)) {
+            alert('TAG Name đã tồn tại! Vui lòng chọn tên khác.');
+            return;
+        }
+
+        if (devices.some(d => d.port === newDevice.port)) {
+            alert('Cổng đã được sử dụng! Vui lòng chọn cổng khác.');
+            return;
+        }
+
+        devices.push(newDevice);
+        renderDevices();
+        hideAddDeviceModal();
+        addDeviceForm.reset();
+        
+        // Show success toast
+        successToast.show();
+    };
+
+    function showAddDeviceModal() {
+        addDeviceModal.style.display = 'block';
+        setTimeout(() => {
+            addDeviceModal.classList.add('show');
+        }, 10);
+    }
+
+    function hideAddDeviceModal() {
+        addDeviceModal.classList.remove('show');
+        setTimeout(() => {
+            addDeviceModal.style.display = 'none';
+        }, 300);
+    }
+
+    // Close modal when clicking outside
+    addDeviceModal.addEventListener('click', function(e) {
+        if (e.target === addDeviceModal) {
+            hideAddDeviceModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && addDeviceModal.style.display === 'block') {
+            hideAddDeviceModal();
+        }
+    });
+
+    // --- Initialize ---
+    document.addEventListener('DOMContentLoaded', function() {
+        renderDevices();
+        
+        // Add some interactive animations
+        document.addEventListener('mousemove', function(e) {
+            const cards = document.querySelectorAll('.device-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+                } else {
+                    card.style.transform = '';
+                }
+            });
+        });
+    });
+
+    // Auto-refresh simulation (optional)
+    setInterval(() => {
+        // Simulate random status changes
+        if (Math.random() < 0.1) { // 10% chance every 5 seconds
+            const randomDevice = devices[Math.floor(Math.random() * devices.length)];
+            if (randomDevice.in_use_by === null && Math.random() < 0.5) {
+                randomDevice.in_use_by = `user${Math.floor(Math.random() * 100)}`;
+                renderDevices();
+            } else if (randomDevice.in_use_by !== null && Math.random() < 0.3) {
+                randomDevice.in_use_by = null;
+                renderDevices();
+            }
+        }
+    }, 5000);
+
 </script>
--->
-<!-- {% endblock %} -->
+
+</body>
+</html>
