@@ -407,34 +407,42 @@ def auto_discover_device():
 
     
     # Validate request
-    data, error_response, status_code = validate_json_request(['port', 'type'])
+    data, error_response, status_code = validate_json_request(['port', 'vendor_id', 'product_id'])
     if error_response:
         return error_response, status_code
     
-    port = data.get('port')           # ví dụ: "/dev/ttyUSB0"
-    device_type = data.get('type')    # ví dụ: "ESP8266"
-    device_name = data.get('device_name')  # Tên thiết bị tùy chọn
+    port = data.get('port')
+    vendor_id = data.get('vendor_id')
+    product_id = data.get('product_id')
     
     def _auto_discover_operation(db, cur):
-        # 1. Kiểm tra xem port này đã tồn tại chưa
-        cur.execute("SELECT id, tag_name, device_name FROM devices WHERE port = %s", (port,))
-        existing_device = cur.fetchone()
+        # 1. Kiểm tra xem port này đã tồn tại trong bảng devices chưa
+        cur.execute("SELECT tag_name FROM devices WHERE port = %s", (port,))
+        if cur.fetchone():
+            return jsonify(ok=True, message=f"Thiết bị tại cổng {port} đã tồn tại."), 200
+
+        # 2. Tra cứu trong bảng device_identities để định danh thiết bị
+        cur.execute(
+            "SELECT device_type FROM device_identities WHERE vendor_id = %s AND product_id = %s",
+            (vendor_id, product_id)
+        )
+        identity = cur.fetchone()
         
-        if existing_device:
-            log_action("system", f"Auto-discover: Thiết bị tại cổng {port} đã tồn tại với tag {existing_device['tag_name']}", success=True)
-            return jsonify(
-                ok=True, 
-                message=f"Thiết bị tại cổng {port} đã tồn tại.",
-                device_info={
-                    'tag_name': existing_device['tag_name'],
-                    'device_name': existing_device.get('device_name'),
-                    'port': port,
-                    'status': 'already_exists'
-                }
-            ), 200
+        if not identity:
+            # Nếu không tìm thấy, lưu là "Unknown" nhưng vẫn ghi lại VID/PID
+            device_type = "Unknown"
+            device_name = f"Unknown Device ({vendor_id}:{product_id})"
+            log_action("system", f"Auto-discover: Không thể định danh thiết bị {vendor_id}:{product_id} tại {port}")
+        else:
+            device_type = identity['device_type']
+            device_name = f"{device_type} Device" # Tên mặc định
+
+        # 3. Thêm thông tin VID/PID vào bảng devices để lưu trữ
+        # Bạn cần thêm 2 cột mới vào bảng devices trước:
+        # ALTER TABLE devices ADD COLUMN vendor_id VARCHAR(10), ADD COLUMN product_id VARCHAR(10);
         
-        # 2. Tìm tag_name tiếp theo chưa được sử dụng
-        cur.execute("SELECT tag_name FROM devices WHERE type = %s ORDER BY tag_name", (device_type,))
+        # 4. Tìm tag_name tiếp theo chưa được sử dụng
+        cur.execute("SELECT tag_name FROM devices WHERE type = %s", (device_type,))
         existing_tags = {row['tag_name'] for row in cur.fetchall()}
         
         i = 1
@@ -444,15 +452,11 @@ def auto_discover_device():
                 break
             i += 1
         
-        # 3. Tạo device_name mặc định nếu không có
-        if not device_name:
-            device_name = f"{device_type} Device #{i}"
-        
-        # 4. Thêm thiết bị mới vào CSDL
+        # 5. Thêm thiết bị mới vào CSDL
         cur.execute("""
-            INSERT INTO devices (port, type, tag_name, device_name, created_at) 
-            VALUES (%s, %s, %s, %s, NOW())
-        """, (port, device_type, new_tag_name, device_name))
+            INSERT INTO devices (port, type, tag_name, device_name, vendor_id, product_id, created_at) 
+            VALUES (%s, %s, %s, %s, %s, %s, NOW())
+        """, (port, device_type, new_tag_name, device_name, vendor_id, product_id))
         
         db.commit()
         
@@ -461,16 +465,11 @@ def auto_discover_device():
         return jsonify(
             ok=True, 
             message=f"Đã tự động thêm thiết bị mới: {new_tag_name}",
-            device_info={
-                'tag_name': new_tag_name,
-                'device_name': device_name,
-                'type': device_type,
-                'port': port,
-                'status': 'newly_created'
-            }
+            device_info={ 'tag_name': new_tag_name, 'device_name': device_name, 'status': 'newly_created' }
         ), 201
     
     return safe_db_operation(_auto_discover_operation)
+
 
 @hardware_bp.route("/admin/devices/scan", methods=["POST"])
 @require_auth('admin')
