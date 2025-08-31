@@ -47,5 +47,17 @@ services:
     depends_on:
       - backend
 
+  hardware_manager:
+    build: ./hardware_manager
+    container_name: hardware_manager
+    restart: unless-stopped
+    volumes:
+      # QUAN TRỌNG: Cấp quyền truy cập vào Docker socket
+      # để rule udev có thể chạy lệnh `docker exec`
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      # Truyền URL của backend vào container
+      BACKEND_URL: http://backend:5000
+      
 volumes:
   db_data:
