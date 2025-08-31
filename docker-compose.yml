@@ -58,6 +58,8 @@ services:
     environment:
       # Truyền URL của backend vào container
       BACKEND_URL: http://backend:5000
+      INTERNAL_API_SECRET: ${INTERNAL_API_SECRET} 
+
       
 volumes:
   db_data:

@@ -1,5 +1,5 @@
 # backend/hardware_api.py (Phiên bản tối ưu)
-
+import os
 from flask import Blueprint, request, jsonify, session
 from datetime import datetime, timedelta
 import logging
@@ -398,10 +398,13 @@ def auto_discover_device():
     
     # Kiểm tra secret key nếu có (tùy chọn bảo mật)
     secret_key = request.headers.get('X-Internal-Secret')
-    expected_secret = 'your-internal-secret-key'  # Nên đưa vào config
+    expected_secret = os.environ.get('INTERNAL_API_SECRET', 'default-secret-key') 
+
+
     
     if secret_key != expected_secret:
         return jsonify(ok=False, error="Không có quyền truy cập"), 403
+
     
     # Validate request
     data, error_response, status_code = validate_json_request(['port', 'type'])

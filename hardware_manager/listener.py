@@ -56,7 +56,10 @@ def main():
         "port": full_port_path,
         "type": device_type
     }
-
+    secret_key = os.environ.get('INTERNAL_API_SECRET', 'default-secret-key')
+    headers = {
+        'X-Internal-Secret': secret_key
+    }
     try:
         logging.info(f"Gửi thông tin đến backend: {payload}")
         response = requests.post(API_ENDPOINT, json=payload, timeout=10)
