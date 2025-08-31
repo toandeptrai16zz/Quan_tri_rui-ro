@@ -1,5 +1,8 @@
 # ================== IMPORTS ==================
-import os
+import 
+#Cài đặt thêm thư viện eventlet
+import eventlet
+eventlet.monkey_patch()
 import secrets
 import time
 import random
@@ -33,7 +36,7 @@ logging.basicConfig(
 )
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
-socketio = SocketIO(app, cors_allowed_origins="*")
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
 
 # ================== CONFIGURATIONS ==================
 SECURITY_CONFIG = {
@@ -62,6 +65,7 @@ def generate_csrf_token():
     for t in expired: del csrf_tokens[t]
     return token
 
+#sua dong 65
 def validate_csrf_token(token):
     if not token or token not in csrf_tokens: return False
     if time.time() - csrf_tokens[token]['created_at'] > SECURITY_CONFIG['CSRF_EXPIRY']:
@@ -99,7 +103,7 @@ def send_otp_email(email, otp, username):
     except Exception as e:
         app.logger.error(f"EMAIL SEND ERROR: {e}")
         return False
-
+#xinchao
 def validate_password_strength(password):
     if len(password) < SECURITY_CONFIG['PASSWORD_MIN_LENGTH']: return False, "Mật khẩu phải dài ít nhất 8 ký tự"
     if not re.search("[a-z]", password): return False, "Mật khẩu phải chứa chữ thường"
