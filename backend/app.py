@@ -142,7 +142,19 @@ def require_rate_limit(f):
 # ================== DATABASE & DOCKER HELPERS ==================
 def get_db_connection():
     try:
-        return mysql.connector.connect(host="localhost", user="root", password="Chuong2004@", database="flask_app", autocommit=True)
+        # Đọc thông tin kết nối từ biến môi trường
+        db_host = os.environ.get('DB_HOST')
+        db_user = os.environ.get('DB_USER')
+        db_password = os.environ.get('DB_PASSWORD')
+        db_name = os.environ.get('DB_NAME')
+        
+        return mysql.connector.connect(
+            host=db_host,
+            user=db_user,
+            password=db_password,
+            database=db_name,
+            autocommit=True
+        )
     except Exception as e:
         app.logger.error(f"DATABASE CONNECTION ERROR: {e}")
         return None
