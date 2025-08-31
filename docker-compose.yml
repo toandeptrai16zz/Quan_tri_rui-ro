@@ -21,12 +21,13 @@ services:
     # SỬA LỖI: Đã xóa khối 'ports' ở đây.
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - /home/tung/PRODUCTION1/QUAN_LY_USER:/workspaces
     environment:
       DB_HOST: database
       DB_USER: root
       DB_PASSWORD: ${DB_ROOT_PASSWORD}
       DB_NAME: remote_lab
-      USER_WORKSPACE_DIR: /home/chuongdev/workspaces # Đảm bảo đường dẫn này tồn tại trên máy chủ
+      USER_WORKSPACE_DIR: /workspaces  # Đảm bảo đường dẫn này tồn tại trên máy chủ
       INTERNAL_API_SECRET: ${INTERNAL_API_SECRET} # Thêm secret key cho backend
     depends_on:
       - database
@@ -53,7 +54,7 @@ services:
       BACKEND_URL: http://backend:5000
       # TỐI ƯU: Thêm secret key để gọi API nội bộ an toàn.
       INTERNAL_API_SECRET: ${INTERNAL_API_SECRET}
-
+      
   hardware_broker:
     build: ./hardware_broker
     container_name: hardware_broker
