@@ -98,15 +98,6 @@ def init_db():
     db.close()
 
 
-
-
-
-
-
-
-
-
-
 # ================== AUTHENTICATION ROUTES ==================
 @app.route("/")
 def index():
