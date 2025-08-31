@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Thời gian Học</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --warning-gradient: linear-gradient(135deg, #ff9a56 0%, #fad0c4 100%);
+            --danger-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.18);
+            --shadow-soft: 0 8px 32px rgba(31, 38, 135, 0.37);
+            --shadow-hover: 0 15px 35px rgba(31, 38, 135, 0.4);
+            --border-radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .main-header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+
+        .main-header h2 {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .session-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .session-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .session-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .session-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .session-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: between;
+            align-items: center;
+        }
+
+        .session-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+
+        .session-body {
+            padding: 1.5rem;
+        }
+
+        .timer-display {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 1rem 0;
+            font-family: 'Monaco', monospace;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timer-display.active {
+            animation: pulse-timer 1s infinite;
+        }
+
+        @keyframes pulse-timer {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .action-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            border: none;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-start {
+            background: var(--success-gradient);
+            color: white;
+        }
+
+        .btn-pause {
+            background: var(--warning-gradient);
+            color: white;
+        }
+
+        .btn-stop {
+            background: var(--danger-gradient);
+            color: white;
+        }
+
+        .btn-reset {
+            background: #6c757d;
+            color: white;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .progress-wrapper {
+            background: rgba(255,255,255,0.5);
+            border-radius: 25px;
+            padding: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .progress {
+            height: 12px;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .progress-bar {
+            background: var(--success-gradient);
+            border-radius: 25px;
+            transition: width 1s ease;
+        }
+
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .status-active {
+            background: var(--success-gradient);
+            color: white;
+            animation: pulse-success 2s infinite;
+        }
+
+        .status-paused {
+            background: var(--warning-gradient);
+            color: white;
+        }
+
+        .status-stopped {
+            background: var(--danger-gradient);
+            color: white;
+        }
+
+        .status-waiting {
+            background: #6c757d;
+            color: white;
+        }
+
+        @keyframes pulse-success {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(56, 239, 125, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(56, 239, 125, 0); }
+        }
+
+        .form-control, .form-select {
+            border-radius: 12px;
+            border: 2px solid #e9ecef;
+            padding: 0.75rem 1rem;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+            background: #fff;
+        }
+
+        .participant-list {
+            background: rgba(255,255,255,0.7);
+            border-radius: 12px;
+            padding: 1rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .participant-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .participant-item:last-child {
+            border-bottom: none;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .floating-action {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+
+        .fab {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--success-gradient);
+            color: white;
+            border: none;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Modal styling */
+        .modal {
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .modal-header {
+            border-bottom: 1px solid var(--glass-border);
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="main-header fade-in">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h2><i class="fa-solid fa-clock me-3"></i>Quản lý Thời gian Học</h2>
+                <p class="subtitle mb-0">Thiết lập và theo dõi các phiên học của sinh viên</p>
+            </div>
+            <div class="d-flex gap-3">
+                <a href="/admin/dashboard" class="btn btn-outline-primary">
+                    <i class="fa-solid fa-arrow-left me-2"></i>Quay lại Dashboard
+                </a>
+                <a href="/admin/submissions" class="btn btn-info">
+                    <i class="fa-solid fa-clipboard-list me-2"></i>Xem bài làm
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Active Sessions -->
+    <div class="row g-4 mb-4">
+        <div class="col-12">
+            <h4 class="mb-3"><i class="fa-solid fa-play-circle text-success me-2"></i>Phiên học đang diễn ra</h4>
+            <div id="activeSessions" class="row g-3">
+                <!-- Active sessions will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Create New Session -->
+    <div class="session-card fade-in">
+        <div class="session-header">
+            <h5 class="session-title">
+                <i class="fa-solid fa-plus-circle me-2"></i>
+                Tạo phiên học mới
+            </h5>
+        </div>
+        <div class="session-body">
+            <form id="createSessionForm">
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label for="sessionName" class="form-label">
+                            <i class="fa-solid fa-tag me-2"></i>Tên phiên học
+                        </label>
+                        <input type="text" class="form-control" id="sessionName" required 
+                               placeholder="Ví dụ: Thực hành Arduino - Buổi 1">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="duration" class="form-label">
+                            <i class="fa-solid fa-stopwatch me-2"></i>Thời gian (phút)
+                        </label>
+                        <select class="form-select" id="duration" required>
+                            <option value="">Chọn thời gian...</option>
+                            <option value="15">15 phút</option>
+                            <option value="30">30 phút</option>
+                            <option value="45">45 phút</option>
+                            <option value="60">60 phút</option>
+                            <option value="90">90 phút</option>
+                            <option value="120">120 phút</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="maxParticipants" class="form-label">
+                            <i class="fa-solid fa-users me-2"></i>Số lượng tối đa
+                        </label>
+                        <input type="number" class="form-control" id="maxParticipants" 
+                               min="1" max="100" value="30" required>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="description" class="form-label">
+                        <i class="fa-solid fa-align-left me-2"></i>Mô tả bài tập
+                    </label>
+                    <textarea class="form-control" id="description" rows="3" 
+                              placeholder="Mô tả chi tiết về bài tập, yêu cầu cần hoàn thành..."></textarea>
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <label class="form-label">
+                            <i class="fa-solid fa-calendar-check me-2"></i>Tự động bắt đầu
+                        </label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="autoStart">
+                            <label class="form-check-label" for="autoStart">Bắt đầu ngay khi tạo</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">
+                            <i class="fa-solid fa-bell me-2"></i>Thông báo
+                        </label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="notifications" checked>
+                            <label class="form-check-label" for="notifications">Gửi thông báo cho students</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">
+                            <i class="fa-solid fa-eye me-2"></i>Theo dõi real-time
+                        </label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="realTimeMonitoring" checked>
+                            <label class="form-check-label" for="realTimeMonitoring">Theo dõi tiến độ</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="action-btn btn-start w-100">
+                    <i class="fa-solid fa-rocket me-2"></i>
+                    Tạo phiên học
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Session History -->
+    <div class="session-card fade-in">
+        <div class="session-header">
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <h5 class="session-title mb-0">
+                    <i class="fa-solid fa-history me-2"></i>
+                    Lịch sử phiên học
+                </h5>
+                <button class="btn btn-outline-light btn-sm" onclick="refreshHistory()">
+                    <i class="fa-solid fa-refresh me-1"></i>Làm mới
+                </button>
+            </div>
+        </div>
+        <div class="session-body">
+            <div id="sessionHistory">
+                <!-- Session history will be rendered here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Floating Action Button -->
+<div class="floating-action">
+    <button class="fab" onclick="showQuickStart()" title="Tạo phiên học nhanh">
+        <i class="fa-solid fa-bolt"></i>
+    </button>
+</div>
+
+<!-- Quick Start Modal -->
+<div id="quickStartModal" class="modal" tabindex="-1" style="display:none;">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fa-solid fa-bolt me-2"></i>
+                    Tạo phiên học nhanh
+                </h5>
+                <button type="button" class="btn-close" onclick="hideQuickStart()"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <button class="action-btn btn-start w-100" onclick="createQuickSession(15)">
+                            <i class="fa-solid fa-clock me-2"></i>15 phút
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="action-btn btn-start w-100" onclick="createQuickSession(30)">
+                            <i class="fa-solid fa-clock me-2"></i>30 phút
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="action-btn btn-start w-100" onclick="createQuickSession(45)">
+                            <i class="fa-solid fa-clock me-2"></i>45 phút
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="action-btn btn-start w-100" onclick="createQuickSession(60)">
+                            <i class="fa-solid fa-clock me-2"></i>60 phút
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // --- Data ---
+    let sessions = [
+        {
+            id: 1,
+            name: "Thực hành ESP32 - Buổi 1",
+            duration: 45,
+            description: "Lập trình cơ bản với ESP32, blink LED",
+            status: "completed",
+            startTime: new Date("2024-08-30T09:00:00"),
+            endTime: new Date("2024-08-30T09:45:00"),
+            participants: 25,
+            completed: 23,
+            maxParticipants: 30
+        },
+        {
+            id: 2,
+            name: "Arduino Sensors Workshop",
+            duration: 60,
+            description: "Sử dụng các cảm biến với Arduino",
+            status: "active",
+            startTime: new Date(),
+            endTime: null,
+            currentTime: 1800, // 30 minutes in seconds
+            participants: 18,
+            completed: 12,
+            maxParticipants: 25
+        }
+    ];
+
+    let sessionIdCounter = sessions.length + 1;
+    let timers = {}; // Store active timers
+
+    // --- Elements ---
+    const activeSessions = document.getElementById('activeSessions');
+    const sessionHistory = document.getElementById('sessionHistory');
+    const createSessionForm = document.getElementById('createSessionForm');
+    const quickStartModal = document.getElementById('quickStartModal');
+
+    // --- Utility Functions ---
+    function formatTime(seconds) {
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        
+        if (hours > 0) {
+            return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+        return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    function getStatusInfo(session) {
+        switch(session.status) {
+            case 'active':
+                return { class: 'status-active', icon: 'fa-play', text: 'Đang diễn ra' };
+            case 'paused':
+                return { class: 'status-paused', icon: 'fa-pause', text: 'Tạm dừng' };
+            case 'completed':
+                return { class: 'status-stopped', icon: 'fa-check', text: 'Hoàn thành' };
+            case 'stopped':
+                return { class: 'status-stopped', icon: 'fa-stop', text: 'Đã dừng' };
+            default:
+                return { class: 'status-waiting', icon: 'fa-clock', text: 'Chờ bắt đầu' };
+        }
+    }
+
+    function calculateProgress(session) {
+        if (session.status === 'completed') return 100;
+        if (!session.currentTime) return 0;
+        
+        const totalSeconds = session.duration * 60;
+        return Math.min((session.currentTime / totalSeconds) * 100, 100);
+    }
+
+    // --- Timer Functions ---
+    function startTimer(sessionId) {
+        const session = sessions.find(s => s.id === sessionId);
+        if (!session) return;
+
+        session.status = 'active';
+        session.startTime = new Date();
+        
+        timers[sessionId] = setInterval(() => {
+            session.currentTime = (session.currentTime || 0) + 1;
+            
+            // Check if time is up
+            if (session.currentTime >= session.duration * 60) {
+                session.status = 'completed';
+                session.endTime = new Date();
+                clearInterval(timers[sessionId]);
+                delete timers[sessionId];
+                
+                // Redirect to submissions page
+                window.open(`/admin/submissions?session=${sessionId}`, '_blank');
+            }
+            
+            renderActiveSessions();
+        }, 1000);
+        
+        renderActiveSessions();
+    }
+
+    function pauseTimer(sessionId) {
+        const session = sessions.find(s => s.id === sessionId);
+        if (!session) return;
+
+        session.status = 'paused';
+        clearInterval(timers[sessionId]);
+        delete timers[sessionId];
+        renderActiveSessions();
+    }
+
+    function stopTimer(sessionId) {
+        const session = sessions.find(s => s.id === sessionId);
+        if (!session) return;
+
+        session.status = 'stopped';
+        session.endTime = new Date();
+        clearInterval(timers[sessionId]);
+        delete timers[sessionId];
+        renderActiveSessions();
+        renderHistory();
+    }
+
+    function resetTimer(sessionId) {
+        const session = sessions.find(s => s.id === sessionId);
+        if (!session) return;
+
+        session.status = 'waiting';
+        session.currentTime = 0;
+        session.startTime = null;
+        session.endTime = null;
+        clearInterval(timers[sessionId]);
+        delete timers[sessionId];
+        renderActiveSessions();
+    }
+
+    // --- Render Functions ---
+    function renderActiveSessions() {
+        const activeSessionsList = sessions.filter(s => ['active', 'paused', 'waiting'].includes(s.status));
+        
+        if (activeSessionsList.length === 0) {
+            activeSessions.innerHTML = `
+                <div class="col-12">
+                    <div class="text-center text-muted py-4">
+                        <i class="fa-solid fa-clock fa-3x mb-3 opacity-50"></i>
+                        <h5>Không có phiên học nào đang diễn ra</h5>
+                        <p>Tạo phiên học mới để bắt đầu</p>
+                    </div>
+                </div>
+            `;
+            return;
+        }
+
+        activeSessions.innerHTML = activeSessionsList.map(session => {
+            const status = getStatusInfo(session);
+            const progress = calculateProgress(session);
+            const timeRemaining = Math.max(0, (session.duration * 60) - (session.currentTime || 0));
+            
+            return `
+                <div class="col-lg-6">
+                    <div class="session-card">
+                        <div class="session-header">
+                            <div class="d-flex justify-content-between align-items-center w-100">
+                                <h6 class="session-title mb-0">${session.name}</h6>
+                                <div class="status-badge ${status.class}">
+                                    <i class="fa-solid ${status.icon} me-1"></i>
+                                    ${status.text}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="session-body">
+                            <div class="timer-display ${session.status === 'active' ? 'active' : ''}">
+                                ${formatTime(timeRemaining)}
+                            </div>
+                            
+                            <div class="progress-wrapper">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" 
+                                         style="width: ${progress}%" 
+                                         aria-valuenow="${progress}" 
+                                         aria-valuemin="0" 
+                                         aria-valuemax="100">
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between mt-2">
+                                    <small class="text-muted">Tiến độ: ${progress.toFixed(1)}%</small>
+                                    <small class="text-muted">${session.participants}/${session.maxParticipants} sinh viên</small>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-2 mt-3">
+                                ${session.status === 'waiting' || session.status === 'paused' ? 
+                                    `<button class="action-btn btn-start flex-fill" onclick="startTimer(${session.id})">
+                                        <i class="fa-solid fa-play me-1"></i>Bắt đầu
+                                    </button>` : ''
+                                }
+                                ${session.status === 'active' ? 
+                                    `<button class="action-btn btn-pause flex-fill" onclick="pauseTimer(${session.id})">
+                                        <i class="fa-solid fa-pause me-1"></i>Tạm dừng
+                                    </button>` : ''
+                                }
+                                <button class="action-btn btn-stop flex-fill" onclick="stopTimer(${session.id})">
+                                    <i class="fa-solid fa-stop me-1"></i>Dừng
+                                </button>
+                                <button class="action-btn btn-reset" onclick="resetTimer(${session.id})">
+                                    <i class="fa-solid fa-redo"></i>
+                                </button>
+                                <a href="/admin/submissions?session=${session.id}" class="action-btn" style="background: var(--info-gradient); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function renderHistory() {
+        const completedSessions = sessions.filter(s => ['completed', 'stopped'].includes(s.status));
+        
+        if (completedSessions.length === 0) {
+            sessionHistory.innerHTML = `
+                <div class="text-center text-muted py-4">
+                    <i class="fa-solid fa-history fa-2x mb-2 opacity-50"></i>
+                    <p>Chưa có lịch sử phiên học</p>
+                </div>
+            `;
+            return;
+        }
+
+        sessionHistory.innerHTML = `
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Tên phiên học</th>
+                            <th>Thời gian</th>
+                            <th>Tham gia</th>
+                            <th>Hoàn thành</th>
+                            <th>Trạng thái</th>
+                            <th>Ngày tạo</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${completedSessions.map(session => {
+                            const status = getStatusInfo(session);
+                            const completionRate = session.participants > 0 ? 
+                                ((session.completed / session.participants) * 100).toFixed(1) : 0;
+                            
+                            return `
+                                <tr>
+                                    <td><strong>${session.name}</strong></td>
+                                    <td>${session.duration} phút</td>
+                                    <td>${session.participants}/${session.maxParticipants}</td>
+                                    <td>
+                                        <span class="badge ${session.completed === session.participants ? 'bg-success' : 'bg-warning'}">
+                                            ${session.completed}/${session.participants} (${completionRate}%)
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge ${status.class}">
+                                            <i class="fa-solid ${status.icon} me-1"></i>
+                                            ${status.text}
+                                        </span>
+                                    </td>
+                                    <td>${session.startTime ? session.startTime.toLocaleDateString('vi-VN') : 'N/A'}</td>
+                                    <td>
+                                        <div class="d-flex gap-1">
+                                            <a href="/admin/submissions?session=${session.id}" 
+                                               class="btn btn-sm btn-outline-primary" title="Xem bài làm">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </a>
+                                            <button class="btn btn-sm btn-outline-success" 
+                                                    onclick="duplicateSession(${session.id})" title="Sao chép">
+                                                <i class="fa-solid fa-copy"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" 
+                                                    onclick="deleteSession(${session.id})" title="Xóa">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            `;
+                        }).join('')}
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }
+
+    // --- Event Handlers ---
+    createSessionForm.onsubmit = function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(createSessionForm);
+        const newSession = {
+            id: sessionIdCounter++,
+            name: formData.get('sessionName') || `Phiên học ${sessionIdCounter - 1}`,
+            duration: parseInt(formData.get('duration')),
+            description: formData.get('description') || '',
+            status: formData.get('autoStart') ? 'active' : 'waiting',
+            startTime: formData.get('autoStart') ? new Date() : null,
+            endTime: null,
+            currentTime: 0,
+            participants: 0,
+            completed: 0,
+            maxParticipants: parseInt(formData.get('maxParticipants')),
+            notifications: formData.get('notifications') === 'on',
+            realTimeMonitoring: formData.get('realTimeMonitoring') === 'on'
+        };
+
+        sessions.push(newSession);
+        
+        if (newSession.status === 'active') {
+            startTimer(newSession.id);
+        }
+        
+        renderActiveSessions();
+        renderHistory();
+        createSessionForm.reset();
+        
+        // Show success message
+        showNotification('Phiên học đã được tạo thành công!', 'success');
+    };
+
+    function createQuickSession(duration) {
+        const newSession = {
+            id: sessionIdCounter++,
+            name: `Phiên học nhanh ${duration} phút`,
+            duration: duration,
+            description: `Phiên học nhanh ${duration} phút`,
+            status: 'active',
+            startTime: new Date(),
+            endTime: null,
+            currentTime: 0,
+            participants: 0,
+            completed: 0,
+            maxParticipants: 30,
+            notifications: true,
+            realTimeMonitoring: true
+        };
+
+        sessions.push(newSession);
+        startTimer(newSession.id);
+        hideQuickStart();
+        renderActiveSessions();
+        
+        showNotification(`Phiên học nhanh ${duration} phút đã bắt đầu!`, 'success');
+    }
+
+    function duplicateSession(sessionId) {
+        const session = sessions.find(s => s.id === sessionId);
+        if (!session) return;
+
+        const newSession = {
+            ...session,
+            id: sessionIdCounter++,
+            name: session.name + " (Copy)",
+            status: 'waiting',
+            startTime: null,
+            endTime: null,
+            currentTime: 0,
+            participants: 0,
+            completed: 0
+        };
+
+        sessions.push(newSession);
+        renderActiveSessions();
+        renderHistory();
+        showNotification('Phiên học đã được sao chép!', 'info');
+    }
+
+    function deleteSession(sessionId) {
+        if (confirm('Bạn có chắc chắn muốn xóa phiên học này?')) {
+            sessions = sessions.filter(s => s.id !== sessionId);
+            clearInterval(timers[sessionId]);
+            delete timers[sessionId];
+            renderActiveSessions();
+            renderHistory();
+            showNotification('Phiên học đã được xóa!', 'warning');
+        }
+    }
+
+    function refreshHistory() {
+        renderHistory();
+        showNotification('Lịch sử đã được làm mới!', 'info');
+    }
+
+    function showQuickStart() {
+        quickStartModal.style.display = 'block';
+        setTimeout(() => {
+            quickStartModal.classList.add('show');
+        }, 10);
+    }
+
+    function hideQuickStart() {
+        quickStartModal.classList.remove('show');
+        setTimeout(() => {
+            quickStartModal.style.display = 'none';
+        }, 300);
+    }
+
+    function showNotification(message, type = 'info') {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+        notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+        notification.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" onclick="this.parentElement.remove()"></button>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Auto remove after 3 seconds
+        setTimeout(() => {
+            if (notification.parentElement) {
+                notification.remove();
+            }
+        }, 3000);
+    }
+
+    // --- Event Listeners ---
+    quickStartModal.addEventListener('click', function(e) {
+        if (e.target === quickStartModal) {
+            hideQuickStart();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            if (quickStartModal.style.display === 'block') {
+                hideQuickStart();
+            }
+        }
+    });
+
+    // --- Initialize ---
+    document.addEventListener('DOMContentLoaded', function() {
+        renderActiveSessions();
+        renderHistory();
+        
+        // Start existing active timers
+        sessions.forEach(session => {
+            if (session.status === 'active') {
+                startTimer(session.id);
+            }
+        });
+        
+        // Simulate participants joining
+        setInterval(() => {
+            sessions.forEach(session => {
+                if (session.status === 'active' && Math.random() < 0.1) {
+                    if (session.participants < session.maxParticipants) {
+                        session.participants += 1;
+                    }
+                    if (Math.random() < 0.3 && session.completed < session.participants) {
+                        session.completed += 1;
+                    }
+                }
+            });
+            renderActiveSessions();
+        }, 5000);
+    });
+</script>
+
+</body>
+</html>
